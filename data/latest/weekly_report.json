@@ -4,7 +4,7 @@
     "end": "2026-10-04",
     "utc_offset": -3
   },
-  "generated_at": "2026-10-04T21:36:43.939446+00:00",
+  "generated_at": "2026-10-04T22:13:49.821816+00:00",
   "sources_status": {
     "kev": {
       "ok": true,
@@ -14,12 +14,12 @@
     "cvelist": {
       "ok": true,
       "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-      "fetched": 2521,
+      "fetched": 2522,
       "errors": 0
     },
     "epss": {
-      "ok": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "ok": true,
+      "scored": 2479
     }
   },
   "summary": {
@@ -33,11 +33,11 @@
       "Fortinet": 1,
       "Citrix": 1
     },
-    "cve_new": 2509,
+    "cve_new": 2510,
     "cve_rejected": 12,
     "cve_updated": 3214,
     "cve_by_severity": {
-      "MEDIUM": 1013,
+      "MEDIUM": 1014,
       "CRITICAL": 290,
       "LOW": 105,
       "HIGH": 1050,
@@ -162,7 +162,7 @@
       ],
       [
         "VulDB",
-        197
+        198
       ],
       [
         "GitHub_M",
@@ -209,7 +209,11 @@
       "notes": "https://support.apple.com/en-us/149226 ; https://support.apple.com/en-us/149228 ; https://support.apple.com/en-us/149229 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86950",
       "cwes": [
         "CWE-787"
-      ]
+      ],
+      "epss": {
+        "epss": 0.01242,
+        "percentile": 0.68153
+      }
     },
     {
       "cveID": "CVE-2026-76504",
@@ -225,7 +229,11 @@
       "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
       "cwes": [
         "CWE-177"
-      ]
+      ],
+      "epss": {
+        "epss": 0.01575,
+        "percentile": 0.74593
+      }
     },
     {
       "cveID": "CVE-2026-104286",
@@ -242,7 +250,11 @@
       "cwes": [
         "CWE-22",
         "CWE-158"
-      ]
+      ],
+      "epss": {
+        "epss": 0.02201,
+        "percentile": 0.81912
+      }
     },
     {
       "cveID": "CVE-2026-102490",
@@ -258,7 +270,11 @@
       "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
       "cwes": [
         "CWE-269"
-      ]
+      ],
+      "epss": {
+        "epss": 0.00629,
+        "percentile": 0.48333
+      }
     },
     {
       "cveID": "CVE-2026-102489",
@@ -274,7 +290,11 @@
       "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
       "cwes": [
         "CWE-384"
-      ]
+      ],
+      "epss": {
+        "epss": 0.01396,
+        "percentile": 0.71465
+      }
     },
     {
       "cveID": "CVE-2026-88779",
@@ -290,7 +310,11 @@
       "notes": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174 ; https://community.citrix.com/techzone-blogs/110_security-updates/understanding-and-addressing-cve-2026-88779-in-citrix-netscaler-adc-and-citrix-netscaler-gateway/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
       "cwes": [
         "CWE-119"
-      ]
+      ],
+      "epss": {
+        "epss": 0.00276,
+        "percentile": 0.18203
+      }
     }
   ],
   "critical_cves": [
@@ -316,7 +340,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A vulnerability was determined in Netcore NBR100V2 1.3.240614.030928. This affects the function uci.apply of the file /usr/share/rpcd/acl.d/unauthenticated.json of the component ACL Handler. This manipulation of the argument section causes missing authorization. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted ear"
+      "description": "A vulnerability was determined in Netcore NBR100V2 1.3.240614.030928. This affects the function uci.apply of the file /usr/share/rpcd/acl.d/unauthenticated.json of the component ACL Handler. This manipulation of the argument section causes missing authorization. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted ear",
+      "epss": {
+        "epss": 0.00501,
+        "percentile": 0.40742
+      }
     },
     {
       "cve_id": "CVE-2026-101001",
@@ -340,7 +368,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A vulnerability was identified in Netcore NBR200V2 1.3.241127.071246. This impacts the function eval of the file /www/cgi-bin/network_tools of the component Web Management Interface. Such manipulation of the argument QUERY_STRING leads to os command injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about thi"
+      "description": "A vulnerability was identified in Netcore NBR200V2 1.3.241127.071246. This impacts the function eval of the file /www/cgi-bin/network_tools of the component Web Management Interface. Such manipulation of the argument QUERY_STRING leads to os command injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about thi",
+      "epss": {
+        "epss": 0.02635,
+        "percentile": 0.85041
+      }
     },
     {
       "cve_id": "CVE-2026-101039",
@@ -364,7 +396,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A vulnerability was identified in FAST FAC1900R 20190827_2.0.2. Affected by this issue is the function copy_msg_element of the component devdiscover Service. Such manipulation leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      "description": "A vulnerability was identified in FAST FAC1900R 20190827_2.0.2. Affected by this issue is the function copy_msg_element of the component devdiscover Service. Such manipulation leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "epss": {
+        "epss": 0.00743,
+        "percentile": 0.53128
+      }
     },
     {
       "cve_id": "CVE-2026-101072",
@@ -388,7 +424,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A vulnerability was identified in Netcore NR289-GE 1.4.5102. This issue affects the function system of the file /ap_ip.cgi of the component CGI Handler. Such manipulation of the argument ip leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      "description": "A vulnerability was identified in Netcore NR289-GE 1.4.5102. This issue affects the function system of the file /ap_ip.cgi of the component CGI Handler. Such manipulation of the argument ip leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "epss": {
+        "epss": 0.01989,
+        "percentile": 0.79918
+      }
     },
     {
       "cve_id": "CVE-2026-101075",
@@ -412,7 +452,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A security vulnerability has been detected in Netcore NR289-GE 1.4.5102. The impacted element is the function system of the file /location_time.cgi of the component Location Time Handler. The manipulation of the argument mac leads to os command injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about thi"
+      "description": "A security vulnerability has been detected in Netcore NR289-GE 1.4.5102. The impacted element is the function system of the file /location_time.cgi of the component Location Time Handler. The manipulation of the argument mac leads to os command injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about thi",
+      "epss": {
+        "epss": 0.02451,
+        "percentile": 0.83836
+      }
     },
     {
       "cve_id": "CVE-2026-101076",
@@ -436,7 +480,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A vulnerability was detected in Netcore NR289-GE 1.4.5102. This affects the function system of the file /set_ntp_server_ip.cgi of the component CGI Handler. The manipulation of the argument ntp_ip results in os command injection. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      "description": "A vulnerability was detected in Netcore NR289-GE 1.4.5102. This affects the function system of the file /set_ntp_server_ip.cgi of the component CGI Handler. The manipulation of the argument ntp_ip results in os command injection. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "epss": {
+        "epss": 0.02011,
+        "percentile": 0.80182
+      }
     },
     {
       "cve_id": "CVE-2026-101077",
@@ -460,7 +508,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A flaw has been found in Netcore NR289-GE 1.4.5102. This impacts the function process_request of the component boa_temp Handler. This manipulation causes missing authentication. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      "description": "A flaw has been found in Netcore NR289-GE 1.4.5102. This impacts the function process_request of the component boa_temp Handler. This manipulation causes missing authentication. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "epss": {
+        "epss": 0.00711,
+        "percentile": 0.51922
+      }
     },
     {
       "cve_id": "CVE-2026-101148",
@@ -483,7 +535,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "The BackupSheep WordPress Backup Plugin WordPress plugin through 1.8 does not properly validate its integration key, treating an unset or blank key as valid, which allows unauthenticated attackers to create and download full site backups, including the database with user password hashes, and to delete arbitrary files on the server, leading to sensitive data disclosure and site takeover.\n\nThe Backu"
+      "description": "The BackupSheep WordPress Backup Plugin WordPress plugin through 1.8 does not properly validate its integration key, treating an unset or blank key as valid, which allows unauthenticated attackers to create and download full site backups, including the database with user password hashes, and to delete arbitrary files on the server, leading to sensitive data disclosure and site takeover.\n\nThe Backu",
+      "epss": {
+        "epss": 0.00308,
+        "percentile": 0.21485
+      }
     },
     {
       "cve_id": "CVE-2026-102240",
@@ -507,7 +563,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A vulnerability was found in Netcore NAP930 0.1.241010.141410. This affects the function eval of the file /www/cgi-bin/network_tools of the component Network Tools CGI. The manipulation of the argument sid results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not res"
+      "description": "A vulnerability was found in Netcore NAP930 0.1.241010.141410. This affects the function eval of the file /www/cgi-bin/network_tools of the component Network Tools CGI. The manipulation of the argument sid results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not res",
+      "epss": {
+        "epss": 0.02011,
+        "percentile": 0.80182
+      }
     },
     {
       "cve_id": "CVE-2026-102427",
@@ -530,7 +590,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK < 8.3.16 - site/uploader.php is reached through the component’s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file’s content with a real magic-byte MIME check, but the extension allow-list that woul"
+      "description": "Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK < 8.3.16 - site/uploader.php is reached through the component’s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file’s content with a real magic-byte MIME check, but the extension allow-list that woul",
+      "epss": {
+        "epss": 0.00792,
+        "percentile": 0.54801
+      }
     },
     {
       "cve_id": "CVE-2026-103956",
@@ -554,7 +618,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Missing authentication for critical function in the authentication dependency in Loom for AWS before 1.6.1 allowed remote actors to obtain super-admin authority over the agent control plane, including registering tool servers, reading stored integration credentials, and rewriting the IAM role policies attached to managed agent roles, via any request to the application API in a deployment where no "
+      "description": "Missing authentication for critical function in the authentication dependency in Loom for AWS before 1.6.1 allowed remote actors to obtain super-admin authority over the agent control plane, including registering tool servers, reading stored integration credentials, and rewriting the IAM role policies attached to managed agent roles, via any request to the application API in a deployment where no ",
+      "epss": {
+        "epss": 0.00468,
+        "percentile": 0.38305
+      }
     },
     {
       "cve_id": "CVE-2026-104610",
@@ -578,7 +646,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A security vulnerability has been detected in Tenda HG7, HG9 and HG10 300001138_en_xpon. This impacts the function boaGetVar of the file /boaform/formLoopBack of the component Boa Web Server. Such manipulation of the argument Ethtype leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used."
+      "description": "A security vulnerability has been detected in Tenda HG7, HG9 and HG10 300001138_en_xpon. This impacts the function boaGetVar of the file /boaform/formLoopBack of the component Boa Web Server. Such manipulation of the argument Ethtype leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
+      "epss": {
+        "epss": 0.00644,
+        "percentile": 0.49057
+      }
     },
     {
       "cve_id": "CVE-2026-105134",
@@ -598,7 +670,11 @@
         "CWE-78"
       ],
       "ssvc": null,
-      "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve"
+      "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve",
+      "epss": {
+        "epss": 0.01843,
+        "percentile": 0.78277
+      }
     },
     {
       "cve_id": "CVE-2026-105135",
@@ -618,7 +694,11 @@
         "CWE-94"
       ],
       "ssvc": null,
-      "description": "A vulnerability has been found in InternLM MindSearch 0.1.0. This issue affects the function ExecutionAction.run of the file mindsearch/agent/graph.py of the component Planner Agent. The manipulation of the argument inputs leads to code injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure"
+      "description": "A vulnerability has been found in InternLM MindSearch 0.1.0. This issue affects the function ExecutionAction.run of the file mindsearch/agent/graph.py of the component Planner Agent. The manipulation of the argument inputs leads to code injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure",
+      "epss": {
+        "epss": 0.0077,
+        "percentile": 0.54065
+      }
     },
     {
       "cve_id": "CVE-2026-55107",
@@ -642,7 +722,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Kobako is a Ruby gem that embeds a Wasm-isolated mruby interpreter inside applications, allowing execution of untrusted Ruby scripts (LLM-generated code, user formulas, student submissions, third-party plugins) in-process without giving them access to host memory, files, network, or credentials. From version 0.1.0 to before version 0.9.1, a guest mruby script running inside the Kobako sandbox can "
+      "description": "Kobako is a Ruby gem that embeds a Wasm-isolated mruby interpreter inside applications, allowing execution of untrusted Ruby scripts (LLM-generated code, user formulas, student submissions, third-party plugins) in-process without giving them access to host memory, files, network, or credentials. From version 0.1.0 to before version 0.9.1, a guest mruby script running inside the Kobako sandbox can ",
+      "epss": {
+        "epss": 0.00799,
+        "percentile": 0.5503
+      }
     },
     {
       "cve_id": "CVE-2026-55393",
@@ -665,7 +749,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Unvalidated pathnames in the web interface in Teledyne FLIR Aware2 versions through 6.9.0.2 (PackBot) and 1.7.9 (FirstLook) allows remote unauthenticated attackers to read configuration and security parameters on Teledyne FLIR PackBot and FirstLook robots running this software via path traversal."
+      "description": "Unvalidated pathnames in the web interface in Teledyne FLIR Aware2 versions through 6.9.0.2 (PackBot) and 1.7.9 (FirstLook) allows remote unauthenticated attackers to read configuration and security parameters on Teledyne FLIR PackBot and FirstLook robots running this software via path traversal.",
+      "epss": {
+        "epss": 0.00429,
+        "percentile": 0.34915
+      }
     },
     {
       "cve_id": "CVE-2026-71379",
@@ -688,7 +776,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "The file export endpoint allows any unauthenticated attacker to export arbitrary database tables by sending a crafted POST request."
+      "description": "The file export endpoint allows any unauthenticated attacker to export arbitrary database tables by sending a crafted POST request.",
+      "epss": {
+        "epss": 0.00442,
+        "percentile": 0.36161
+      }
     },
     {
       "cve_id": "CVE-2026-76570",
@@ -711,7 +803,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables  1.21.1 - The front-end CRUD API controller performs no Joomla token validation and no authentication check on any task. Table names, column names, and values are taken directly from request parameters and concatenated into SQL queries, allowing SQLi for reading and writing queries."
+      "description": "Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables  1.21.1 - The front-end CRUD API controller performs no Joomla token validation and no authentication check on any task. Table names, column names, and values are taken directly from request parameters and concatenated into SQL queries, allowing SQLi for reading and writing queries.",
+      "epss": {
+        "epss": 0.00455,
+        "percentile": 0.37257
+      }
     },
     {
       "cve_id": "CVE-2026-96349",
@@ -734,7 +830,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Unauthenticated Remote Code Execution (RCE) in SiteSkite <= 2.1.8 versions."
+      "description": "Unauthenticated Remote Code Execution (RCE) in SiteSkite <= 2.1.8 versions.",
+      "epss": {
+        "epss": 0.00602,
+        "percentile": 0.46935
+      }
     },
     {
       "cve_id": "CVE-2026-96587",
@@ -757,7 +857,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "The Viidure Android application embeds permanent, plaintext cloud storage credentials within its compiled code. These credentials provide full access to critical platform storage, including the ability to read, modify, or delete operational files such as firmware and application binaries."
+      "description": "The Viidure Android application embeds permanent, plaintext cloud storage credentials within its compiled code. These credentials provide full access to critical platform storage, including the ability to read, modify, or delete operational files such as firmware and application binaries.",
+      "epss": {
+        "epss": 0.00344,
+        "percentile": 0.25602
+      }
     },
     {
       "cve_id": "CVE-2026-79901",
@@ -780,7 +884,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "In deployments using BoKS keytab management, affected versions of boks_keytabmd generate Active Directory service-account passwords from a predictable pseudo-random sequence seeded with the current Unix timestamp. An attacker who knows the service principal and can estimate the password-change time can reproduce a limited candidate set and verify candidates offline."
+      "description": "In deployments using BoKS keytab management, affected versions of boks_keytabmd generate Active Directory service-account passwords from a predictable pseudo-random sequence seeded with the current Unix timestamp. An attacker who knows the service principal and can estimate the password-change time can reproduce a limited candidate set and verify candidates offline.",
+      "epss": {
+        "epss": 0.00266,
+        "percentile": 0.17046
+      }
     },
     {
       "cve_id": "CVE-2026-82377",
@@ -803,7 +911,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "Missing Authorization in Apache Roller 6.1.5 allows an authenticated user to read, modify, or delete weblog content belonging to other weblogs through the legacy XML-RPC Blogger and MetaWeblog APIs, because the handlers authenticate the caller but do not verify the caller's permission on the weblog or entry actually affected. Only installations that enable the non-default global XML-RPC setting ar"
+      "description": "Missing Authorization in Apache Roller 6.1.5 allows an authenticated user to read, modify, or delete weblog content belonging to other weblogs through the legacy XML-RPC Blogger and MetaWeblog APIs, because the handlers authenticate the caller but do not verify the caller's permission on the weblog or entry actually affected. Only installations that enable the non-default global XML-RPC setting ar",
+      "epss": {
+        "epss": 0.00535,
+        "percentile": 0.43169
+      }
     },
     {
       "cve_id": "CVE-2026-84154",
@@ -826,7 +938,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "A Code Injection vulnerability affecting GEOVIA Geospatial Data Manager from Release 3DEXPERIENCE R2024x through Release 3DEXPERIENCE R2026x could allow an attacker to execute arbitrary code on the server."
+      "description": "A Code Injection vulnerability affecting GEOVIA Geospatial Data Manager from Release 3DEXPERIENCE R2024x through Release 3DEXPERIENCE R2026x could allow an attacker to execute arbitrary code on the server.",
+      "epss": {
+        "epss": 0.00355,
+        "percentile": 0.26912
+      }
     },
     {
       "cve_id": "CVE-2026-85526",
@@ -849,7 +965,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "Path traversal in the Btrfs storage driver (unpackVolume) in Canonical LXD on Linux allows an authenticated user with instance creation privileges to delete or replace arbitrary files and directories on the host filesystem as root via a crafted subvolumes[].path entry in backup/optimized_header.yaml during a btrfs optimized backup import."
+      "description": "Path traversal in the Btrfs storage driver (unpackVolume) in Canonical LXD on Linux allows an authenticated user with instance creation privileges to delete or replace arbitrary files and directories on the host filesystem as root via a crafted subvolumes[].path entry in backup/optimized_header.yaml during a btrfs optimized backup import.",
+      "epss": {
+        "epss": 0.00516,
+        "percentile": 0.41882
+      }
     },
     {
       "cve_id": "CVE-2026-87799",
@@ -872,7 +992,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "Improper link resolution in the migration receive path in Canonical LXD versions 4.0 and later (fixed in 4.0.14, 5.0.10, 5.21.8 and 6.10) on Linux allows an authenticated client that can create instances or custom storage volumes in a project, or a malicious migration source server, to write attacker-controlled files to arbitrary paths on the target host as root, leading to full host compromise. T"
+      "description": "Improper link resolution in the migration receive path in Canonical LXD versions 4.0 and later (fixed in 4.0.14, 5.0.10, 5.21.8 and 6.10) on Linux allows an authenticated client that can create instances or custom storage volumes in a project, or a malicious migration source server, to write attacker-controlled files to arbitrary paths on the target host as root, leading to full host compromise. T",
+      "epss": {
+        "epss": 0.00407,
+        "percentile": 0.32629
+      }
     },
     {
       "cve_id": "CVE-2026-90970",
@@ -895,7 +1019,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "GitLab has remediated a vulnerability in the GitLab AI Gateway component affecting all versions of the AI Gateway from 18.1.6 before 19.2.4, 19.3 before 19.3.2, and 19.4 before 19.4.1 that, under certain conditions, could have allowed an authenticated user with Duo Agent Platform access to escape the prompt template sandbox via a specially crafted flow configuration, resulting in arbitrary command"
+      "description": "GitLab has remediated a vulnerability in the GitLab AI Gateway component affecting all versions of the AI Gateway from 18.1.6 before 19.2.4, 19.3 before 19.3.2, and 19.4 before 19.4.1 that, under certain conditions, could have allowed an authenticated user with Duo Agent Platform access to escape the prompt template sandbox via a specially crafted flow configuration, resulting in arbitrary command",
+      "epss": {
+        "epss": 0.00943,
+        "percentile": 0.59693
+      }
     },
     {
       "cve_id": "CVE-2026-93698",
@@ -918,7 +1046,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "Insufficient validation allows arbitrary commands to be executed via the Multilang adminbin."
+      "description": "Insufficient validation allows arbitrary commands to be executed via the Multilang adminbin.",
+      "epss": {
+        "epss": 0.00464,
+        "percentile": 0.37979
+      }
     },
     {
       "cve_id": "CVE-2026-96658",
@@ -941,7 +1073,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "A flaw was found in Foreman. An authenticated attacker with low-level permissions can achieve remote code execution (RCE) by bypassing the safemode sandbox within the templating engine. Due to improper handling of delegated methods, an attacker can append unauthorized functions to the allowed execution list, enabling them to run arbitrary commands on the hosting server."
+      "description": "A flaw was found in Foreman. An authenticated attacker with low-level permissions can achieve remote code execution (RCE) by bypassing the safemode sandbox within the templating engine. Due to improper handling of delegated methods, an attacker can append unauthorized functions to the allowed execution list, enabling them to run arbitrary commands on the hosting server.",
+      "epss": {
+        "epss": 0.00703,
+        "percentile": 0.51645
+      }
     },
     {
       "cve_id": "CVE-2024-31026",
@@ -964,7 +1100,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "An issue in Greek Universities Network (GUnet) Open eClass Platform v.3.15 allows a remote attacker to execute arbitrary code via the chat input field in the course module."
+      "description": "An issue in Greek Universities Network (GUnet) Open eClass Platform v.3.15 allows a remote attacker to execute arbitrary code via the chat input field in the course module.",
+      "epss": {
+        "epss": 0.00589,
+        "percentile": 0.46278
+      }
     },
     {
       "cve_id": "CVE-2026-100512",
@@ -987,7 +1127,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Contributor PHP Object Injection in Nested Pages <= 3.3.2 versions."
+      "description": "Contributor PHP Object Injection in Nested Pages <= 3.3.2 versions.",
+      "epss": {
+        "epss": 0.00331,
+        "percentile": 0.24015
+      }
     },
     {
       "cve_id": "CVE-2026-100788",
@@ -1010,7 +1154,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Invalid pointer in the JavaScript: WebAssembly component. This vulnerability was fixed in Firefox ESR 153.4, Thunderbird 157, Thunderbird 140.17, Thunderbird 153.4, Firefox 157, and Firefox ESR 140.17."
+      "description": "Invalid pointer in the JavaScript: WebAssembly component. This vulnerability was fixed in Firefox ESR 153.4, Thunderbird 157, Thunderbird 140.17, Thunderbird 153.4, Firefox 157, and Firefox ESR 140.17.",
+      "epss": {
+        "epss": 0.00442,
+        "percentile": 0.36159
+      }
     },
     {
       "cve_id": "CVE-2026-100810",
@@ -1033,7 +1181,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Other issue in the DevTools component. This vulnerability was fixed in Thunderbird 157 and Firefox 157."
+      "description": "Other issue in the DevTools component. This vulnerability was fixed in Thunderbird 157 and Firefox 157.",
+      "epss": {
+        "epss": 0.004,
+        "percentile": 0.31897
+      }
     },
     {
       "cve_id": "CVE-2026-102115",
@@ -1056,7 +1208,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Kiteworks Core did not correctly validate a parameter submitted to the password reset workflow. An unauthenticated attacker who knew the email address of a user with a locally stored password could potentially reset that account's password without access to the emailed reset link and then authenticate as that user, including where the account holds administrative privileges."
+      "description": "Kiteworks Core did not correctly validate a parameter submitted to the password reset workflow. An unauthenticated attacker who knew the email address of a user with a locally stored password could potentially reset that account's password without access to the emailed reset link and then authenticate as that user, including where the account holds administrative privileges.",
+      "epss": {
+        "epss": 0.00334,
+        "percentile": 0.24511
+      }
     },
     {
       "cve_id": "CVE-2026-103044",
@@ -1080,7 +1236,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "XML injection (aka blind XPath injection) vulnerability in The Wikimedia Foundation Mediawiki - EasyTimeline extension allows XML Injection.\n\nThis issue affects Mediawiki - EasyTimeline extension: before 1.46.1, 1.45.5, 1.43.10."
+      "description": "XML injection (aka blind XPath injection) vulnerability in The Wikimedia Foundation Mediawiki - EasyTimeline extension allows XML Injection.\n\nThis issue affects Mediawiki - EasyTimeline extension: before 1.46.1, 1.45.5, 1.43.10.",
+      "epss": {
+        "epss": 0.00436,
+        "percentile": 0.35666
+      }
     },
     {
       "cve_id": "CVE-2026-103110",
@@ -1103,7 +1263,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Pexip Infinity before 38.2, plus 39.0, 39.1 and 40.0, is affected by improper input validation that allows a remote attacker to execute code remotely as an unprivileged user on a Pexip Infinity Conferencing Node."
+      "description": "Pexip Infinity before 38.2, plus 39.0, 39.1 and 40.0, is affected by improper input validation that allows a remote attacker to execute code remotely as an unprivileged user on a Pexip Infinity Conferencing Node.",
+      "epss": {
+        "epss": 0.00608,
+        "percentile": 0.47267
+      }
     },
     {
       "cve_id": "CVE-2026-103752",
@@ -1126,7 +1290,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Unauthenticated Privilege Escalation in Authorizer <= 3.15.3 versions."
+      "description": "Unauthenticated Privilege Escalation in Authorizer <= 3.15.3 versions.",
+      "epss": {
+        "epss": 0.00268,
+        "percentile": 0.17236
+      }
     },
     {
       "cve_id": "CVE-2026-104286",
@@ -1149,7 +1317,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests."
+      "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+      "epss": {
+        "epss": 0.02201,
+        "percentile": 0.81912
+      }
     },
     {
       "cve_id": "CVE-2026-104846",
@@ -1168,7 +1340,11 @@
         "CWE-843"
       ],
       "ssvc": null,
-      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. From 0.12.0 until 1.6.2, fromJSON deserialization of a fulfilled Promise control node can pass a plugin-produced callable-bearing thenable to a native Promise resolver. ECMAScript thenable assimilation then invokes the callable unexpectedly, allowing attacker-controlled JSON to trigger co"
+      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. From 0.12.0 until 1.6.2, fromJSON deserialization of a fulfilled Promise control node can pass a plugin-produced callable-bearing thenable to a native Promise resolver. ECMAScript thenable assimilation then invokes the callable unexpectedly, allowing attacker-controlled JSON to trigger co",
+      "epss": {
+        "epss": 0.00345,
+        "percentile": 0.25722
+      }
     },
     {
       "cve_id": "CVE-2026-105105",
@@ -1191,7 +1367,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "CWE-306: Missing Authentication for Critical Function in the ait.core.server telemetry and command broker (ait-server) in NASA-AMMOS AIT-Core through 3.1.1 allows an unauthenticated remote attacker with network access to the ZeroMQ message bus to inject spacecraft command data, exfiltrate command and telemetry traffic, inject forged telemetry, or disrupt the command and telemetry bus. The ait-serv"
+      "description": "CWE-306: Missing Authentication for Critical Function in the ait.core.server telemetry and command broker (ait-server) in NASA-AMMOS AIT-Core through 3.1.1 allows an unauthenticated remote attacker with network access to the ZeroMQ message bus to inject spacecraft command data, exfiltrate command and telemetry traffic, inject forged telemetry, or disrupt the command and telemetry bus. The ait-serv",
+      "epss": {
+        "epss": 0.00783,
+        "percentile": 0.54468
+      }
     },
     {
       "cve_id": "CVE-2026-12627",
@@ -1214,7 +1394,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Fortra's Core Privileged Access Manager (BoKS) contains a stack-based buffer overflow vulnerability in boks_autoregisterd. A remote attacker with network access to the autoregistration service may be able to trigger memory corruption during client response processing."
+      "description": "Fortra's Core Privileged Access Manager (BoKS) contains a stack-based buffer overflow vulnerability in boks_autoregisterd. A remote attacker with network access to the autoregistration service may be able to trigger memory corruption during client response processing.",
+      "epss": {
+        "epss": 0.00442,
+        "percentile": 0.36205
+      }
     }
   ],
   "ssvc_poc_or_active": [
@@ -1239,7 +1423,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.41, before 13.1-64.28, before 14.1-73.41 FIPS, and before 13.1-37.282; Gateway: before 14.1-73.41 and before 13.1-64.28."
+      "description": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.41, before 13.1-64.28, before 14.1-73.41 FIPS, and before 13.1-37.282; Gateway: before 14.1-73.41 and before 13.1-64.28.",
+      "epss": {
+        "epss": 0.00276,
+        "percentile": 0.18203
+      }
     },
     {
       "cve_id": "CVE-2026-104861",
@@ -1263,7 +1451,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "probe-image-size gets image dimensions without downloading the entire file. Prior to 7.4.0, lib/parse_sync/svg.js and lib/parse_stream/svg.js use the searching regular expression /<[-_.:a-zA-Z0-9][^>]*>/, which repeatedly scans to the end of input when attacker-controlled data contains many less-than characters without a closing greater-than character. The synchronous parser converts and scans the"
+      "description": "probe-image-size gets image dimensions without downloading the entire file. Prior to 7.4.0, lib/parse_sync/svg.js and lib/parse_stream/svg.js use the searching regular expression /<[-_.:a-zA-Z0-9][^>]*>/, which repeatedly scans to the end of input when attacker-controlled data contains many less-than characters without a closing greater-than character. The synchronous parser converts and scans the",
+      "epss": {
+        "epss": 0.00425,
+        "percentile": 0.34563
+      }
     },
     {
       "cve_id": "CVE-2026-102626",
@@ -1286,7 +1478,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "An authenticated LimeSurvey Community Edition 7.4.0 user with the global Surveys: create permission can store a JavaScript-breaking value in the date_min attribute of a Date/Time question. When another user renders the affected question, LimeSurvey inserts the stored value into a single-quoted inline JavaScript literal without JavaScript-context encoding."
+      "description": "An authenticated LimeSurvey Community Edition 7.4.0 user with the global Surveys: create permission can store a JavaScript-breaking value in the date_min attribute of a Date/Time question. When another user renders the affected question, LimeSurvey inserts the stored value into a single-quoted inline JavaScript literal without JavaScript-context encoding.",
+      "epss": {
+        "epss": 0.00269,
+        "percentile": 0.1731
+      }
     },
     {
       "cve_id": "CVE-2026-104848",
@@ -1309,7 +1505,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "Tinypool is a minimal Node.js worker thread pool implementation. Prior to 2.1.1, Tinypool constructs ThreadPool.options from a normal options object and reads the execArgv and env worker options in dist/index.js, allowing values inherited from a polluted Object.prototype to be copied into own properties and passed to worker_threads.Worker. An attacker who can first pollute either property can caus"
+      "description": "Tinypool is a minimal Node.js worker thread pool implementation. Prior to 2.1.1, Tinypool constructs ThreadPool.options from a normal options object and reads the execArgv and env worker options in dist/index.js, allowing values inherited from a polluted Object.prototype to be copied into own properties and passed to worker_threads.Worker. An attacker who can first pollute either property can caus",
+      "epss": {
+        "epss": 0.00497,
+        "percentile": 0.4044
+      }
     },
     {
       "cve_id": "CVE-2026-51899",
@@ -1332,7 +1532,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "In SuperAGI v0.0.14 and prior, controller endpoints (/api/agents/create, /api/agents/schedule, /api/agents/delete, /api/agents/edit_schedule, /api/agents/stop_schedule) allow authenticated users from one organization to create, schedule, edit, stop, and delete agents belonging to a different organization's project. The endpoints accept a project_id parameter but do not verify that the project belo"
+      "description": "In SuperAGI v0.0.14 and prior, controller endpoints (/api/agents/create, /api/agents/schedule, /api/agents/delete, /api/agents/edit_schedule, /api/agents/stop_schedule) allow authenticated users from one organization to create, schedule, edit, stop, and delete agents belonging to a different organization's project. The endpoints accept a project_id parameter but do not verify that the project belo",
+      "epss": {
+        "epss": 0.00191,
+        "percentile": 0.07909
+      }
     },
     {
       "cve_id": "CVE-2026-51907",
@@ -1355,7 +1559,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "In TaskingAI v0.3.0 in the QR Code Generator plugin save_base64_image function, a path traversal vulnerability allows attackers to write image files to arbitrary locations on the server filesystem by manipulating the project_id parameter."
+      "description": "In TaskingAI v0.3.0 in the QR Code Generator plugin save_base64_image function, a path traversal vulnerability allows attackers to write image files to arbitrary locations on the server filesystem by manipulating the project_id parameter.",
+      "epss": {
+        "epss": 0.00388,
+        "percentile": 0.30521
+      }
     },
     {
       "cve_id": "CVE-2026-104638",
@@ -1378,7 +1586,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "A security vulnerability has been detected in onetwothreeneth HospitalManagementSystem up to 9ef91ed6007314b6473110ed699dff76d158f61d. The impacted element is an unknown function of the file php/sessions.php. The manipulation of the argument ID leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. This product foll"
+      "description": "A security vulnerability has been detected in onetwothreeneth HospitalManagementSystem up to 9ef91ed6007314b6473110ed699dff76d158f61d. The impacted element is an unknown function of the file php/sessions.php. The manipulation of the argument ID leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. This product foll",
+      "epss": {
+        "epss": 0.00429,
+        "percentile": 0.34923
+      }
     },
     {
       "cve_id": "CVE-2026-104614",
@@ -1402,7 +1614,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "A vulnerability was identified in CodeAstro Simple Pharmacy Management System 1.0. This issue affects some unknown processing of the file /SimplePharmacy-PHP/product/delete.php. Such manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The exploit is publicly available and might be used."
+      "description": "A vulnerability was identified in CodeAstro Simple Pharmacy Management System 1.0. This issue affects some unknown processing of the file /SimplePharmacy-PHP/product/delete.php. Such manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The exploit is publicly available and might be used.",
+      "epss": {
+        "epss": 0.002,
+        "percentile": 0.08928
+      }
     },
     {
       "cve_id": "CVE-2026-104613",
@@ -1426,7 +1642,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "A vulnerability was determined in CodeAstro Simple Pharmacy Management System 1.0. This vulnerability affects unknown code of the file /SimplePharmacy-PHP/product/view.php. This manipulation of the argument ID causes sql injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized."
+      "description": "A vulnerability was determined in CodeAstro Simple Pharmacy Management System 1.0. This vulnerability affects unknown code of the file /SimplePharmacy-PHP/product/view.php. This manipulation of the argument ID causes sql injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized.",
+      "epss": {
+        "epss": 0.002,
+        "percentile": 0.08928
+      }
     },
     {
       "cve_id": "CVE-2026-104610",
@@ -1450,7 +1670,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "A security vulnerability has been detected in Tenda HG7, HG9 and HG10 300001138_en_xpon. This impacts the function boaGetVar of the file /boaform/formLoopBack of the component Boa Web Server. Such manipulation of the argument Ethtype leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used."
+      "description": "A security vulnerability has been detected in Tenda HG7, HG9 and HG10 300001138_en_xpon. This impacts the function boaGetVar of the file /boaform/formLoopBack of the component Boa Web Server. Such manipulation of the argument Ethtype leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
+      "epss": {
+        "epss": 0.00644,
+        "percentile": 0.49057
+      }
     },
     {
       "cve_id": "CVE-2026-103763",
@@ -1473,7 +1697,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "SiYuan before v3.8.5 contains an information disclosure vulnerability that allows read-only publish readers to learn metadata of publish-excluded documents through the getNotebookInfo endpoint. Attackers, including anonymous visitors when no reader password is set, can query publish-visible notebooks to obtain document count, size and modification timestamps of hidden documents."
+      "description": "SiYuan before v3.8.5 contains an information disclosure vulnerability that allows read-only publish readers to learn metadata of publish-excluded documents through the getNotebookInfo endpoint. Attackers, including anonymous visitors when no reader password is set, can query publish-visible notebooks to obtain document count, size and modification timestamps of hidden documents.",
+      "epss": {
+        "epss": 0.00312,
+        "percentile": 0.21943
+      }
     },
     {
       "cve_id": "CVE-2026-104410",
@@ -1496,7 +1724,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "SiYuan before 3.8.5 contains an information disclosure vulnerability that allows publish readers to read password-protected and publish-disabled database rows via the /api/export/preview endpoint. Attackers can request an export preview of a public document embedding a database view to obtain protected rows' primary-key text and cell values."
+      "description": "SiYuan before 3.8.5 contains an information disclosure vulnerability that allows publish readers to read password-protected and publish-disabled database rows via the /api/export/preview endpoint. Attackers can request an export preview of a public document embedding a database view to obtain protected rows' primary-key text and cell values.",
+      "epss": {
+        "epss": 0.00383,
+        "percentile": 0.30007
+      }
     },
     {
       "cve_id": "CVE-2026-104438",
@@ -1519,7 +1751,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a missing authorization vulnerability in the listpagestag and includepages actions of the tags tool, which enumerate pages without applying read-ACL filtering. Unauthenticated or unprivileged attackers can embed these actions with a chosen tag or page name to disclose the names and body-derived titles of ACL-restricted pages."
+      "description": "YesWiki before 4.6.7 contains a missing authorization vulnerability in the listpagestag and includepages actions of the tags tool, which enumerate pages without applying read-ACL filtering. Unauthenticated or unprivileged attackers can embed these actions with a chosen tag or page name to disclose the names and body-derived titles of ACL-restricted pages.",
+      "epss": {
+        "epss": 0.00296,
+        "percentile": 0.20237
+      }
     },
     {
       "cve_id": "CVE-2026-104439",
@@ -1542,7 +1778,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a user enumeration vulnerability in LostPasswordAction.php that allows unauthenticated attackers to confirm registered email addresses through differing responses. Attackers can submit emails to the MotDePassePerdu recovery page without rate limiting to identify valid accounts for targeted phishing or password-spraying."
+      "description": "YesWiki before 4.6.7 contains a user enumeration vulnerability in LostPasswordAction.php that allows unauthenticated attackers to confirm registered email addresses through differing responses. Attackers can submit emails to the MotDePassePerdu recovery page without rate limiting to identify valid accounts for targeted phishing or password-spraying.",
+      "epss": {
+        "epss": 0.00337,
+        "percentile": 0.24801
+      }
     },
     {
       "cve_id": "CVE-2026-104440",
@@ -1565,7 +1805,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a blind server-side request forgery vulnerability that allows unauthenticated attackers to make arbitrary server-side requests via the idtypeannonce parameter of /api/entries/bazarlist. Because isValidURL() always returns true, attackers can supply internal URLs fetched by curl in loadURLContent() to probe internal networks and reach internal services or metadata endp"
+      "description": "YesWiki before 4.6.7 contains a blind server-side request forgery vulnerability that allows unauthenticated attackers to make arbitrary server-side requests via the idtypeannonce parameter of /api/entries/bazarlist. Because isValidURL() always returns true, attackers can supply internal URLs fetched by curl in loadURLContent() to probe internal networks and reach internal services or metadata endp",
+      "epss": {
+        "epss": 0.0029,
+        "percentile": 0.19583
+      }
     },
     {
       "cve_id": "CVE-2026-104442",
@@ -1588,7 +1832,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an unauthenticated server-side request forgery vulnerability that allows remote attackers to make the server fetch arbitrary URLs by supplying a syndication action through the render handler's content parameter. Attackers can target internal hosts and ports, read back fetched feed content in the rendered page, and cause feed enclosures to be downloaded into the files "
+      "description": "YesWiki before 4.6.7 contains an unauthenticated server-side request forgery vulnerability that allows remote attackers to make the server fetch arbitrary URLs by supplying a syndication action through the render handler's content parameter. Attackers can target internal hosts and ports, read back fetched feed content in the rendered page, and cause feed enclosures to be downloaded into the files ",
+      "epss": {
+        "epss": 0.00323,
+        "percentile": 0.23069
+      }
     },
     {
       "cve_id": "CVE-2026-104443",
@@ -1611,7 +1859,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an empty-filter scope bypass in the triples delete API that allows any authenticated user to delete or forge arbitrary semantic triples regardless of ownership. Attackers can send an empty filter to the triples delete endpoint to remove the admins-group membership triple, emptying the admin group and causing a site-wide authorization lockout."
+      "description": "YesWiki before 4.6.7 contains an empty-filter scope bypass in the triples delete API that allows any authenticated user to delete or forge arbitrary semantic triples regardless of ownership. Attackers can send an empty filter to the triples delete endpoint to remove the admins-group membership triple, emptying the admin group and causing a site-wide authorization lockout.",
+      "epss": {
+        "epss": 0.00363,
+        "percentile": 0.27811
+      }
     },
     {
       "cve_id": "CVE-2026-104446",
@@ -1634,7 +1886,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an authentication bypass in the contact mail AJAX handler that allows unauthenticated attackers to send email through the wiki's SMTP server. Attackers can POST an XMLHttpRequest to the mail handler without field or type parameters, supplying arbitrary recipient, sender, subject and body for spam and phishing."
+      "description": "YesWiki before 4.6.7 contains an authentication bypass in the contact mail AJAX handler that allows unauthenticated attackers to send email through the wiki's SMTP server. Attackers can POST an XMLHttpRequest to the mail handler without field or type parameters, supplying arbitrary recipient, sender, subject and body for spam and phishing.",
+      "epss": {
+        "epss": 0.00435,
+        "percentile": 0.35602
+      }
     },
     {
       "cve_id": "CVE-2026-104447",
@@ -1657,7 +1913,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in the autoupdate UpdateAction that allows attackers to delete installed packages via unprotected GET requests. Attackers can lure a logged-in administrator to a crafted link with action=delete and a package parameter to remove extensions like bazar, breaking core site functionality."
+      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in the autoupdate UpdateAction that allows attackers to delete installed packages via unprotected GET requests. Attackers can lure a logged-in administrator to a crafted link with action=delete and a package parameter to remove extensions like bazar, breaking core site functionality.",
+      "epss": {
+        "epss": 0.00134,
+        "percentile": 0.02414
+      }
     },
     {
       "cve_id": "CVE-2026-104448",
@@ -1680,7 +1940,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in the ajaxdeletepage handler, which permanently deletes a page on any GET request carrying a jsonp_callback parameter without checking a CSRF token. Attackers can lure a logged-in administrator or page owner to a crafted link to delete arbitrary pages along with their ACLs, links, triples, comments and referrers."
+      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in the ajaxdeletepage handler, which permanently deletes a page on any GET request carrying a jsonp_callback parameter without checking a CSRF token. Attackers can lure a logged-in administrator or page owner to a crafted link to delete arbitrary pages along with their ACLs, links, triples, comments and referrers.",
+      "epss": {
+        "epss": 0.00157,
+        "percentile": 0.04262
+      }
     },
     {
       "cve_id": "CVE-2026-104450",
@@ -1703,7 +1967,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a missing authorization flaw in the pointimage action (tools/attach/actions/pointimage.php), which saves content to an attacker-chosen page with write ACL checks bypassed. Unauthenticated attackers can POST pagetag, title, and description fields to any page rendering {{pointimage}} to append raw HTML or JavaScript to any wiki page, including pages whose write ACL rest"
+      "description": "YesWiki before 4.6.7 contains a missing authorization flaw in the pointimage action (tools/attach/actions/pointimage.php), which saves content to an attacker-chosen page with write ACL checks bypassed. Unauthenticated attackers can POST pagetag, title, and description fields to any page rendering {{pointimage}} to append raw HTML or JavaScript to any wiki page, including pages whose write ACL rest",
+      "epss": {
+        "epss": 0.00265,
+        "percentile": 0.16761
+      }
     },
     {
       "cve_id": "CVE-2026-104451",
@@ -1726,7 +1994,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in RevisionsHandler that allows attackers to restore old page revisions through GET requests lacking CSRF token validation. Attackers can lure write-capable users into a top-level navigation with the restoreRevisionId parameter, silently overwriting current page content with stale or vandalized revisions."
+      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in RevisionsHandler that allows attackers to restore old page revisions through GET requests lacking CSRF token validation. Attackers can lure write-capable users into a top-level navigation with the restoreRevisionId parameter, silently overwriting current page content with stale or vandalized revisions.",
+      "epss": {
+        "epss": 0.0013,
+        "percentile": 0.02196
+      }
     },
     {
       "cve_id": "CVE-2026-104454",
@@ -1749,7 +2021,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an algorithmic-complexity denial of service in the wakka.php formatter due to an O(n^2) markdown-link regex. Unauthenticated attackers can submit a small crafted body of bracket characters to the page-edit preview endpoint to pin PHP-FPM workers and saturate the pool."
+      "description": "YesWiki before 4.6.7 contains an algorithmic-complexity denial of service in the wakka.php formatter due to an O(n^2) markdown-link regex. Unauthenticated attackers can submit a small crafted body of bracket characters to the page-edit preview endpoint to pin PHP-FPM workers and saturate the pool.",
+      "epss": {
+        "epss": 0.00401,
+        "percentile": 0.32055
+      }
     },
     {
       "cve_id": "CVE-2026-104455",
@@ -1772,7 +2048,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an access control bypass vulnerability that allows unauthenticated attackers to read restricted page content via the recentchangesrssplus RSS action. Attackers can request the xml method of a page hosting the action to retrieve 500-character body excerpts of every latest page, including read-restricted drafts and notes."
+      "description": "YesWiki before 4.6.7 contains an access control bypass vulnerability that allows unauthenticated attackers to read restricted page content via the recentchangesrssplus RSS action. Attackers can request the xml method of a page hosting the action to retrieve 500-character body excerpts of every latest page, including read-restricted drafts and notes.",
+      "epss": {
+        "epss": 0.00366,
+        "percentile": 0.28107
+      }
     },
     {
       "cve_id": "CVE-2026-104456",
@@ -1795,7 +2075,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a second-order SQL injection vulnerability in AclService::updateRequestWithACL, where a stored username is concatenated unescaped into a read-ACL LIKE clause. Attackers can self-register an account name containing a double-quote payload, then load non-admin ACL-filtered listings to read database contents and bypass read ACLs."
+      "description": "YesWiki before 4.6.7 contains a second-order SQL injection vulnerability in AclService::updateRequestWithACL, where a stored username is concatenated unescaped into a read-ACL LIKE clause. Attackers can self-register an account name containing a double-quote payload, then load non-admin ACL-filtered listings to read database contents and bypass read ACLs.",
+      "epss": {
+        "epss": 0.00297,
+        "percentile": 0.20331
+      }
     },
     {
       "cve_id": "CVE-2026-104458",
@@ -1818,7 +2102,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability in validateKeyIdUrl() that allows unauthenticated attackers to bypass the SSRF guard using 6to4, NAT64, or IPv4-compatible IPv6 addresses. Attackers can send a crafted Signature keyId to the public actor inbox route to reach cloud metadata, loopback services, or internal hosts."
+      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability in validateKeyIdUrl() that allows unauthenticated attackers to bypass the SSRF guard using 6to4, NAT64, or IPv4-compatible IPv6 addresses. Attackers can send a crafted Signature keyId to the public actor inbox route to reach cloud metadata, loopback services, or internal hosts.",
+      "epss": {
+        "epss": 0.00317,
+        "percentile": 0.2243
+      }
     },
     {
       "cve_id": "CVE-2026-104459",
@@ -1841,7 +2129,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability in WebfingerService that allows unauthenticated attackers to trigger HTTPS requests to internal hosts. Attackers can POST a crafted actor_handle with a numeric host and port to the abonnements view to probe internal HTTPS services and ports."
+      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability in WebfingerService that allows unauthenticated attackers to trigger HTTPS requests to internal hosts. Attackers can POST a crafted actor_handle with a numeric host and port to the abonnements view to probe internal HTTPS services and ports.",
+      "epss": {
+        "epss": 0.00388,
+        "percentile": 0.30531
+      }
     },
     {
       "cve_id": "CVE-2026-104460",
@@ -1864,7 +2156,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a blind SQL injection vulnerability in the {{newtextsearch}} action because Bazar list option ids are concatenated into SQL REGEXP/LIKE clauses in actions/newtextsearch.php without escaping. Anonymous attackers can plant a malicious option id in an anonymously editable Bazar list and use search requests as a boolean oracle to read arbitrary database data, including ad"
+      "description": "YesWiki before 4.6.7 contains a blind SQL injection vulnerability in the {{newtextsearch}} action because Bazar list option ids are concatenated into SQL REGEXP/LIKE clauses in actions/newtextsearch.php without escaping. Anonymous attackers can plant a malicious option id in an anonymously editable Bazar list and use search requests as a boolean oracle to read arbitrary database data, including ad",
+      "epss": {
+        "epss": 0.00385,
+        "percentile": 0.30222
+      }
     },
     {
       "cve_id": "CVE-2026-104462",
@@ -1887,7 +2183,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an SQL injection vulnerability in the Bazar nuagetag action, which concatenates the unescaped tags attribute into a raw SQL IN clause. Attackers with page-write access (unauthenticated on default installs) can embed a nuagetag tag ending in a backslash to break quote parity and inject a UNION subquery, exfiltrating password hashes and arbitrary table data."
+      "description": "YesWiki before 4.6.7 contains an SQL injection vulnerability in the Bazar nuagetag action, which concatenates the unescaped tags attribute into a raw SQL IN clause. Attackers with page-write access (unauthenticated on default installs) can embed a nuagetag tag ending in a backslash to break quote parity and inject a UNION subquery, exfiltrating password hashes and arbitrary table data.",
+      "epss": {
+        "epss": 0.00312,
+        "percentile": 0.2186
+      }
     },
     {
       "cve_id": "CVE-2026-104463",
@@ -1910,7 +2210,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows unauthenticated attackers to trigger server requests by sending signed Follow activities to the public forms actor inbox route. Attackers sign requests with their own keyId while supplying internal actor URLs in the body, reaching internal hosts or cloud metadata via blind GET and POST requests."
+      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows unauthenticated attackers to trigger server requests by sending signed Follow activities to the public forms actor inbox route. Attackers sign requests with their own keyId while supplying internal actor URLs in the body, reaching internal hosts or cloud metadata via blind GET and POST requests.",
+      "epss": {
+        "epss": 0.00254,
+        "percentile": 0.1533
+      }
     },
     {
       "cve_id": "CVE-2026-104464",
@@ -1933,7 +2237,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make server-side GET requests by supplying an unvalidated actor URL to the Bazar abonnements sync action. Attackers can target internal hosts or cloud metadata endpoints and chain attacker-controlled outbox first/next links, with fetched responses stored as readable Bazar entries."
+      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make server-side GET requests by supplying an unvalidated actor URL to the Bazar abonnements sync action. Attackers can target internal hosts or cloud metadata endpoints and chain attacker-controlled outbox first/next links, with fetched responses stored as readable Bazar entries.",
+      "epss": {
+        "epss": 0.00289,
+        "percentile": 0.19521
+      }
     },
     {
       "cve_id": "CVE-2026-104466",
@@ -1956,7 +2264,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a stored cross-site scripting vulnerability in formatters/wakka.php that allows users who can edit pages or post comments to inject event handlers by placing quotes in markdown image URLs. Attackers can store a crafted markdown image whose src breaks out of the attribute to add an onerror handler, executing JavaScript in viewers' browsers, including administrators."
+      "description": "YesWiki before 4.6.7 contains a stored cross-site scripting vulnerability in formatters/wakka.php that allows users who can edit pages or post comments to inject event handlers by placing quotes in markdown image URLs. Attackers can store a crafted markdown image whose src breaks out of the attribute to add an onerror handler, executing JavaScript in viewers' browsers, including administrators.",
+      "epss": {
+        "epss": 0.00169,
+        "percentile": 0.05574
+      }
     },
     {
       "cve_id": "CVE-2026-104467",
@@ -1979,7 +2291,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "YesWiki before 4.6.7 contains an authorization bypass vulnerability in ApiService::isAuthorized() that allows unauthenticated attackers to call admin-only API routes when public API mode is enabled. Attackers can send requests to endpoints like api/ci/update_config and api/archives to overwrite configuration and list, download, or delete backup archives."
+      "description": "YesWiki before 4.6.7 contains an authorization bypass vulnerability in ApiService::isAuthorized() that allows unauthenticated attackers to call admin-only API routes when public API mode is enabled. Attackers can send requests to endpoints like api/ci/update_config and api/archives to overwrite configuration and list, download, or delete backup archives.",
+      "epss": {
+        "epss": 0.00367,
+        "percentile": 0.28206
+      }
     },
     {
       "cve_id": "CVE-2026-104468",
@@ -2002,7 +2318,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains an insufficient session expiration vulnerability that allows attackers to reuse old password reset links because tokens lack expiry timestamps. Attackers who obtain an unused reset URL from mailboxes, logs, backups, or browser history can submit a new password through checkEmailKey() and take over accounts."
+      "description": "YesWiki before 4.6.7 contains an insufficient session expiration vulnerability that allows attackers to reuse old password reset links because tokens lack expiry timestamps. Attackers who obtain an unused reset URL from mailboxes, logs, backups, or browser history can submit a new password through checkEmailKey() and take over accounts.",
+      "epss": {
+        "epss": 0.0025,
+        "percentile": 0.14861
+      }
     },
     {
       "cve_id": "CVE-2026-104470",
@@ -2025,7 +2345,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows page editors to make the server fetch arbitrary URLs via the url parameter of the Bazar valeur action. Attackers can embed the action with a champ parameter in wiki markup to reach loopback or internal services and partially read responses rendered into the page."
+      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows page editors to make the server fetch arbitrary URLs via the url parameter of the Bazar valeur action. Attackers can embed the action with a champ parameter in wiki markup to reach loopback or internal services and partially read responses rendered into the page.",
+      "epss": {
+        "epss": 0.0022,
+        "percentile": 0.11449
+      }
     },
     {
       "cve_id": "CVE-2026-104471",
@@ -2048,7 +2372,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "YesWiki before 4.6.7 contains an unrestricted file upload vulnerability that allows authenticated admins to write remote files into the web-accessible files/ directory via Bazar CSV import preview. Attackers can import a CSV whose file or image field references a remote .php URL, which is saved without extension checks and executed as server-side code."
+      "description": "YesWiki before 4.6.7 contains an unrestricted file upload vulnerability that allows authenticated admins to write remote files into the web-accessible files/ directory via Bazar CSV import preview. Attackers can import a CSV whose file or image field references a remote .php URL, which is saved without extension checks and executed as server-side code.",
+      "epss": {
+        "epss": 0.00372,
+        "percentile": 0.28813
+      }
     },
     {
       "cve_id": "CVE-2026-104472",
@@ -2071,7 +2399,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "YesWiki before 4.6.7 contains a missing authorization vulnerability in the attachment download handler that allows unauthenticated attackers to bypass page read ACLs. Attackers can request the download handler with a known page tag and file parameter to retrieve confidential attachments from read-restricted pages."
+      "description": "YesWiki before 4.6.7 contains a missing authorization vulnerability in the attachment download handler that allows unauthenticated attackers to bypass page read ACLs. Attackers can request the download handler with a known page tag and file parameter to retrieve confidential attachments from read-restricted pages.",
+      "epss": {
+        "epss": 0.00345,
+        "percentile": 0.25698
+      }
     },
     {
       "cve_id": "CVE-2026-104606",
@@ -2095,7 +2427,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "A security flaw has been discovered in itsourcecode Online Admission System Project 1.0. The impacted element is an unknown function of the file confirm.php. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks."
+      "description": "A security flaw has been discovered in itsourcecode Online Admission System Project 1.0. The impacted element is an unknown function of the file confirm.php. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "epss": {
+        "epss": 0.0025,
+        "percentile": 0.14795
+      }
     },
     {
       "cve_id": "CVE-2026-104123",
@@ -2119,7 +2455,11 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "A vulnerability was detected in SourceCodester Online Reviewer Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /reviewer_0/admins/assessments/activities/btn_functions.php?action=activity. The manipulation of the argument Title results in sql injection. The attack may be launched remotely. The exploit is now public and may be used."
+      "description": "A vulnerability was detected in SourceCodester Online Reviewer Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /reviewer_0/admins/assessments/activities/btn_functions.php?action=activity. The manipulation of the argument Title results in sql injection. The attack may be launched remotely. The exploit is now public and may be used.",
+      "epss": {
+        "epss": 0.00329,
+        "percentile": 0.23788
+      }
     },
     {
       "cve_id": "CVE-2026-104054",
@@ -2143,7 +2483,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "A security flaw has been discovered in calcom cal.diy up to 6.2.0. This affects the function doesUserIdHaveAccessToBooking of the file BookingAccessService.ts of the component PBAC Permission Engine. Performing a manipulation results in missing authorization. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The pull request to fix this "
+      "description": "A security flaw has been discovered in calcom cal.diy up to 6.2.0. This affects the function doesUserIdHaveAccessToBooking of the file BookingAccessService.ts of the component PBAC Permission Engine. Performing a manipulation results in missing authorization. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The pull request to fix this ",
+      "epss": {
+        "epss": 0.00209,
+        "percentile": 0.10118
+      }
     }
   ],
   "high_epss": []

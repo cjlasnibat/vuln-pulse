@@ -14,12 +14,12 @@
   "cvelist": {
    "ok": true,
    "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-   "fetched": 2521,
+   "fetched": 2522,
    "errors": 0
   },
   "epss": {
-   "ok": false,
-   "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+   "ok": true,
+   "scored": 2479
   }
  },
  "kev": {
@@ -44,11 +44,11 @@
   }
  },
  "cve_7d": {
-  "new": 2509,
+  "new": 2510,
   "rejected": 12,
   "updated": 3214,
   "by_severity": {
-   "MEDIUM": 1013,
+   "MEDIUM": 1014,
    "CRITICAL": 290,
    "LOW": 105,
    "HIGH": 1050,

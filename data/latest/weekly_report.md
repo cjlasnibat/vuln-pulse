@@ -3,8 +3,8 @@
 ## Resumen
 
 - KEV agregadas: **6** (catálogo total: 1734; ransomware conocido: 0)
-- CVE nuevos publicados: **2509** (rechazados: 12; registros actualizados: 3214)
-- Por severidad CVSS: {'MEDIUM': 1013, 'CRITICAL': 290, 'LOW': 105, 'HIGH': 1050, 'SIN_CVSS': 51}  — con CVSS: 98.0%
+- CVE nuevos publicados: **2510** (rechazados: 12; registros actualizados: 3214)
+- Por severidad CVSS: {'MEDIUM': 1014, 'CRITICAL': 290, 'LOW': 105, 'HIGH': 1050, 'SIN_CVSS': 51}  — con CVSS: 98.0%
 - SSVC (CISA ADP) explotación PoC/activa: 352; automatizable + impacto total: 134
 - EPSS ≥ 10%: 0
 
@@ -102,12 +102,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 2521,
+    "fetched": 2522,
     "errors": 0
   },
   "epss": {
-    "ok": false,
-    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    "ok": true,
+    "scored": 2479
   }
 }
 ```
