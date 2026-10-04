@@ -1,0 +1,218 @@
+{
+  "name": "Resumen semanal por rol (Claude)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "name": "Lunes 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000001"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/cjlasnibat/vuln-pulse/main/data/latest/weekly_report.json",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "name": "Reporte semanal",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000002",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "url": "=https://raw.githubusercontent.com/cjlasnibat/vuln-pulse/main/data/history/{{ $now.setZone('America/Santiago').minus({ days: 7 }).toFormat('yyyy-MM-dd') }}.json",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "name": "Semana previa",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000003",
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// ===== CONFIGURACIÓN (queda privada en n8n) ==================================\nconst WATCHLIST = ['Microsoft', 'Cisco', 'Fortinet', 'Citrix', 'Apple', 'Linux', 'VMware', 'Oracle'];\nconst DASHBOARD = 'https://cjlasnibat.github.io/vuln-pulse/';\nconst MODEL = 'claude-sonnet-4-5';   // revisa el nombre vigente en docs.claude.com → Models\nconst RECIPIENTS = {\n  oficial: 'oficial@tudominio.cl',\n  gerente: 'gerente.ti@tudominio.cl',\n  ciso:    'ciso@tudominio.cl',\n};\n// ============================================================================\n\nconst r = $('Reporte semanal').first().json;\nconst prevRaw = $input.first().json;                       // snapshot de hace 7 días (puede no existir)\nconst prev = prevRaw && prevRaw.cve_7d ? prevRaw : null;\nconst s = r.summary;\nconst terms = WATCHLIST.map(t => t.toLowerCase());\nconst mine = (v, p) => terms.some(t => `${v || ''} ${p || ''}`.toLowerCase().includes(t));\nconst pick = (o, keys) => Object.fromEntries(keys.map(k => [k, o[k]]));\nconst delta = (cur, old) => (old == null ? null : cur - old);\n\nconst kev = (r.kev_new || []).map(k => ({\n  cve: k.cveID, fabricante: k.vendorProject, producto: k.product, vulnerabilidad: k.vulnerabilityName,\n  agregada: k.dateAdded, plazo_cisa: k.dueDate, ransomware: k.knownRansomwareCampaignUse,\n  epss: k.epss ? +(k.epss.epss * 100).toFixed(2) : null, en_mis_tecnologias: mine(k.vendorProject, k.product),\n}));\nconst slimCve = c => ({\n  cve: c.cve_id, fabricante: c.vendor, producto: c.product, cvss: c.cvss && c.cvss.score,\n  cwe: (c.cwe || [])[0] || null, ssvc_explotacion: c.ssvc && c.ssvc.exploitation,\n  automatizable_impacto_total: !!(c.ssvc && c.ssvc.automatable === 'yes' && c.ssvc.technical_impact === 'total'),\n  epss_pct: c.epss ? +(c.epss.epss * 100).toFixed(2) : null, en_mis_tecnologias: mine(c.vendor, c.product),\n});\nconst crit = (r.critical_cves || []).map(slimCve);\nconst exploited = (r.ssvc_poc_or_active || []).map(slimCve);\n\nconst common = {\n  ventana: r.window, generado: r.generated_at, tablero: DASHBOARD,\n  fuentes_ok: Object.fromEntries(Object.entries(r.sources_status).map(([k, v]) => [k, v.ok])),\n  mis_tecnologias: WATCHLIST,\n  kev: { agregadas: s.kev_added, total_catalogo: s.kev_catalog_total, con_ransomware: s.kev_ransomware_known,\n         variacion_vs_semana_previa: delta(s.kev_added, prev && prev.kev.added_7d), detalle: kev },\n  cve: { nuevos: s.cve_new, por_severidad: s.cve_by_severity,\n         variacion_nuevos_vs_semana_previa: delta(s.cve_new, prev && prev.cve_7d.new),\n         variacion_criticos_vs_semana_previa: delta(s.cve_by_severity.CRITICAL || 0, prev && (prev.cve_7d.by_severity || {}).CRITICAL),\n         ssvc_poc_o_activa: s.ssvc_poc_or_active, automatizables_impacto_total: s.ssvc_automatable_total_impact,\n         epss_ge_10pct: s.epss_ge_10pct },\n};\n\nconst facts = {\n  oficial: { ...common,\n    criticos_en_mis_tecnologias: crit.filter(c => c.en_mis_tecnologias).slice(0, 15),\n    con_explotacion_ssvc: [...new Map(exploited.filter(c => c.ssvc_explotacion === 'active').slice(0, 10)\n      .concat(exploited.filter(c => c.en_mis_tecnologias).slice(0, 15)).map(c => [c.cve, c])).values()],\n    criticos_globales_top: crit.slice(0, 10) },\n  gerente: { ...common,\n    top_fabricantes: s.top_vendors.slice(0, 10), top_cwe: s.top_cwe.slice(0, 8),\n    criticos_en_mis_tecnologias: crit.filter(c => c.en_mis_tecnologias).length,\n    pct_sin_cvss: +(100 - s.cve_with_cvss_pct).toFixed(1) },\n  ciso: { ...common,\n    fabricantes_kev_semana: s.kev_vendors, top_cwe: s.top_cwe.slice(0, 5),\n    metricas_internas_pendientes: ['Exposición KEV propia', 'Ventana de exposición KEV', 'Excepciones de riesgo', 'Riesgo de terceros'] },\n};\n\nconst ROLE = {\n  oficial: { nombre: 'Oficial de seguridad', foco: 'qué atender hoy y esta semana: KEV en sus tecnologías, plazos de CISA vencidos o próximos, CVE con explotación activa o PoC. Termina con una lista de acciones concretas priorizadas (P0/P1).', largo: '250-350 palabras' },\n  gerente: { nombre: 'Gerente de TI', foco: 'carga de trabajo de parcheo: volumen y su variación, fabricantes que concentran esfuerzo, críticos en sus tecnologías y qué planificar en las ventanas de mantención. Lenguaje operativo, sin jerga innecesaria.', largo: '200-300 palabras' },\n  ciso:    { nombre: 'CISO', foco: 'riesgo y tendencia: ritmo de explotación confirmada, peso del perímetro, si algo exige escalar a la gerencia, y qué métricas internas faltan para medir la exposición propia. Tono ejecutivo.', largo: '150-250 palabras' },\n};\n\nconst SYSTEM = [\n  'Eres analista de inteligencia de vulnerabilidades. Redactas en español de Chile, claro y directo.',\n  'Reglas estrictas:',\n  '1. Usa SOLO los datos del JSON entregado. No calcules cifras nuevas ni inventes CVE, productos, fechas o porcentajes.',\n  '2. Cada afirmación sobre una vulnerabilidad lleva su CVE.',\n  '3. Si una fuente aparece con fuentes_ok=false, dilo en una línea y no uses esos datos.',\n  '4. Si una variación es null, no hay semana previa para comparar: dilo así, sin estimar.',\n  '5. Una KEV nunca se minimiza por tener CVSS o EPSS bajo: la explotación ya está confirmada.',\n  '6. EPSS es bajo en CVE recién publicados; no lo uses para descartar urgencia.',\n  '7. Formato: texto plano para correo, con títulos cortos en MAYÚSCULAS y viñetas con \"-\". Sin markdown con asteriscos.',\n  '8. Cierra con el enlace al tablero.',\n].join('\\n');\n\nreturn Object.keys(ROLE).map(role => ({\n  json: {\n    role, to: RECIPIENTS[role],\n    subject: `Pulso de vulnerabilidades · ${ROLE[role].nombre} · ${r.window.start} a ${r.window.end}`,\n    request: {\n      model: MODEL, max_tokens: 1500, system: SYSTEM,\n      messages: [{ role: 'user', content:\n        `Redacta el resumen semanal para: ${ROLE[role].nombre}.\\nFoco: ${ROLE[role].foco}\\nExtensión: ${ROLE[role].largo}.\\n\\nDATOS (JSON):\\n${JSON.stringify(facts[role])}` }],\n    },\n  },\n}));\n"
+      },
+      "name": "Preparar datos por rol",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000004"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "name": "Redactar con Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000005",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 10000,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Une la respuesta de Claude con destinatario y asunto del ítem original.\nconst src = $('Preparar datos por rol').all();\nreturn $input.all().map((it, i) => {\n  const body = it.json.content && it.json.content[0] ? it.json.content[0].text\n             : `No se pudo generar el resumen: ${JSON.stringify(it.json.error || it.json).slice(0, 300)}`;\n  return { json: { to: src[i].json.to, subject: src[i].json.subject, text: body } };\n});"
+      },
+      "name": "Armar correo",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000006"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.to }}",
+        "subject": "={{ $json.subject }}",
+        "emailType": "text",
+        "message": "={{ $json.text }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "name": "Enviar correo (Gmail)",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1320,
+        0
+      ],
+      "id": "b2000000-0000-4000-8000-000000000007"
+    }
+  ],
+  "connections": {
+    "Lunes 08:00": {
+      "main": [
+        [
+          {
+            "node": "Reporte semanal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reporte semanal": {
+      "main": [
+        [
+          {
+            "node": "Semana previa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Semana previa": {
+      "main": [
+        [
+          {
+            "node": "Preparar datos por rol",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar datos por rol": {
+      "main": [
+        [
+          {
+            "node": "Redactar con Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redactar con Claude": {
+      "main": [
+        [
+          {
+            "node": "Armar correo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Armar correo": {
+      "main": [
+        [
+          {
+            "node": "Enviar correo (Gmail)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Santiago"
+  },
+  "pinData": {}
+}
