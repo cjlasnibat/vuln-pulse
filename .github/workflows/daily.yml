@@ -1,0 +1,78 @@
+name: Pulso diario de vulnerabilidades
+
+on:
+  schedule:
+    # GitHub usa UTC. 10:20 UTC = 07:20 en Chile con horario de verano (UTC-3)
+    # y 06:20 con horario de invierno (UTC-4).
+    - cron: "20 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # commit de data/latest y data/history
+  pages: write      # publicar el tablero
+  id-token: write
+
+concurrency:
+  group: pulso-diario
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fecha de corte (hora de Chile)
+        id: date
+        run: echo "end=$(TZ=America/Santiago date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Reporte de 7 días (KEV, CVE, SSVC, EPSS)
+        run: |
+          python src/collector.py --days 7 --end ${{ steps.date.outputs.end }} \
+            --out data/latest --top 40
+
+      - name: Foto diaria para tendencias largas
+        run: |
+          python src/snapshot.py --report data/latest/weekly_report.json \
+            --date ${{ steps.date.outputs.end }} --out data/history
+
+      - name: Tablero (30 días)
+        env:
+          WATCHLIST_DEFAULT: ${{ vars.WATCHLIST_DEFAULT }}
+        run: |
+          python src/build_dashboard_data.py --end ${{ steps.date.outputs.end }} --days 30 \
+            --template src/dashboard_template.html \
+            --out site/index.html --data-out site/dashboard_data.json
+          cp data/latest/weekly_report.json data/latest/weekly_report.md site/
+
+      - name: Guardar datos en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "datos ${{ steps.date.outputs.end }}"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

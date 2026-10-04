@@ -1,0 +1,573 @@
+<title>Pulso de Vulnerabilidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: consola de guardia — barra de control (ventana · rol · mis tecnologías), fila de indicadores, rejilla de paneles por rol */
+:root {
+  --bg: #f3f5f8;
+  --panel: #ffffff;
+  --line: #dde2ea;
+  --grid: #e9edf2;
+  --ink: #111722;
+  --ink-2: #4a5466;
+  --ink-3: #6e7889;
+  --accent: #1f5fbf;
+  --accent-soft: #e3ecfa;
+  --mark: #2a78d6;
+  --mark-dim: #b9cff0;
+  --ma: #111722;
+  --sev-crit: #8e2418;
+  --sev-high: #cf4a26;
+  --sev-med: #e98a54;
+  --sev-low: #f2c09c;
+  --sev-none: #c3c8d1;
+  --ok: #0c7a0c;
+  --warn: #9a6400;
+  --crit: #c2302f;
+  --crit-soft: #fbe7e6;
+  --warn-soft: #fbf0d9;
+  --ok-soft: #e2f3e2;
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f141c; --panel: #161d28; --line: #263142; --grid: #1f2836;
+    --ink: #eef2f8; --ink-2: #b4bdcc; --ink-3: #8a95a8;
+    --accent: #7fb0f5; --accent-soft: #1d2c45; --mark: #3987e5; --mark-dim: #2a3f5f; --ma: #eef2f8;
+    --sev-crit: #ff7a66; --sev-high: #e8693f; --sev-med: #b85a2e; --sev-low: #7a4026; --sev-none: #4a5466;
+    --ok: #4cc24c; --warn: #f0b43c; --crit: #ff6b6b; --crit-soft: #3a1c1f; --warn-soft: #3a2f17; --ok-soft: #173020;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f141c; --panel: #161d28; --line: #263142; --grid: #1f2836;
+  --ink: #eef2f8; --ink-2: #b4bdcc; --ink-3: #8a95a8;
+  --accent: #7fb0f5; --accent-soft: #1d2c45; --mark: #3987e5; --mark-dim: #2a3f5f; --ma: #eef2f8;
+  --sev-crit: #ff7a66; --sev-high: #e8693f; --sev-med: #b85a2e; --sev-low: #7a4026; --sev-none: #4a5466;
+  --ok: #4cc24c; --warn: #f0b43c; --crit: #ff6b6b; --crit-soft: #3a1c1f; --warn-soft: #3a2f17; --ok-soft: #173020;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 14px; line-height: 1.45; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: 20px; padding-block: 20px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+@media (max-width: 520px) { .wrap { padding-inline: 16px; } .seg button { padding: 6px 9px; } }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+h1 { font-size: 1.9rem; font-weight: 800; font-stretch: 80%; letter-spacing: -0.01em; }
+h2 { font-size: 1.05rem; font-weight: 700; font-stretch: 90%; }
+.mono { font-family: var(--f-mono); font-size: 0.86em; }
+.muted { color: var(--ink-3); }
+.eyebrow { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); font-weight: 600; }
+
+header.top { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; justify-content: space-between; }
+.title-block { display: grid; gap: 4px; min-width: 0; }
+.fresh { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.8rem; color: var(--ink-2); }
+.chip { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-size: 0.75rem; white-space: nowrap; }
+.chip .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-3); }
+.chip.ok .dot { background: var(--ok); }
+.chip.bad .dot { background: var(--crit); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: 0.85rem; border: 0; background: transparent; color: var(--ink-2); padding: 6px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--panel); font-weight: 600; }
+.seg button:focus-visible, .btn:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ctl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ctl label { font-size: 0.75rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+.watch { flex: 1 1 280px; min-width: 0; }
+.watch input { flex: 1 1 200px; min-width: 0; font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.btn { font: inherit; font-size: 0.82rem; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+
+.role-note { font-size: 0.9rem; color: var(--ink-2); max-width: 75ch; }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 4px; align-content: start; position: relative; overflow: hidden; }
+.kpi::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--line); }
+.kpi.crit::before { background: var(--crit); }
+.kpi.warn::before { background: var(--warn); }
+.kpi.ok::before { background: var(--ok); }
+.kpi .val { font-family: var(--f-display); font-weight: 800; font-stretch: 80%; font-size: 2.1rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.kpi .lbl { font-size: 0.82rem; color: var(--ink-2); font-weight: 600; }
+.kpi .sub { font-size: 0.76rem; color: var(--ink-3); }
+.delta { font-size: 0.76rem; font-weight: 600; }
+.delta.up { color: var(--crit); }
+.delta.down { color: var(--ok); }
+.spark { height: 26px; width: 100%; }
+
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-content: start; min-width: 0; grid-column: span 6; }
+.panel.w12 { grid-column: span 12; }
+.panel.w8 { grid-column: span 8; }
+.panel.w4 { grid-column: span 4; }
+.panel-head { display: flex; flex-wrap: wrap; gap: 8px 14px; justify-content: space-between; align-items: baseline; }
+.panel-head p { margin: 2px 0 0; font-size: 0.8rem; color: var(--ink-3); max-width: 70ch; }
+@media (max-width: 960px) { .panel, .panel.w8, .panel.w4 { grid-column: span 12; } }
+
+.chart { width: 100%; position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-3); font-family: var(--f-body); font-size: 11px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.78rem; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.legend i.line { height: 2px; vertical-align: 3px; width: 14px; }
+
+.tip { position: fixed; pointer-events: none; z-index: 50; background: var(--ink); color: var(--bg); font-size: 0.78rem; padding: 6px 9px; border-radius: 6px; max-width: 280px; line-height: 1.35; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.tip b { font-weight: 600; }
+
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.83rem; }
+th { text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 7px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+td.mono { white-space: nowrap; }
+.tbl-wrap table { min-width: 720px; }
+@media (max-width: 720px) { .controls { position: static; } }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.mine td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+.pill { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 1px 7px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+.pill.crit { background: var(--crit-soft); color: var(--crit); border-color: var(--crit); }
+.pill.warn { background: var(--warn-soft); color: var(--warn); border-color: var(--warn); }
+.pill.ok { background: var(--ok-soft); color: var(--ok); border-color: var(--ok); }
+.pill.n { background: var(--bg); color: var(--ink-2); border-color: var(--line); }
+.pill.acc { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.sev { display: inline-flex; align-items: center; gap: 5px; font-variant-numeric: tabular-nums; }
+.sev i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.filters input, .filters select { font: inherit; font-size: 0.83rem; padding: 5px 8px; border-radius: 7px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); min-width: 0; }
+.filters label.chk { font-size: 0.83rem; color: var(--ink-2); display: inline-flex; gap: 5px; align-items: center; }
+
+.bars { display: grid; gap: 6px; }
+.bar-row { display: grid; grid-template-columns: minmax(90px, 34%) 1fr auto; gap: 8px; align-items: center; font-size: 0.82rem; }
+.bar-row .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-2); }
+.bar-row .track { height: 12px; background: var(--grid); border-radius: 0 4px 4px 0; position: relative; }
+.bar-row .fill { height: 100%; background: var(--mark); border-radius: 0 4px 4px 0; }
+.bar-row.mine .fill { background: var(--accent); }
+.bar-row.mine .name { color: var(--ink); font-weight: 600; }
+.bar-row .n { font-variant-numeric: tabular-nums; color: var(--ink-2); min-width: 3ch; text-align: right; }
+
+.pending { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.pending div { border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 3px; }
+.pending b { font-size: 0.85rem; }
+.pending span { font-size: 0.78rem; color: var(--ink-3); }
+.note { font-size: 0.78rem; color: var(--ink-3); }
+footer { font-size: 0.78rem; color: var(--ink-3); display: grid; gap: 4px; }
+@media (prefers-reduced-motion: no-preference) { .fill { transition: width .3s ease; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="title-block">
+      <span class="eyebrow">Inteligencia de vulnerabilidades · datos abiertos</span>
+      <h1>Pulso de Vulnerabilidades</h1>
+      <div class="fresh" id="fresh"></div>
+    </div>
+  </header>
+
+  <div class="controls" role="toolbar" aria-label="Controles del tablero">
+    <div class="ctl">
+      <label for="seg-win">Ventana</label>
+      <div class="seg" id="seg-win">
+        <button type="button" data-win="7" aria-pressed="true">7 días</button>
+        <button type="button" data-win="14" aria-pressed="false">14 días</button>
+        <button type="button" data-win="30" aria-pressed="false">30 días</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label for="seg-role">Perfil</label>
+      <div class="seg" id="seg-role">
+        <button type="button" data-role="oficial" aria-pressed="true">Oficial de seguridad</button>
+        <button type="button" data-role="gerente" aria-pressed="false">Gerente TI</button>
+        <button type="button" data-role="ciso" aria-pressed="false">CISO</button>
+      </div>
+    </div>
+    <div class="ctl watch">
+      <label for="watch">Mis tecnologías</label>
+      <input id="watch" type="text" placeholder="Ej.: Microsoft, Cisco, Fortinet (separados por coma)" autocomplete="off">
+      <button type="button" class="btn" id="watch-save">Aplicar</button>
+    </div>
+  </div>
+
+  <p class="role-note" id="role-note"></p>
+
+  <section class="kpis" id="kpis" aria-label="Indicadores"></section>
+
+  <section class="grid" id="panels"></section>
+
+  <footer>
+    <div id="foot-src"></div>
+    <div>"Mis tecnologías" filtra por coincidencia de texto en fabricante y producto, y se guarda solo en este navegador. Las métricas que dependen del inventario interno aparecen como pendientes hasta conectar CMDB, EDR o el escáner.</div>
+  </footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+/* ------------------------------------------------------------ estado */
+const DEFAULT_WATCH = /*__WATCH__*/"";
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const S = {
+  win: +store.get("pv.win", 7),
+  role: (location.hash || "").replace("#", "") || store.get("pv.role", "oficial"),
+  watch: store.get("pv.watch", DEFAULT_WATCH),
+  exp: { q: "", sev: "ALL", ssvc: "ALL", mine: false },
+  expLimit: 25
+};
+if (!["oficial", "gerente", "ciso"].includes(S.role)) S.role = "oficial";
+
+/* ------------------------------------------------------------ util */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmt = n => (n == null || isNaN(n)) ? "–" : Number(n).toLocaleString("es-CL");
+const pct = (a, b) => b ? Math.round(1000 * a / b) / 10 : 0;
+const D = s => new Date(s + "T12:00:00");
+const dShort = s => D(s).toLocaleDateString("es-CL", { day: "2-digit", month: "short" }).replace(".", "");
+const addDays = (s, n) => { const d = D(s); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
+const SEV = { CRITICAL: ["Crítica", "--sev-crit"], HIGH: ["Alta", "--sev-high"], MEDIUM: ["Media", "--sev-med"], LOW: ["Baja", "--sev-low"], SIN_CVSS: ["Sin CVSS", "--sev-none"] };
+const watchTerms = () => S.watch.split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
+const isMine = (vendor, product) => { const t = watchTerms(); if (!t.length) return false; const s = `${vendor || ""} ${product || ""}`.toLowerCase(); return t.some(w => s.includes(w)); };
+
+const END = DATA.window.end;
+function winRange(n, offset = 0) { const e = addDays(END, -offset); return [addDays(e, -(n - 1)), e]; }
+const inR = (d, [a, b]) => d >= a && d <= b;
+
+/* ------------------------------------------------------------ tooltip */
+const tip = $("#tip");
+function showTip(html, ev) { tip.innerHTML = html; tip.hidden = false; moveTip(ev); }
+function moveTip(ev) { const w = tip.offsetWidth, h = tip.offsetHeight; let x = ev.clientX + 14, y = ev.clientY + 14; if (x + w > innerWidth - 8) x = ev.clientX - w - 14; if (y + h > innerHeight - 8) y = ev.clientY - h - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
+function hideTip() { tip.hidden = true; }
+function bindTips(root) {
+  root.querySelectorAll("[data-tip]").forEach(el => {
+    el.addEventListener("mouseenter", e => showTip(el.getAttribute("data-tip"), e));
+    el.addEventListener("mousemove", moveTip);
+    el.addEventListener("mouseleave", hideTip);
+  });
+}
+
+/* ------------------------------------------------------------ cálculos */
+function compute() {
+  const R = winRange(S.win), P = winRange(S.win, S.win);
+  const hasPrev = P[0] >= DATA.window.start;
+  const cv = DATA.cves.filter(c => inR(c.d, R));
+  const cvPrev = hasPrev ? DATA.cves.filter(c => inR(c.d, P)) : null;
+  const kev = DATA.kev_recent.filter(k => inR(k.dateAdded, R));
+  const kevPrev = hasPrev ? DATA.kev_recent.filter(k => inR(k.dateAdded, P)) : null;
+  const sev = {}; Object.keys(SEV).forEach(k => sev[k] = 0); cv.forEach(c => sev[c.sev]++);
+  const mine = cv.filter(c => isMine(c.v, c.p));
+  const kevMine = kev.filter(k => isMine(k.vendorProject, k.product));
+  const ssvcExp = cv.filter(c => c.x === "poc" || c.x === "active");
+  const autoTotal = cv.filter(c => c.au === "yes" && c.ti === "total");
+  return { R, P, hasPrev, cv, cvPrev, kev, kevPrev, sev, mine, kevMine, ssvcExp, autoTotal };
+}
+
+/* ------------------------------------------------------------ KPIs */
+function deltaHtml(cur, prev, upIsBad = true) {
+  if (prev == null) return `<span class="delta muted">sin período previo en los datos</span>`;
+  const d = cur - prev; if (d === 0) return `<span class="delta muted">= vs período anterior</span>`;
+  const cls = (d > 0) === upIsBad ? "up" : "down";
+  const p = prev ? ` (${d > 0 ? "+" : ""}${Math.round(100 * d / prev)} %)` : "";
+  return `<span class="delta ${cls}">${d > 0 ? "▲" : "▼"} ${fmt(Math.abs(d))}${p} vs ${S.win} d previos</span>`;
+}
+function sparkFrom(vals, color = "var(--mark)") {
+  const w = 160, h = 26, max = Math.max(1, ...vals), n = vals.length;
+  const pts = vals.map((v, i) => [i * (w - 4) / Math.max(1, n - 1) + 2, h - 3 - (v / max) * (h - 6)]);
+  const path = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+  const area = path + ` L${pts[n - 1][0].toFixed(1)} ${h - 1} L${pts[0][0].toFixed(1)} ${h - 1} Z`;
+  const last = pts[n - 1];
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${area}" fill="${color}" opacity=".14"/><path d="${path}" fill="none" stroke="${color}" stroke-width="1.6" vector-effect="non-scaling-stroke"/><circle cx="${last[0]}" cy="${last[1]}" r="2.4" fill="${color}"/></svg>`;
+}
+function kpi({ val, lbl, sub = "", cls = "", extra = "", tipText = "" }) {
+  return `<div class="kpi ${cls}"${tipText ? ` data-tip="${esc(tipText)}"` : ""}><span class="lbl">${lbl}</span><span class="val">${val}</span>${extra}<span class="sub">${sub}</span></div>`;
+}
+function renderKpis(C) {
+  const dailyIn = DATA.daily.filter(x => inR(x.d, C.R));
+  const k = [];
+  const kw = DATA.kev_weeks, last12 = kw.slice(-12).map(w => w.n);
+  if (S.role === "oficial") {
+    k.push(kpi({ val: watchTerms().length ? fmt(C.kevMine.length) : "–", lbl: "KEV en mis tecnologías", cls: !watchTerms().length ? "" : C.kevMine.length ? "crit" : "ok", sub: !watchTerms().length ? "Escribe tus tecnologías en la barra superior" : C.kevMine.length ? C.kevMine.map(x => x.cveID).join(", ") : "Ninguna en la ventana", tipText: "KEV agregadas en la ventana cuyo fabricante o producto coincide con 'Mis tecnologías'." }));
+    k.push(kpi({ val: fmt(C.kev.length), lbl: "KEV nuevas (global)", cls: C.kev.length ? "warn" : "", extra: deltaHtml(C.kev.length, C.kevPrev?.length), sub: `${C.kev.filter(x => x.edge).length} en equipos de perímetro` }));
+    k.push(kpi({ val: fmt(C.mine.filter(c => c.sev === "CRITICAL").length), lbl: "Críticas en mis tecnologías", cls: "warn", sub: `${fmt(C.mine.length)} CVE nuevos me afectan potencialmente` }));
+    k.push(kpi({ val: fmt(C.ssvcExp.length), lbl: "CVE con PoC o explotación (SSVC)", extra: sparkFrom(dailyIn.map(x => x.ssvc_exp)), sub: `${fmt(C.ssvcExp.filter(c => c.x === "active").length)} con explotación activa`, tipText: "Clasificación SSVC 'Exploitation' asignada por CISA (ADP Vulnrichment). Llega con 1–3 días de retraso." }));
+    k.push(kpi({ val: fmt(C.autoTotal.length), lbl: "Automatizables con impacto total", sub: "Candidatas a explotación masiva", tipText: "SSVC Automatable = yes y Technical Impact = total." }));
+  } else if (S.role === "gerente") {
+    const ch = C.sev.CRITICAL + C.sev.HIGH;
+    k.push(kpi({ val: fmt(C.cv.length), lbl: "CVE nuevos publicados", extra: deltaHtml(C.cv.length, C.cvPrev?.length) + sparkFrom(dailyIn.map(x => x.total)), sub: "Volumen global" }));
+    k.push(kpi({ val: pct(ch, C.cv.length) + " %", lbl: "Críticos + altos", sub: `${fmt(C.sev.CRITICAL)} críticos · ${fmt(C.sev.HIGH)} altos` }));
+    k.push(kpi({ val: fmt(C.mine.length), lbl: "Carga en mis tecnologías", cls: C.mine.length ? "warn" : "ok", extra: C.cvPrev ? deltaHtml(C.mine.length, C.cvPrev.filter(c => isMine(c.v, c.p)).length) : "", sub: `${fmt(C.mine.filter(c => c.sev === "CRITICAL" || c.sev === "HIGH").length)} críticos o altos a planificar` }));
+    const vend = topCount(C.mine, c => c.v, 1)[0];
+    k.push(kpi({ val: vend ? esc(vend[0]) : "–", lbl: "Fabricante con más carga", sub: vend ? `${fmt(vend[1])} CVE en la ventana` : "Sin coincidencias" }));
+    k.push(kpi({ val: pct(C.sev.SIN_CVSS, C.cv.length) + " %", lbl: "Publicados sin CVSS", sub: "Requieren triage manual" }));
+  } else {
+    const avg = (kw.reduce((a, w) => a + w.n, 0) / kw.length);
+    const k365 = DATA.kev_365;
+    const med = medianFromHist(k365.deadline_hist);
+    k.push(kpi({ val: fmt(DATA.kev_total), lbl: "Catálogo KEV total", sub: `${fmt(k365.n)} agregadas en 12 meses` }));
+    k.push(kpi({ val: avg.toFixed(1), lbl: "KEV por semana (promedio 52 sem.)", extra: sparkFrom(last12), sub: `Últimas 12 semanas: ${last12.join(" · ")}` }));
+    k.push(kpi({ val: pct(k365.ransom, k365.n) + " %", lbl: "KEV con uso en ransomware", cls: "warn", sub: `${fmt(k365.ransom)} de ${fmt(k365.n)} en 12 meses` }));
+    k.push(kpi({ val: pct(k365.edge, k365.n) + " %", lbl: "KEV en perímetro (12 meses)", sub: "VPN, ADC, firewall, gateways (heurística)", tipText: "Clasificación por palabras clave en fabricante/producto. Es aproximada." }));
+    k.push(kpi({ val: med + " d", lbl: "Plazo CISA mediano", cls: med <= 7 ? "crit" : "", sub: "Días entre alta en KEV y fecha límite" }));
+  }
+  $("#kpis").innerHTML = k.join("");
+  bindTips($("#kpis"));
+}
+function medianFromHist(h) { const n = h.reduce((a, [, c]) => a + c, 0); let acc = 0; for (const [v, c] of h) { acc += c; if (acc >= n / 2) return v; } return 0; }
+function topCount(arr, key, n) { const m = new Map(); arr.forEach(x => { const k = key(x); if (!k || k === "n/d" || k === "n/a") return; m.set(k, (m.get(k) || 0) + 1); }); return [...m].sort((a, b) => b[1] - a[1]).slice(0, n); }
+
+/* ------------------------------------------------------------ gráficos SVG */
+function niceMax(v) { if (v <= 5) return 5; const p = Math.pow(10, Math.floor(Math.log10(v))); const m = v / p; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * p; }
+function axisY(max, H, padT, padB, W, padL, padR, ticks = 4) {
+  if (max <= 10) ticks = max <= 5 ? max : max / 2;
+  let g = "";
+  for (let i = 0; i <= ticks; i++) {
+    const v = max * i / ticks, y = H - padB - (H - padT - padB) * i / ticks;
+    g += `<line x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}" stroke="var(--grid)" stroke-width="1"/>`;
+    g += `<text x="${padL - 6}" y="${y + 3.5}" text-anchor="end">${fmt(Math.round(v * 10) / 10)}</text>`;
+  }
+  return g;
+}
+function roundTopRect(x, y, w, h, r = 3) {
+  if (h <= 0) return "";
+  r = Math.min(r, w / 2, h);
+  return `M${x} ${y + h} L${x} ${y + r} Q${x} ${y} ${x + r} ${y} L${x + w - r} ${y} Q${x + w} ${y} ${x + w} ${y + r} L${x + w} ${y + h} Z`;
+}
+
+/* tendencia diaria con media móvil 7 d */
+function drawTrend(el, metric) {
+  const W = Math.max(320, el.clientWidth), H = 240, padL = 40, padR = 12, padT = 12, padB = 30;
+  const days = DATA.daily, n = days.length;
+  const val = d => metric === "total" ? d.total : metric === "crit" ? d.CRITICAL : metric === "ssvc" ? d.ssvc_exp : d.kev;
+  const vals = days.map(val);
+  const ma = vals.map((_, i) => i < 6 ? null : vals.slice(i - 6, i + 1).reduce((a, b) => a + b, 0) / 7);
+  const max = niceMax(Math.max(1, ...vals));
+  const bw = (W - padL - padR) / n, R = winRange(S.win);
+  const y = v => H - padB - (H - padT - padB) * v / max;
+  let s = axisY(max, H, padT, padB, W, padL, padR);
+  const x0 = padL + days.findIndex(d => d.d === R[0]) * bw;
+  s += `<rect x="${x0}" y="${padT}" width="${W - padR - x0}" height="${H - padT - padB}" fill="var(--accent-soft)" opacity=".55"/>`;
+  s += `<text x="${x0 + 4}" y="${padT + 11}" style="fill:var(--accent);font-weight:600">ventana ${S.win} d</text>`;
+  days.forEach((d, i) => {
+    const v = vals[i], inside = inR(d.d, R), bx = padL + i * bw + 1, w = Math.max(1, bw - 2);
+    s += `<path d="${roundTopRect(bx, y(v), w, H - padB - y(v))}" fill="${inside ? "var(--mark)" : "var(--mark-dim)"}"/>`;
+    const tipH = `<b>${dShort(d.d)}</b><br>${labelMetric(metric)}: <b>${fmt(v)}</b>${ma[i] != null ? `<br>Media móvil 7 d: ${ma[i].toFixed(1)}` : ""}${metric === "total" ? `<br>Críticos ${d.CRITICAL} · Altos ${d.HIGH} · KEV ${d.kev}` : ""}`;
+    s += `<rect x="${padL + i * bw}" y="${padT}" width="${bw}" height="${H - padT - padB}" fill="transparent" data-tip="${esc(tipH)}"/>`;
+    if (i % Math.ceil(n / Math.max(4, Math.floor(W / 70))) === 0 || i === n - 1) s += `<text x="${bx + w / 2}" y="${H - padB + 16}" text-anchor="middle">${dShort(d.d)}</text>`;
+  });
+  const pts = ma.map((v, i) => v == null ? null : [padL + i * bw + bw / 2, y(v)]).filter(Boolean);
+  if (pts.length > 1) {
+    s += `<path d="${pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ")}" fill="none" stroke="var(--ma)" stroke-width="2" stroke-linejoin="round" pointer-events="none"/>`;
+    const L = pts[pts.length - 1];
+    s += `<circle cx="${L[0]}" cy="${L[1]}" r="4" fill="var(--ma)" stroke="var(--panel)" stroke-width="2" pointer-events="none"/>`;
+  }
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tendencia diaria de ${labelMetric(metric)} con media móvil de 7 días">${s}</svg>`;
+  bindTips(el);
+}
+const labelMetric = m => ({ total: "CVE publicados", crit: "CVE críticos", ssvc: "CVE con PoC/explotación (SSVC)", kev: "KEV agregadas" }[m]);
+
+/* histograma CVSS */
+function drawCvssHist(el, C) {
+  const W = Math.max(300, el.clientWidth), H = 220, padL = 40, padR = 10, padT = 10, padB = 30;
+  const bins = Array.from({ length: 20 }, (_, i) => ({ lo: i * 0.5, n: 0, mine: 0 }));
+  C.cv.forEach(c => { if (c.s == null) return; const i = Math.min(19, Math.floor(c.s / 0.5)); bins[i].n++; if (isMine(c.v, c.p)) bins[i].mine++; });
+  const max = niceMax(Math.max(1, ...bins.map(b => b.n)));
+  const bw = (W - padL - padR) / 20, y = v => H - padB - (H - padT - padB) * v / max;
+  let s = axisY(max, H, padT, padB, W, padL, padR);
+  const col = lo => lo >= 9 ? "var(--sev-crit)" : lo >= 7 ? "var(--sev-high)" : lo >= 4 ? "var(--sev-med)" : "var(--sev-low)";
+  bins.forEach((b, i) => {
+    const x = padL + i * bw + 1, w = bw - 2;
+    s += `<path d="${roundTopRect(x, y(b.n), w, H - padB - y(b.n))}" fill="${col(b.lo)}"/>`;
+    if (b.mine) s += `<rect x="${x + w * 0.3}" y="${y(b.mine)}" width="${w * 0.4}" height="${H - padB - y(b.mine)}" fill="var(--ink)" opacity=".75"/>`;
+    s += `<rect x="${padL + i * bw}" y="${padT}" width="${bw}" height="${H - padT - padB}" fill="transparent" data-tip="${esc(`<b>CVSS ${b.lo.toFixed(1)}–${(b.lo + 0.49).toFixed(1)}</b><br>${fmt(b.n)} CVE · ${fmt(b.mine)} en mis tecnologías`)}"/>`;
+  });
+  [0, 4, 7, 9, 10].forEach(v => { s += `<text x="${padL + v * 2 * bw}" y="${H - padB + 16}" text-anchor="middle">${v}</text>`; });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Histograma de puntajes CVSS">${s}</svg>`;
+  bindTips(el);
+}
+
+/* barras KEV semanales 52 sem + media móvil 4 sem */
+function drawKevWeeks(el) {
+  const W = Math.max(320, el.clientWidth), H = 230, padL = 34, padR = 10, padT = 10, padB = 30;
+  const wk = DATA.kev_weeks, n = wk.length, max = niceMax(Math.max(1, ...wk.map(w => w.n)));
+  const bw = (W - padL - padR) / n, y = v => H - padB - (H - padT - padB) * v / max;
+  let s = axisY(max, H, padT, padB, W, padL, padR);
+  const ma = wk.map((_, i) => i < 3 ? null : wk.slice(i - 3, i + 1).reduce((a, w) => a + w.n, 0) / 4);
+  wk.forEach((w, i) => {
+    const x = padL + i * bw + 1, bwid = Math.max(1, bw - 2);
+    const hTot = H - padB - y(w.n), hEdge = H - padB - y(w.edge);
+    s += `<path d="${roundTopRect(x, y(w.n), bwid, hTot)}" fill="var(--mark-dim)"/>`;
+    if (w.edge) s += `<rect x="${x}" y="${y(w.edge)}" width="${bwid}" height="${hEdge}" fill="var(--mark)"/>`;
+    s += `<rect x="${padL + i * bw}" y="${padT}" width="${bw}" height="${H - padT - padB}" fill="transparent" data-tip="${esc(`<b>${dShort(w.start)} – ${dShort(w.end)}</b><br>KEV agregadas: <b>${w.n}</b><br>En perímetro: ${w.edge} · Ransomware: ${w.ransom}${ma[i] != null ? `<br>Media móvil 4 sem: ${ma[i].toFixed(1)}` : ""}`)}"/>`;
+    if (i % 8 === 0 || i === n - 1) s += `<text x="${x + bwid / 2}" y="${H - padB + 16}" text-anchor="middle">${dShort(w.end)}</text>`;
+  });
+  const pts = ma.map((v, i) => v == null ? null : [padL + i * bw + bw / 2, y(v)]).filter(Boolean);
+  s += `<path d="${pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ")}" fill="none" stroke="var(--ma)" stroke-width="2" pointer-events="none"/>`;
+  const L = pts[pts.length - 1]; s += `<circle cx="${L[0]}" cy="${L[1]}" r="4" fill="var(--ma)" stroke="var(--panel)" stroke-width="2" pointer-events="none"/>`;
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="KEV agregadas por semana, 52 semanas">${s}</svg>`;
+  bindTips(el);
+}
+
+/* histograma de plazos CISA */
+function drawDeadline(el) {
+  const W = Math.max(280, el.clientWidth), H = 200, padL = 34, padR = 10, padT = 10, padB = 30;
+  const h = DATA.kev_365.deadline_hist, max = niceMax(Math.max(...h.map(x => x[1])));
+  const bw = (W - padL - padR) / h.length, y = v => H - padB - (H - padT - padB) * v / max;
+  let s = axisY(max, H, padT, padB, W, padL, padR);
+  h.forEach(([d, c], i) => {
+    const x = padL + i * bw + bw * 0.15, w = bw * 0.7;
+    s += `<path d="${roundTopRect(x, y(c), w, H - padB - y(c))}" fill="${d <= 7 ? "var(--crit)" : "var(--mark)"}" data-tip="${esc(`<b>Plazo ${d} días</b><br>${c} KEV en 12 meses`)}"/>`;
+    s += `<text x="${x + w / 2}" y="${H - padB + 16}" text-anchor="middle">${d} d</text>`;
+  });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Distribución de plazos de remediación CISA">${s}</svg>`;
+  bindTips(el);
+}
+
+/* barras horizontales */
+function hbars(rows, mineFn) {
+  const max = Math.max(1, ...rows.map(r => r[1]));
+  return `<div class="bars">${rows.map(([k, v]) => `<div class="bar-row ${mineFn && mineFn(k) ? "mine" : ""}"><span class="name" title="${esc(k)}">${esc(k)}</span><span class="track"><span class="fill" style="display:block;width:${(100 * v / max).toFixed(1)}%"></span></span><span class="n">${fmt(v)}</span></div>`).join("")}</div>`;
+}
+
+/* ------------------------------------------------------------ tablas */
+function kevTable(C) {
+  const today = END;
+  const rows = DATA.kev_recent.filter(k => inR(k.dateAdded, winRange(Math.max(S.win, 14)))).sort((a, b) => b.dateAdded.localeCompare(a.dateAdded));
+  if (!rows.length) return `<p class="muted">Sin KEV en el período.</p>`;
+  return `<div class="tbl-wrap"><table><thead><tr><th>Agregada</th><th>CVE</th><th>Fabricante · producto</th><th>Vulnerabilidad</th><th>Plazo CISA</th><th>Señales</th></tr></thead><tbody>${rows.map(k => {
+    const left = Math.round((D(k.dueDate) - D(today)) / 864e5), mine = isMine(k.vendorProject, k.product);
+    const due = left < 0 ? `<span class="pill crit">vencido hace ${-left} d</span>` : left <= 3 ? `<span class="pill warn">${left === 0 ? "vence hoy" : `quedan ${left} d`}</span>` : `<span class="pill n">quedan ${left} d</span>`;
+    const sig = [mine ? `<span class="pill acc">mi tecnología</span>` : "", k.edge ? `<span class="pill warn">perímetro</span>` : "", k.knownRansomwareCampaignUse === "Known" ? `<span class="pill crit">ransomware</span>` : "", inR(k.dateAdded, C.R) ? "" : `<span class="pill n">fuera de ventana</span>`].join(" ");
+    return `<tr class="${mine ? "mine" : ""}"><td class="mono">${dShort(k.dateAdded)}</td><td class="mono">${esc(k.cveID)}</td><td>${esc(k.vendorProject)} · ${esc(k.product)}</td><td>${esc(k.vulnerabilityName)}${k.cwes && k.cwes.length ? ` <span class="muted mono">${esc(k.cwes.join(", "))}</span>` : ""}</td><td>${dShort(k.dueDate)} ${due}</td><td>${sig}</td></tr>`;
+  }).join("")}</tbody></table></div>`;
+}
+
+function explorer(C) {
+  const f = S.exp;
+  let rows = C.cv.filter(c =>
+    (f.sev === "ALL" || c.sev === f.sev) &&
+    (f.ssvc === "ALL" || (f.ssvc === "EXP" ? (c.x === "poc" || c.x === "active") : f.ssvc === "ACTIVE" ? c.x === "active" : (c.au === "yes" && c.ti === "total"))) &&
+    (!f.mine || isMine(c.v, c.p)) &&
+    (!f.q || `${c.id} ${c.v} ${c.p} ${c.cwe}`.toLowerCase().includes(f.q.toLowerCase())));
+  const total = rows.length;
+  const rank = c => (c.x === "active" ? 30 : c.x === "poc" ? 20 : 0) + (c.au === "yes" && c.ti === "total" ? 5 : 0) + (c.s || 0) + (isMine(c.v, c.p) ? 8 : 0);
+  rows = rows.sort((a, b) => rank(b) - rank(a)).slice(0, S.expLimit);
+  const xPill = x => x === "active" ? `<span class="pill crit">activa</span>` : x === "poc" ? `<span class="pill warn">PoC</span>` : x === "none" ? `<span class="pill n">ninguna</span>` : `<span class="muted">pendiente</span>`;
+  return `<p class="note">${fmt(total)} CVE coinciden · se muestran ${rows.length}, ordenados por explotación (SSVC), CVSS y coincidencia con mis tecnologías.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>CVE</th><th>Publicado</th><th>Fabricante</th><th>Producto</th><th class="num">CVSS</th><th>SSVC explotación</th><th>Auto + total</th><th>CWE</th></tr></thead><tbody>${rows.map(c => `<tr class="${isMine(c.v, c.p) ? "mine" : ""}"><td class="mono">${esc(c.id)}</td><td class="mono">${dShort(c.d)}</td><td>${esc(c.v)}</td><td>${esc(c.p)}</td><td class="num"><span class="sev"><i style="background:var(${SEV[c.sev][1]})"></i>${c.s ?? "–"}</span></td><td>${xPill(c.x)}</td><td>${c.au === "yes" && c.ti === "total" ? `<span class="pill warn">sí</span>` : ""}</td><td class="mono muted">${esc(c.cwe || "")}</td></tr>`).join("")}</tbody></table></div>${total > rows.length ? `<button type="button" class="btn" id="exp-more">Mostrar 25 más</button>` : ""}`;
+}
+
+/* ------------------------------------------------------------ paneles por rol */
+const PENDING = {
+  oficial: [["Cola P0/P1 abierta", "Hallazgos del escáner priorizados con KEV, SSVC y EPSS"], ["KEV vencidas internas", "Fecha de detección y cierre por activo"], ["Exposición externa", "Reportes de Shadowserver o ASM para tus IPs"], ["Cobertura de detección", "Reglas EDR/SIEM asociadas a CVE P0"]],
+  gerente: [["Cumplimiento de SLA por prioridad", "Tickets de remediación con fechas"], ["MTTR mediana y p90", "Fecha de detección y de cierre"], ["Backlog y burn-down", "Hallazgos abiertos y cerrados por semana"], ["Cobertura de parches por plataforma", "Inventario y estado de parches (MDM, WSUS, etc.)"]],
+  ciso: [["Exposición KEV propia", "Activos con al menos una KEV abierta"], ["Ventana de exposición KEV", "Días entre alta en KEV y cierre interno"], ["Excepciones de riesgo", "Registro de aceptaciones de riesgo"], ["Riesgo de terceros", "Proveedores críticos y sus productos"]]
+};
+const NOTES = {
+  oficial: "Qué atender hoy. KEV y SSVC mandan; las coincidencias con tus tecnologías se marcan en azul.",
+  gerente: "Carga de trabajo y tendencia. Cuánto llega, qué fabricantes concentran el esfuerzo y cómo se compara con el período anterior.",
+  ciso: "Panorama y tendencia. Ritmo de explotación confirmada en 12 meses, peso del perímetro y del ransomware, y presión de los plazos de CISA."
+};
+let trendMetric = { oficial: "ssvc", gerente: "total", ciso: "kev" };
+
+function panel(id, title, desc, body, w = "", head = "") {
+  return `<section class="panel ${w}" id="${id}"><div class="panel-head"><div><h2>${title}</h2>${desc ? `<p>${desc}</p>` : ""}</div>${head}</div>${body}</section>`;
+}
+function trendPanel(w) {
+  const m = trendMetric[S.role];
+  const seg = `<div class="seg" id="seg-metric">${["total", "crit", "ssvc", "kev"].map(k => `<button type="button" data-m="${k}" aria-pressed="${k === m}">${({ total: "Total", crit: "Críticos", ssvc: "SSVC PoC/activa", kev: "KEV" })[k]}</button>`).join("")}</div>`;
+  return panel("p-trend", "Tendencia diaria · últimos 30 días", "Barras por día de publicación; la línea es la media móvil de 7 días. La zona sombreada es la ventana seleccionada.",
+    `<div class="chart" id="c-trend"></div><div class="legend"><span><i style="background:var(--mark)"></i>Dentro de la ventana</span><span><i style="background:var(--mark-dim)"></i>Fuera de la ventana</span><span><i class="line" style="background:var(--ma)"></i>Media móvil 7 d</span></div><p class="note">SSVC lo asigna CISA con 1–3 días de retraso: los últimos días se verán bajos hasta completarse.</p>`, w, seg);
+}
+function render() {
+  const C = compute();
+  document.querySelectorAll("#seg-win button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.win === S.win));
+  document.querySelectorAll("#seg-role button").forEach(b => b.setAttribute("aria-pressed", b.dataset.role === S.role));
+  $("#role-note").textContent = NOTES[S.role];
+  renderKpis(C);
+
+  const sevLegend = `<div class="legend">${["CRITICAL", "HIGH", "MEDIUM", "LOW"].map(k => `<span><i style="background:var(${SEV[k][1]})"></i>${SEV[k][0]} ${fmt(C.sev[k])}</span>`).join("")}<span><i style="background:var(--ink);opacity:.75"></i>Mis tecnologías</span></div>`;
+  const histP = panel("p-hist", "Distribución CVSS", `CVE publicados en la ventana (${dShort(C.R[0])} – ${dShort(C.R[1])}), en tramos de 0,5.`, `<div class="chart" id="c-hist"></div>${sevLegend}`);
+  const kevP = panel("p-kev", "KEV recientes", `Agregadas en los últimos ${Math.max(S.win, 14)} días, con el plazo de CISA contado al ${dShort(END)}.`, kevTable(C), "w12");
+  const expP = panel("p-exp", "Explorador de CVE", "", `<div class="filters"><input id="f-q" type="search" placeholder="Buscar CVE, fabricante, producto, CWE" value="${esc(S.exp.q)}" aria-label="Buscar"><select id="f-sev" aria-label="Severidad"><option value="ALL">Toda severidad</option>${Object.keys(SEV).map(k => `<option value="${k}" ${S.exp.sev === k ? "selected" : ""}>${SEV[k][0]}</option>`).join("")}</select><select id="f-ssvc" aria-label="SSVC"><option value="ALL">Todo SSVC</option><option value="EXP" ${S.exp.ssvc === "EXP" ? "selected" : ""}>PoC o activa</option><option value="ACTIVE" ${S.exp.ssvc === "ACTIVE" ? "selected" : ""}>Solo activa</option><option value="AUTO" ${S.exp.ssvc === "AUTO" ? "selected" : ""}>Automatizable + total</option></select><label class="chk"><input id="f-mine" type="checkbox" ${S.exp.mine ? "checked" : ""}> Solo mis tecnologías</label></div><div id="exp-body">${explorer(C)}</div>`, "w12");
+  const vendP = panel("p-vend", "Fabricantes con más CVE", "Ventana seleccionada. En azul intenso, tus tecnologías.", hbars(topCount(C.cv, c => c.v, 12), k => isMine(k, "")), "w4");
+  const cweP = panel("p-cwe", "Debilidades más frecuentes (CWE)", "Ventana seleccionada.", hbars(topCount(C.cv, c => c.cwe, 12)), "w4");
+  const cnaP = panel("p-cna", "Quién publica (CNA)", "Organizaciones que asignaron los CVE de la ventana.", hbars(topCount(C.cv, c => c.cna, 12)), "w4");
+  const kwP = panel("p-kw", "KEV por semana · 52 semanas", "Barra completa: total semanal. Tramo intenso: equipos de perímetro. Línea: media móvil de 4 semanas.", `<div class="chart" id="c-kw"></div><div class="legend"><span><i style="background:var(--mark)"></i>Perímetro</span><span><i style="background:var(--mark-dim)"></i>Otros</span><span><i class="line" style="background:var(--ma)"></i>Media móvil 4 sem</span></div>`, "w8");
+  const dlP = panel("p-dl", "Plazos de remediación CISA", "KEV agregadas en 12 meses según los días otorgados. En rojo, 7 días o menos.", `<div class="chart" id="c-dl"></div>`, "w4");
+  const kvP = panel("p-kv", "Fabricantes en KEV · 12 meses", "Explotación confirmada acumulada.", hbars(DATA.kev_vendors_365, k => isMine(k, "")), "w4");
+  const pendP = panel("p-pend", "Pendiente de conectar", "Indicadores de este perfil que requieren datos internos.", `<div class="pending">${PENDING[S.role].map(([a, b]) => `<div><b>${a}</b><span>Requiere: ${b}</span></div>`).join("")}</div>`, "w12");
+
+  const layouts = {
+    oficial: [kevP, trendPanel("w8"), panel("p-hist", "Distribución CVSS", `Ventana ${dShort(C.R[0])} – ${dShort(C.R[1])}, tramos de 0,5.`, `<div class="chart" id="c-hist"></div>${sevLegend}`, "w4"), expP, pendP],
+    gerente: [trendPanel("w12"), histP, panel("p-mix", "Mezcla de severidad por día", "", `<div class="chart" id="c-mix"></div><div class="legend">${["CRITICAL", "HIGH", "MEDIUM", "LOW", "SIN_CVSS"].map(k => `<span><i style="background:var(${SEV[k][1]})"></i>${SEV[k][0]}</span>`).join("")}</div>`), vendP, cweP, cnaP, expP, pendP],
+    ciso: [kwP, dlP, trendPanel("w8"), kvP, kevP, pendP]
+  };
+  $("#panels").innerHTML = layouts[S.role].join("");
+  drawAll(C);
+  wirePanels();
+}
+function drawAll(C) {
+  C = C || compute();
+  const t = $("#c-trend"); if (t) drawTrend(t, trendMetric[S.role]);
+  const h = $("#c-hist"); if (h) drawCvssHist(h, C);
+  const k = $("#c-kw"); if (k) drawKevWeeks(k);
+  const d = $("#c-dl"); if (d) drawDeadline(d);
+  const m = $("#c-mix"); if (m) drawMix(m, C);
+}
+/* barras apiladas 100 % por día (ventana) */
+function drawMix(el, C) {
+  const W = Math.max(300, el.clientWidth), H = 220, padL = 40, padR = 10, padT = 10, padB = 30;
+  const days = DATA.daily.filter(d => inR(d.d, C.R)), n = days.length, bw = (W - padL - padR) / n;
+  const keys = ["LOW", "MEDIUM", "HIGH", "CRITICAL", "SIN_CVSS"];
+  let s = "";
+  for (let i = 0; i <= 4; i++) { const yy = H - padB - (H - padT - padB) * i / 4; s += `<line x1="${padL}" x2="${W - padR}" y1="${yy}" y2="${yy}" stroke="var(--grid)"/><text x="${padL - 6}" y="${yy + 3.5}" text-anchor="end">${i * 25} %</text>`; }
+  days.forEach((d, i) => {
+    let acc = 0; const x = padL + i * bw + 1, w = Math.max(1, bw - 2), tot = Math.max(1, d.total);
+    keys.forEach(k => { const hh = (H - padT - padB) * d[k] / tot; if (hh > 0) { s += `<rect x="${x}" y="${(H - padB - acc - hh).toFixed(1)}" width="${w}" height="${Math.max(0, hh - (hh > 3 ? 1 : 0)).toFixed(1)}" fill="var(${SEV[k][1]})"/>`; } acc += hh; });
+    s += `<rect x="${padL + i * bw}" y="${padT}" width="${bw}" height="${H - padT - padB}" fill="transparent" data-tip="${esc(`<b>${dShort(d.d)}</b> · ${fmt(d.total)} CVE<br>Críticos ${pct(d.CRITICAL, d.total)} % · Altos ${pct(d.HIGH, d.total)} %<br>Medios ${pct(d.MEDIUM, d.total)} % · Bajos ${pct(d.LOW, d.total)} % · Sin CVSS ${pct(d.SIN_CVSS, d.total)} %`)}"/>`;
+    if (n <= 14 || i % 3 === 0) s += `<text x="${x + w / 2}" y="${H - padB + 16}" text-anchor="middle">${dShort(d.d)}</text>`;
+  });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mezcla de severidad por día">${s}</svg>`;
+  bindTips(el);
+}
+function wirePanels() {
+  document.querySelectorAll("#seg-metric button").forEach(b => b.addEventListener("click", () => {
+    trendMetric[S.role] = b.dataset.m;
+    document.querySelectorAll("#seg-metric button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    drawTrend($("#c-trend"), b.dataset.m);
+  }));
+  const upd = () => { $("#exp-body").innerHTML = explorer(compute()); const mb = $("#exp-more"); if (mb) mb.addEventListener("click", () => { S.expLimit += 25; upd(); }); };
+  const mb0 = $("#exp-more"); if (mb0) mb0.addEventListener("click", () => { S.expLimit += 25; upd(); });
+  const q = $("#f-q"); if (q) q.addEventListener("input", () => { S.exp.q = q.value; S.expLimit = 25; upd(); });
+  const sv = $("#f-sev"); if (sv) sv.addEventListener("change", () => { S.exp.sev = sv.value; S.expLimit = 25; upd(); });
+  const ss = $("#f-ssvc"); if (ss) ss.addEventListener("change", () => { S.exp.ssvc = ss.value; S.expLimit = 25; upd(); });
+  const mi = $("#f-mine"); if (mi) mi.addEventListener("change", () => { S.exp.mine = mi.checked; S.expLimit = 25; upd(); });
+}
+
+/* ------------------------------------------------------------ cabecera y fuentes */
+function renderFresh() {
+  const st = DATA.sources_status;
+  const chip = (name, s, extra = "") => `<span class="chip ${s && s.ok ? "ok" : "bad"}" title="${esc(s && !s.ok ? s.error : "")}"><span class="dot"></span>${name}${extra}</span>`;
+  $("#fresh").innerHTML = `<span>Datos al ${D(END).toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" })}</span>` +
+    chip("CVE List V5", st.cvelist, ` · ${fmt(st.cvelist.records)} registros`) +
+    chip("CISA KEV", st.kev, st.kev && st.kev.catalogVersion ? ` · v${st.kev.catalogVersion}` : "") +
+    chip("EPSS", st.epss, st.epss && st.epss.ok ? "" : " · sin datos");
+  $("#foot-src").innerHTML = `Fuentes: CVE List V5 (CVE Program, deltaLog) con enriquecimiento CISA ADP (SSVC); CISA KEV desde el repositorio oficial cisagov/kev-data. Generado ${esc(DATA.generated_at.replace("T", " ").replace("+00:00", " UTC"))}. Días asignados por fecha de publicación del CVE en hora de Chile.`;
+}
+
+/* ------------------------------------------------------------ eventos globales */
+document.querySelectorAll("#seg-win button").forEach(b => b.addEventListener("click", () => { S.win = +b.dataset.win; store.set("pv.win", S.win); render(); }));
+document.querySelectorAll("#seg-role button").forEach(b => b.addEventListener("click", () => { S.role = b.dataset.role; store.set("pv.role", S.role); try { history.replaceState(null, "", "#" + S.role); } catch (e) {} render(); }));
+const wi = $("#watch"); wi.value = S.watch;
+const applyWatch = () => { S.watch = wi.value; store.set("pv.watch", S.watch); render(); };
+$("#watch-save").addEventListener("click", applyWatch);
+wi.addEventListener("keydown", e => { if (e.key === "Enter") applyWatch(); });
+let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => drawAll(), 150); });
+
+renderFresh();
+render();
+</script>

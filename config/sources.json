@@ -1,0 +1,311 @@
+{
+  "version": "2026-10-04",
+  "notes": "Catálogo de fuentes para el agente. tier 1 = gratis + estructurado + núcleo del pipeline; tier 2 = gratis/estructurado complementario; tier 3 = contexto (RSS/HTML) o requiere registro. 'signal' indica qué pregunta responde.",
+  "sources": [
+    {
+      "id": "cisa_kev",
+      "tier": 1,
+      "name": "CISA Known Exploited Vulnerabilities",
+      "signal": "explotación confirmada",
+      "format": "JSON, CSV, JSON Schema",
+      "endpoints": [
+        "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+        "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv"
+      ],
+      "auth": "no",
+      "update": "varias veces por semana",
+      "key_fields": [
+        "cveID",
+        "vendorProject",
+        "product",
+        "dateAdded",
+        "dueDate",
+        "knownRansomwareCampaignUse",
+        "requiredAction",
+        "cwes"
+      ],
+      "access_note": "Primaria: repo oficial cisagov/kev-data (CISA lo ofrece para consumo programático; sincronizado con cisa.gov en minutos; CC0). Respaldo y referencia canónica: cisa.gov."
+    },
+    {
+      "id": "cve_list_v5",
+      "tier": 1,
+      "name": "CVE List V5 (CVE Program)",
+      "signal": "registro canónico de CVE nuevos/actualizados",
+      "format": "JSON 5.x (CVE Record Format)",
+      "endpoints": [
+        "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+        "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/delta.json",
+        "https://github.com/CVEProject/cvelistV5/releases",
+        "https://cveawg.mitre.org/api/cve/{CVE-ID}"
+      ],
+      "auth": "no",
+      "update": "cada ~7 min (deltas) / zip diario",
+      "key_fields": [
+        "cveMetadata",
+        "containers.cna.affected",
+        "metrics",
+        "problemTypes",
+        "containers.adp"
+      ]
+    },
+    {
+      "id": "cisa_vulnrichment",
+      "tier": 1,
+      "name": "CISA Vulnrichment (ADP)",
+      "signal": "SSVC (explotación, automatizable, impacto), CVSS/CWE/CPE cuando la CNA no los entrega",
+      "format": "JSON (contenedor ADP dentro del registro CVE)",
+      "endpoints": [
+        "https://github.com/cisagov/vulnrichment"
+      ],
+      "auth": "no",
+      "update": "diaria",
+      "key_fields": [
+        "ssvc.Exploitation",
+        "ssvc.Automatable",
+        "ssvc.Technical Impact"
+      ]
+    },
+    {
+      "id": "nvd_api",
+      "tier": 1,
+      "name": "NIST NVD API 2.0",
+      "signal": "CVSS NVD, CPE match (cruce con inventario), historial de cambios",
+      "format": "JSON REST",
+      "endpoints": [
+        "https://services.nvd.nist.gov/rest/json/cves/2.0",
+        "https://services.nvd.nist.gov/rest/json/cvehistory/2.0",
+        "https://services.nvd.nist.gov/rest/json/cpematch/2.0"
+      ],
+      "auth": "API key gratuita recomendada (50 req/30 s vs 5)",
+      "update": "continua (con backlog de análisis)",
+      "key_fields": [
+        "metrics",
+        "configurations",
+        "cisaExploitAdd",
+        "vulnStatus"
+      ]
+    },
+    {
+      "id": "first_epss",
+      "tier": 1,
+      "name": "FIRST EPSS",
+      "signal": "probabilidad de explotación a 30 días",
+      "format": "JSON REST + CSV diario",
+      "endpoints": [
+        "https://api.first.org/data/v1/epss?cve=CVE-…",
+        "https://epss.empiricalsecurity.com/epss_scores-current.csv.gz"
+      ],
+      "auth": "no",
+      "update": "diaria",
+      "key_fields": [
+        "epss",
+        "percentile",
+        "date"
+      ]
+    },
+    {
+      "id": "euvd",
+      "tier": 1,
+      "name": "ENISA EU Vulnerability Database",
+      "signal": "visión UE, lista de explotadas y críticas, IDs EUVD",
+      "format": "JSON REST",
+      "endpoints": [
+        "https://euvd.enisa.europa.eu/api/lastvulnerabilities",
+        "https://euvd.enisa.europa.eu/api/exploitedvulnerabilities",
+        "https://euvd.enisa.europa.eu/api/criticalvulnerabilities",
+        "https://euvd.enisa.europa.eu/api/search"
+      ],
+      "auth": "no",
+      "update": "continua",
+      "key_fields": [
+        "id",
+        "aliases",
+        "baseScore",
+        "epss",
+        "exploitedSince"
+      ]
+    },
+    {
+      "id": "osv",
+      "tier": 2,
+      "name": "OSV.dev",
+      "signal": "vulnerabilidades en dependencias open source (npm, PyPI, Maven, Go, crates…)",
+      "format": "JSON (OSV schema) REST + bucket GCS",
+      "endpoints": [
+        "https://api.osv.dev/v1/query",
+        "https://api.osv.dev/v1/querybatch",
+        "gs://osv-vulnerabilities"
+      ],
+      "auth": "no",
+      "update": "continua",
+      "key_fields": [
+        "id",
+        "aliases",
+        "affected.ranges",
+        "severity"
+      ]
+    },
+    {
+      "id": "github_advisories",
+      "tier": 2,
+      "name": "GitHub Advisory Database",
+      "signal": "advisories de ecosistemas de software, revisados",
+      "format": "JSON (OSV) en repo + REST",
+      "endpoints": [
+        "https://github.com/github/advisory-database",
+        "https://api.github.com/advisories"
+      ],
+      "auth": "no (token sube límites)",
+      "update": "continua",
+      "key_fields": [
+        "ghsa_id",
+        "cve_id",
+        "severity",
+        "vulnerabilities"
+      ]
+    },
+    {
+      "id": "vendor_csaf",
+      "tier": 2,
+      "name": "Advisories CSAF 2.0 / VEX de fabricantes",
+      "signal": "versión corregida, estado de afectación por producto (VEX)",
+      "format": "CSAF 2.0 JSON (provider-metadata.json)",
+      "endpoints": [
+        "https://msrc.microsoft.com/csaf/",
+        "https://security.access.redhat.com/data/csaf/v2/",
+        "https://cert-portal.siemens.com/productcert/csaf/",
+        "https://github.com/cisagov/CSAF (ICS advisories)"
+      ],
+      "auth": "no",
+      "update": "según ciclo del fabricante (p.ej. Patch Tuesday)",
+      "key_fields": [
+        "product_tree",
+        "vulnerabilities.product_status",
+        "remediations"
+      ]
+    },
+    {
+      "id": "msrc_api",
+      "tier": 2,
+      "name": "Microsoft Security Update Guide API",
+      "signal": "parches mensuales Microsoft, 'Exploitation Detected/More Likely'",
+      "format": "CVRF/CSAF JSON",
+      "endpoints": [
+        "https://api.msrc.microsoft.com/cvrf/v3.0/updates"
+      ],
+      "auth": "no",
+      "update": "mensual + out-of-band"
+    },
+    {
+      "id": "exploitdb",
+      "tier": 2,
+      "name": "Exploit-DB",
+      "signal": "existencia de exploit público",
+      "format": "CSV",
+      "endpoints": [
+        "https://gitlab.com/exploit-database/exploitdb/-/raw/main/files_exploits.csv"
+      ],
+      "auth": "no",
+      "update": "diaria"
+    },
+    {
+      "id": "metasploit",
+      "tier": 2,
+      "name": "Metasploit modules metadata",
+      "signal": "exploit weaponizado/listo para uso",
+      "format": "JSON",
+      "endpoints": [
+        "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/db/modules_metadata_base.json"
+      ],
+      "auth": "no",
+      "update": "continua"
+    },
+    {
+      "id": "nuclei_templates",
+      "tier": 2,
+      "name": "ProjectDiscovery nuclei-templates",
+      "signal": "detección masiva automatizada disponible (escaneo a escala)",
+      "format": "YAML en repo (+ cves.json)",
+      "endpoints": [
+        "https://github.com/projectdiscovery/nuclei-templates"
+      ],
+      "auth": "no",
+      "update": "continua"
+    },
+    {
+      "id": "vulncheck_kev",
+      "tier": 2,
+      "name": "VulnCheck KEV (community)",
+      "signal": "KEV ampliado, con evidencia y antes que CISA en muchos casos",
+      "format": "JSON REST",
+      "endpoints": [
+        "https://api.vulncheck.com/v3/index/vulncheck-kev"
+      ],
+      "auth": "token gratuito (registro)",
+      "update": "continua"
+    },
+    {
+      "id": "cwe_capec_attack",
+      "tier": 2,
+      "name": "MITRE CWE / CAPEC / ATT&CK",
+      "signal": "taxonomía para agrupar debilidades y técnicas",
+      "format": "XML/CSV (CWE, CAPEC), STIX 2.1 JSON (ATT&CK)",
+      "endpoints": [
+        "https://cwe.mitre.org/data/downloads.html",
+        "https://github.com/mitre-attack/attack-stix-data"
+      ],
+      "auth": "no",
+      "update": "trimestral aprox."
+    },
+    {
+      "id": "shadowserver",
+      "tier": 2,
+      "name": "Shadowserver – reportes de red propios",
+      "signal": "exposición real de TUS IPs/dominios (servicios vulnerables, compromisos)",
+      "format": "CSV/JSON vía email o API",
+      "endpoints": [
+        "https://www.shadowserver.org/what-we-do/network-reporting/"
+      ],
+      "auth": "registro gratuito como dueño de la red",
+      "update": "diaria"
+    },
+    {
+      "id": "ransomware_live",
+      "tier": 3,
+      "name": "ransomware.live",
+      "signal": "contexto de víctimas/grupos ransomware por país/sector",
+      "format": "JSON REST",
+      "endpoints": [
+        "https://api.ransomware.live/"
+      ],
+      "auth": "no (API pro con key)",
+      "update": "continua"
+    },
+    {
+      "id": "csirt_chile",
+      "tier": 3,
+      "name": "CSIRT de Gobierno / ANCI (Chile)",
+      "signal": "alertas con relevancia local y regulatoria (Ley Marco de Ciberseguridad)",
+      "format": "HTML/RSS (estructura limitada)",
+      "endpoints": [
+        "https://www.csirt.gob.cl/",
+        "https://anci.gob.cl/"
+      ],
+      "auth": "no",
+      "update": "varias por semana"
+    },
+    {
+      "id": "jvn",
+      "tier": 3,
+      "name": "JVN iPedia / MyJVN API (Japón)",
+      "signal": "cobertura de productos asiáticos",
+      "format": "XML/JSON API",
+      "endpoints": [
+        "https://jvndb.jvn.jp/apis/"
+      ],
+      "auth": "no",
+      "update": "diaria"
+    }
+  ]
+}
