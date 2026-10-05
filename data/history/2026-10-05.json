@@ -1,0 +1,146 @@
+{
+ "date": "2026-10-05",
+ "window_7d": {
+  "start": "2026-09-29",
+  "end": "2026-10-05",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.04"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2535,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2334
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.04",
+  "catalog_total": 1734,
+  "added_7d": 6,
+  "added_7d_ids": [
+   "CVE-2026-86950",
+   "CVE-2026-76504",
+   "CVE-2026-104286",
+   "CVE-2026-102490",
+   "CVE-2026-102489",
+   "CVE-2026-88779"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Zammad GmbH": 2,
+   "Apple": 1,
+   "Cisco": 1,
+   "Fortinet": 1,
+   "Citrix": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2525,
+  "rejected": 10,
+  "updated": 3134,
+  "by_severity": {
+   "HIGH": 1036,
+   "MEDIUM": 1048,
+   "LOW": 101,
+   "SIN_CVSS": 65,
+   "CRITICAL": 275
+  },
+  "with_cvss_pct": 97.4,
+  "ssvc_poc_or_active": 316,
+  "ssvc_automatable_total_impact": 132,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Google",
+    180
+   ],
+   [
+    "Apache Software Foundation",
+    139
+   ],
+   [
+    "NVIDIA",
+    116
+   ],
+   [
+    "n/a",
+    101
+   ],
+   [
+    "Unknown",
+    95
+   ],
+   [
+    "Mozilla",
+    78
+   ],
+   [
+    "Kiteworks",
+    61
+   ],
+   [
+    "Red Hat",
+    47
+   ],
+   [
+    "TryGhost",
+    47
+   ],
+   [
+    "makeplane",
+    38
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    343
+   ],
+   [
+    "CWE-862",
+    152
+   ],
+   [
+    "CWE-89",
+    136
+   ],
+   [
+    "CWE-416",
+    96
+   ],
+   [
+    "CWE-22",
+    93
+   ],
+   [
+    "CWE-639",
+    83
+   ],
+   [
+    "CWE-787",
+    73
+   ],
+   [
+    "CWE-918",
+    71
+   ],
+   [
+    "CWE-863",
+    71
+   ],
+   [
+    "CWE-74",
+    70
+   ]
+  ]
+ }
+}
