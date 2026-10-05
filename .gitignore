@@ -3,3 +3,10 @@ out/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Secretos y datos privados (el repo es público; ver regla 6 de CLAUDE.md)
+.env
+.env.*
+*.pem
+*.key
+inventario*

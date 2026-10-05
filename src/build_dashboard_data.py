@@ -21,6 +21,14 @@ EDGE_HINTS = ["netscaler", "citrix adc", "gateway", "vpn", "fortigate", "fortios
               "check point", "zyxel", "draytek", "esxi", "vcenter", "exchange", "sharepoint"]
 
 
+# Lista de EJEMPLO (no es un inventario real): top 20 fabricantes por cantidad de KEV en el catálogo
+# de CISA al 2026-10-04. Empates en el corte: se incluyen si son de perímetro o de endpoint, y
+# Atlassian por decisión explícita. Debe mantenerse igual a la WATCHLIST de ejemplo en n8n/.
+EXAMPLE_WATCHLIST = ("Microsoft, Cisco, Apple, Adobe, Google, Oracle, Apache, Ivanti, Fortinet, Linux, "
+                     "Citrix, D-Link, VMware, SonicWall, Synacor, Android, Palo Alto Networks, Samsung, SAP, "
+                     "Zyxel, Mozilla, Atlassian")
+
+
 def is_edge(v: dict) -> bool:
     s = f"{v.get('vendorProject','')} {v.get('product','')}".lower()
     return any(h in s for h in EDGE_HINTS)
@@ -35,8 +43,9 @@ def main():
     p.add_argument("--template", default="dashboard_template.html")
     p.add_argument("--out", default="dashboard.html")
     p.add_argument("--data-out", default="out/dashboard_data.json")
-    p.add_argument("--default-watch", default=os.environ.get("WATCHLIST_DEFAULT", ""),
-                   help="lista por defecto de 'Mis tecnologías' en el tablero (público si se publica)")
+    p.add_argument("--default-watch", default=os.environ.get("WATCHLIST_DEFAULT") or EXAMPLE_WATCHLIST,
+                   help="lista por defecto de 'Mis tecnologías' en el tablero (público si se publica); "
+                        "si no se indica, se usa la lista de ejemplo")
     a = p.parse_args()
 
     tz = dt.timezone(dt.timedelta(hours=a.utc_offset))

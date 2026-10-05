@@ -43,7 +43,7 @@ No requiere dependencias: solo usa la librería estándar de Python 3.9 o superi
    git push -u origin main
    ```
 3. **Activa Pages:** *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
-4. **Opcional:** en *Settings → Secrets and variables → Actions → Variables*, crea `WATCHLIST_DEFAULT` con tus tecnologías, por ejemplo `Microsoft, Cisco, Fortinet`. Si el repo es público, esa lista queda visible en el tablero. Si prefieres no exponerla, déjala vacía: cada persona escribe la suya en el tablero y queda guardada solo en su navegador.
+4. **Opcional:** por defecto el tablero parte con una lista de ejemplo (top de fabricantes por KEV, ver `EXAMPLE_WATCHLIST` en `src/build_dashboard_data.py`). Para cambiarla, en *Settings → Secrets and variables → Actions → Variables* crea `WATCHLIST_DEFAULT` con tus tecnologías, por ejemplo `Microsoft, Cisco, Fortinet`. Si el repo es público, esa lista queda visible en el tablero, así que no pongas tu inventario real. Cada persona puede escribir la suya en el tablero y queda guardada solo en su navegador.
 5. **Primera corrida:** en *Actions → Pulso diario de vulnerabilidades → Run workflow*. Tarda 3–4 minutos. El tablero queda en `https://<tu-usuario>.github.io/vuln-pulse/`.
 
 ## URLs para n8n
