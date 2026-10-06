@@ -1,0 +1,144 @@
+{
+ "date": "2026-10-06",
+ "window_7d": {
+  "start": "2026-09-30",
+  "end": "2026-10-06",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.04"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2512,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2399
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.04",
+  "catalog_total": 1734,
+  "added_7d": 5,
+  "added_7d_ids": [
+   "CVE-2026-76504",
+   "CVE-2026-104286",
+   "CVE-2026-102490",
+   "CVE-2026-102489",
+   "CVE-2026-88779"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Zammad GmbH": 2,
+   "Cisco": 1,
+   "Fortinet": 1,
+   "Citrix": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2504,
+  "rejected": 8,
+  "updated": 2875,
+  "by_severity": {
+   "HIGH": 962,
+   "CRITICAL": 245,
+   "MEDIUM": 980,
+   "SIN_CVSS": 234,
+   "LOW": 83
+  },
+  "with_cvss_pct": 90.7,
+  "ssvc_poc_or_active": 324,
+  "ssvc_automatable_total_impact": 127,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Linux",
+    208
+   ],
+   [
+    "Apache Software Foundation",
+    120
+   ],
+   [
+    "NVIDIA",
+    114
+   ],
+   [
+    "Unknown",
+    101
+   ],
+   [
+    "n/a",
+    94
+   ],
+   [
+    "Kiteworks",
+    61
+   ],
+   [
+    "TryGhost",
+    54
+   ],
+   [
+    "Red Hat",
+    53
+   ],
+   [
+    "JetBrains",
+    40
+   ],
+   [
+    "Google",
+    38
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    363
+   ],
+   [
+    "CWE-862",
+    168
+   ],
+   [
+    "CWE-89",
+    151
+   ],
+   [
+    "CWE-639",
+    90
+   ],
+   [
+    "CWE-22",
+    88
+   ],
+   [
+    "CWE-74",
+    77
+   ],
+   [
+    "CWE-918",
+    77
+   ],
+   [
+    "CWE-94",
+    64
+   ],
+   [
+    "CWE-787",
+    61
+   ],
+   [
+    "CWE-770",
+    57
+   ]
+  ]
+ }
+}
