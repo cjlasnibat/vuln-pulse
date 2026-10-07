@@ -1,10 +1,10 @@
 {
   "window": {
-    "start": "2026-09-30",
-    "end": "2026-10-06",
+    "start": "2026-10-01",
+    "end": "2026-10-07",
     "utc_offset": -3
   },
-  "generated_at": "2026-10-06T16:51:09.833164+00:00",
+  "generated_at": "2026-10-07T17:27:51.288248+00:00",
   "sources_status": {
     "kev": {
       "ok": true,
@@ -14,77 +14,72 @@
     "cvelist": {
       "ok": true,
       "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-      "fetched": 2512,
+      "fetched": 2658,
       "errors": 0
     },
     "epss": {
       "ok": true,
-      "scored": 2399
+      "scored": 2493
     }
   },
   "summary": {
-    "kev_added": 5,
+    "kev_added": 4,
     "kev_catalog_total": 1734,
     "kev_ransomware_known": 0,
     "kev_vendors": {
       "Zammad GmbH": 2,
-      "Cisco": 1,
       "Fortinet": 1,
       "Citrix": 1
     },
-    "cve_new": 2504,
+    "cve_new": 2650,
     "cve_rejected": 8,
-    "cve_updated": 2875,
+    "cve_updated": 2609,
     "cve_by_severity": {
-      "HIGH": 962,
-      "CRITICAL": 245,
-      "MEDIUM": 980,
-      "SIN_CVSS": 234,
-      "LOW": 83
+      "MEDIUM": 1059,
+      "HIGH": 968,
+      "CRITICAL": 275,
+      "LOW": 85,
+      "SIN_CVSS": 263
     },
-    "cve_with_cvss_pct": 90.7,
-    "ssvc_poc_or_active": 324,
-    "ssvc_automatable_total_impact": 127,
+    "cve_with_cvss_pct": 90.1,
+    "ssvc_poc_or_active": 327,
+    "ssvc_automatable_total_impact": 108,
     "epss_ge_10pct": 0,
     "top_vendors": [
       [
+        "Google",
+        291
+      ],
+      [
         "Linux",
-        208
+        210
       ],
       [
         "Apache Software Foundation",
-        120
-      ],
-      [
-        "NVIDIA",
-        114
+        117
       ],
       [
         "Unknown",
-        101
+        97
       ],
       [
         "n/a",
-        94
+        93
       ],
       [
-        "Kiteworks",
-        61
+        "Red Hat",
+        74
       ],
       [
         "TryGhost",
         54
       ],
       [
-        "Red Hat",
-        53
+        "backstage",
+        41
       ],
       [
-        "JetBrains",
-        40
-      ],
-      [
-        "Google",
+        "Hewlett Packard Enterprise (HPE)",
         38
       ],
       [
@@ -96,6 +91,10 @@
         37
       ],
       [
+        "Cisco",
+        36
+      ],
+      [
         "Legion of the Bouncy Castle Inc.",
         36
       ],
@@ -104,116 +103,96 @@
         31
       ],
       [
-        "payloadcms",
-        27
+        "Gitea",
+        30
       ]
     ],
     "top_cwe": [
       [
         "CWE-79",
-        363
+        299
       ],
       [
         "CWE-862",
-        168
+        187
       ],
       [
         "CWE-89",
-        151
+        131
       ],
       [
-        "CWE-639",
-        90
+        "CWE-863",
+        109
       ],
       [
         "CWE-22",
-        88
+        98
       ],
       [
-        "CWE-74",
-        77
+        "CWE-639",
+        80
       ],
       [
         "CWE-918",
-        77
+        76
+      ],
+      [
+        "CWE-200",
+        74
       ],
       [
         "CWE-94",
-        64
+        72
       ],
       [
-        "CWE-787",
-        61
-      ],
-      [
-        "CWE-770",
-        57
+        "CWE-74",
+        69
       ]
     ],
     "top_cna": [
       [
+        "GitHub_M",
+        313
+      ],
+      [
         "Patchstack",
-        407
+        281
+      ],
+      [
+        "Chrome",
+        258
       ],
       [
         "VulnCheck",
-        251
-      ],
-      [
-        "GitHub_M",
-        229
+        245
       ],
       [
         "Linux",
-        208
+        210
       ],
       [
         "VulDB",
-        173
+        151
       ],
       [
         "Wordfence",
-        142
+        128
       ],
       [
         "apache",
-        120
-      ],
-      [
-        "nvidia",
-        114
+        117
       ],
       [
         "WPScan",
-        101
+        97
       ],
       [
         "mitre",
-        91
+        96
       ]
     ]
   },
   "kev_new": [
-    {
-      "cveID": "CVE-2026-76504",
-      "vendorProject": "Cisco",
-      "product": "Catalyst SD-WAN Manager",
-      "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-      "dateAdded": "2026-09-30",
-      "shortDescription": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.",
-      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "dueDate": "2026-10-03",
-      "knownRansomwareCampaignUse": "Unknown",
-      "forensicTriage": "Yes",
-      "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
-      "cwes": [
-        "CWE-177"
-      ],
-      "epss": {
-        "epss": 0.01819,
-        "percentile": 0.78034
-      }
-    },
     {
       "cveID": "CVE-2026-104286",
       "vendorProject": "Fortinet",
@@ -232,7 +211,7 @@
       ],
       "epss": {
         "epss": 0.02201,
-        "percentile": 0.81946
+        "percentile": 0.81977
       }
     },
     {
@@ -252,7 +231,7 @@
       ],
       "epss": {
         "epss": 0.00629,
-        "percentile": 0.48437
+        "percentile": 0.48517
       }
     },
     {
@@ -272,7 +251,7 @@
       ],
       "epss": {
         "epss": 0.01396,
-        "percentile": 0.71518
+        "percentile": 0.71567
       }
     },
     {
@@ -292,11 +271,34 @@
       ],
       "epss": {
         "epss": 0.00592,
-        "percentile": 0.4651
+        "percentile": 0.46593
       }
     }
   ],
   "critical_cves": [
+    {
+      "cve_id": "CVE-2025-70518",
+      "state": "PUBLISHED",
+      "assigner": "mitre",
+      "date_published": "2026-10-07T00:00:00.000Z",
+      "vendor": "n/a",
+      "product": "n/a",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 10,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "The management portal's diagnostic ping tool of Fanvil x7a firmware version 2.6.0.1182 does not handle user supplied input securely. The lack of secure user input handling allows any unauthenticated attacker to inject commands and run code in the underlying Android operating system."
+    },
     {
       "cve_id": "CVE-2026-100103",
       "state": "PUBLISHED",
@@ -321,7 +323,7 @@
       "description": "Perforce P4 Search container images prior to 2026.4.2 reset the service authentication token to a publicly documented default value. An unauthenticated attacker with network access can obtain the highest application privilege, potentially leading to arbitrary code execution and compromise of the connected P4 Server.",
       "epss": {
         "epss": 0.00424,
-        "percentile": 0.34584
+        "percentile": 0.34664
       }
     },
     {
@@ -348,35 +350,32 @@
       "description": "The BackupSheep WordPress Backup Plugin WordPress plugin through 1.8 does not properly validate its integration key, treating an unset or blank key as valid, which allows unauthenticated attackers to create and download full site backups, including the database with user password hashes, and to delete arbitrary files on the server, leading to sensitive data disclosure and site takeover.\n\nThe Backu",
       "epss": {
         "epss": 0.00308,
-        "percentile": 0.21597
+        "percentile": 0.21668
       }
     },
     {
-      "cve_id": "CVE-2026-102427",
+      "cve_id": "CVE-2026-102255",
       "state": "PUBLISHED",
-      "assigner": "Joomla",
-      "date_published": "2026-09-30T15:14:49.229Z",
-      "vendor": "ordasoft.com",
-      "product": "OrdaSoft Joomla CCK",
+      "assigner": "sonicwall",
+      "date_published": "2026-10-07T13:07:13.384Z",
+      "vendor": "SonicWall",
+      "product": "SMA1000",
       "cvss": {
-        "version": "cvssV4_0",
+        "version": "cvssV3_1",
         "score": 10,
         "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y"
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
       },
       "cwe": [
-        "CWE-434"
+        "CWE-441",
+        "CWE-918"
       ],
       "ssvc": {
         "exploitation": "none",
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK < 8.3.16 - site/uploader.php is reached through the component’s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file’s content with a real magic-byte MIME check, but the extension allow-list that woul",
-      "epss": {
-        "epss": 0.00792,
-        "percentile": 0.54884
-      }
+      "description": "A Pre-authentication SSRF vulnerability exists in the SMA1000 Appliance Work Place interface due to an unintended alternate access path. By abusing this path, a remote unauthenticated attacker could potentially exploit this vulnerability to direct the appliance to issue requests on their behalf and reach internal functionality and perform unauthorized operations."
     },
     {
       "cve_id": "CVE-2026-103956",
@@ -403,7 +402,7 @@
       "description": "Missing authentication for critical function in the authentication dependency in Loom for AWS before 1.6.1 allowed remote actors to obtain super-admin authority over the agent control plane, including registering tool servers, reading stored integration credentials, and rewriting the IAM role policies attached to managed agent roles, via any request to the application API in a deployment where no ",
       "epss": {
         "epss": 0.00468,
-        "percentile": 0.38424
+        "percentile": 0.38504
       }
     },
     {
@@ -431,7 +430,7 @@
       "description": "A security vulnerability has been detected in Tenda HG7, HG9 and HG10 300001138_en_xpon. This impacts the function boaGetVar of the file /boaform/formLoopBack of the component Boa Web Server. Such manipulation of the argument Ethtype leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
       "epss": {
         "epss": 0.00644,
-        "percentile": 0.49161
+        "percentile": 0.49241
       }
     },
     {
@@ -459,7 +458,7 @@
       "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve",
       "epss": {
         "epss": 0.01843,
-        "percentile": 0.7832
+        "percentile": 0.78358
       }
     },
     {
@@ -479,11 +478,15 @@
         "CWE-74",
         "CWE-94"
       ],
-      "ssvc": null,
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
       "description": "A vulnerability has been found in InternLM MindSearch 0.1.0. This issue affects the function ExecutionAction.run of the file mindsearch/agent/graph.py of the component Planner Agent. The manipulation of the argument inputs leads to code injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure",
       "epss": {
         "epss": 0.0077,
-        "percentile": 0.54149
+        "percentile": 0.54221
       }
     },
     {
@@ -511,7 +514,7 @@
       "description": "A weakness has been identified in Totolink A3002MU 1.0.0-B20230403.1455. The impacted element is the function sub_40FCFC of the file /bin/boa of the component Authentication Check. Executing a manipulation can lead to improper authorization. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks.",
       "epss": {
         "epss": 0.00784,
-        "percentile": 0.54581
+        "percentile": 0.54651
       }
     },
     {
@@ -539,7 +542,7 @@
       "description": "A security vulnerability has been detected in Totolink A3002MU 1.0.0-B20230403.1455. This affects an unknown function of the file /boafrm/formIpQoS of the component QoS Rule Handler. The manipulation of the argument addQos/comment/entry_name leads to stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used.",
       "epss": {
         "epss": 0.00644,
-        "percentile": 0.49161
+        "percentile": 0.49241
       }
     },
     {
@@ -567,7 +570,7 @@
       "description": "A security vulnerability has been detected in TOTOLINK X6000R 9.4.0cu.652_B20230116. The impacted element is the function firmware_check of the file /cgi-bin/cstecgi.cgi of the component UploadFirmwareFile Handler. Such manipulation of the argument file_name leads to os command injection. The attack may be performed from remote.",
       "epss": {
         "epss": 0.02128,
-        "percentile": 0.81335
+        "percentile": 0.81365
       }
     },
     {
@@ -587,8 +590,44 @@
         "CWE-1321",
         "CWE-94"
       ],
-      "ssvc": null,
-      "description": "Payload is a free and open source headless content management system. In @payloadcms/plugin-form-builder versions before 3.90.0 and canary versions before 4.0.0-canary.34, an attacker can craft a form submission that executes code remotely on the server. This issue is fixed in versions 3.90.0 and 4.0.0-canary.34."
+      "ssvc": {
+        "exploitation": "none",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "Payload is a free and open source headless content management system. In @payloadcms/plugin-form-builder versions before 3.90.0 and canary versions before 4.0.0-canary.34, an attacker can craft a form submission that executes code remotely on the server. This issue is fixed in versions 3.90.0 and 4.0.0-canary.34.",
+      "epss": {
+        "epss": 0.00434,
+        "percentile": 0.35662
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106102",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:07:55.498Z",
+      "vendor": "quasarframework",
+      "product": "quasar",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 10,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "cwe": [
+        "CWE-116",
+        "CWE-79"
+      ],
+      "ssvc": {
+        "exploitation": "none",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "Quasar Framework is a framework for building high-performance Vue.js user interfaces. Prior to 2.22.0, the SSR-only getHead() serializer in ui/src/plugins/meta/Meta.js used getAttr() to interpolate values supplied through useMeta() into title, meta, link, and script markup without HTML text or quoted-attribute encoding. injectServerMeta() appended that output to the raw server-rendered response. A",
+      "epss": {
+        "epss": 0.00299,
+        "percentile": 0.20658
+      }
     },
     {
       "cve_id": "CVE-2026-32579",
@@ -614,7 +653,7 @@
       "description": "Unauthenticated Arbitrary File Upload in Kognetiks Chatbot for WordPress <= 2.4.9 versions.",
       "epss": {
         "epss": 0.00486,
-        "percentile": 0.39828
+        "percentile": 0.3991
       }
     },
     {
@@ -641,7 +680,7 @@
       "description": "Unauthenticated Arbitrary File Upload in Doctreat <= 1.7.0 versions.",
       "epss": {
         "epss": 0.00423,
-        "percentile": 0.34515
+        "percentile": 0.34596
       }
     },
     {
@@ -668,35 +707,7 @@
       "description": "Unauthenticated Privilege Escalation in Doctreat Core <= 1.7.0 versions.",
       "epss": {
         "epss": 0.00288,
-        "percentile": 0.19486
-      }
-    },
-    {
-      "cve_id": "CVE-2026-55107",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-09-30T17:06:00.286Z",
-      "vendor": "elct9620",
-      "product": "kobako",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 10,
-        "severity": "CRITICAL",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-470",
-        "CWE-94"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "Kobako is a Ruby gem that embeds a Wasm-isolated mruby interpreter inside applications, allowing execution of untrusted Ruby scripts (LLM-generated code, user formulas, student submissions, third-party plugins) in-process without giving them access to host memory, files, network, or credentials. From version 0.1.0 to before version 0.9.1, a guest mruby script running inside the Kobako sandbox can ",
-      "epss": {
-        "epss": 0.00799,
-        "percentile": 0.55113
+        "percentile": 0.19545
       }
     },
     {
@@ -723,7 +734,7 @@
       "description": "Unvalidated pathnames in the web interface in Teledyne FLIR Aware2 versions through 6.9.0.2 (PackBot) and 1.7.9 (FirstLook) allows remote unauthenticated attackers to read configuration and security parameters on Teledyne FLIR PackBot and FirstLook robots running this software via path traversal.",
       "epss": {
         "epss": 0.00429,
-        "percentile": 0.35029
+        "percentile": 0.35107
       }
     },
     {
@@ -742,8 +753,16 @@
       "cwe": [
         "CWE-306"
       ],
-      "ssvc": null,
-      "description": "Dell Container Storage Modules (CSM), versions prior to v1.18.0, contains a Missing Authentication for Critical Function vulnerability in the csm-authorization-storage gRPC server. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to unauthorized access to storage backend administrator credentials for all registered storage arrays."
+      "ssvc": {
+        "exploitation": "none",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "Dell Container Storage Modules (CSM), versions prior to v1.18.0, contains a Missing Authentication for Critical Function vulnerability in the csm-authorization-storage gRPC server. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to unauthorized access to storage backend administrator credentials for all registered storage arrays.",
+      "epss": {
+        "epss": 0.00791,
+        "percentile": 0.54905
+      }
     },
     {
       "cve_id": "CVE-2026-63692",
@@ -762,42 +781,19 @@
         "CWE-306"
       ],
       "ssvc": null,
-      "description": "Dell Container Storage Modules, versions prior to 1.18.0, contain(s) a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges."
-    },
-    {
-      "cve_id": "CVE-2026-76570",
-      "state": "PUBLISHED",
-      "assigner": "Joomla",
-      "date_published": "2026-09-30T14:47:48.516Z",
-      "vendor": "joomcode.com",
-      "product": "JCTables extension for Joomla",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 10,
-        "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y"
-      },
-      "cwe": [
-        "CWE-89"
-      ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables  1.21.1 - The front-end CRUD API controller performs no Joomla token validation and no authentication check on any task. Table names, column names, and values are taken directly from request parameters and concatenated into SQL queries, allowing SQLi for reading and writing queries.",
+      "description": "Dell Container Storage Modules, versions prior to 1.18.0, contain(s) a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.",
       "epss": {
-        "epss": 0.00455,
-        "percentile": 0.37373
+        "epss": 0.00647,
+        "percentile": 0.49391
       }
     },
     {
-      "cve_id": "CVE-2026-96349",
+      "cve_id": "CVE-2026-76482",
       "state": "PUBLISHED",
-      "assigner": "Patchstack",
-      "date_published": "2026-09-30T12:27:24.923Z",
-      "vendor": "SiteSkite",
-      "product": "SiteSkite",
+      "assigner": "cisco",
+      "date_published": "2026-10-07T16:16:00.719Z",
+      "vendor": "Cisco",
+      "product": "Cisco License On-Prem",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -805,18 +801,10 @@
         "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
       },
       "cwe": [
-        "CWE-94"
+        "CWE-347"
       ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "Unauthenticated Remote Code Execution (RCE) in SiteSkite <= 2.1.8 versions.",
-      "epss": {
-        "epss": 0.00602,
-        "percentile": 0.47037
-      }
+      "ssvc": null,
+      "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the engineering team for Cisco License On-Prem, formerly Cisco Smart Software Manager On-Prem (SSM On-Prem), has conducted a comprehensive internal security review. This review resulted in software hardening releases that address multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-202"
     },
     {
       "cve_id": "CVE-2026-105636",
@@ -838,7 +826,7 @@
       "description": "Plane is an open-source project management tool. Prior to 1.4.0, the webhook delivery task in apps/api/plane/bgtasks/webhook_task.py calls requests.post() without allow_redirects=False and does not validate redirect targets. validate_url() blocks private, loopback, link-local, and reserved addresses in the original webhook URL, but the final URL reached after one or more redirects is not checked. ",
       "epss": {
         "epss": 0.0035,
-        "percentile": 0.26392
+        "percentile": 0.26472
       }
     },
     {
@@ -865,7 +853,7 @@
       "description": "Penpot is an open-source design and prototyping platform. Prior to 2.18.0, the SVG exporter places an attacker-controlled text object's fill-color value into a ppmcolormask command string and executes that string through child_process.exec. A user who can edit a file can store shell metacharacters in the fill color and trigger SVG export, causing commands to execute with the exporter service's pri",
       "epss": {
         "epss": 0.00372,
-        "percentile": 0.28924
+        "percentile": 0.29008
       }
     },
     {
@@ -892,7 +880,7 @@
       "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. Before Langflow 1.10.3, the MCP stdio transport launched whatever command / args a user put in an MCP server configuration, with no allowlist and (before 1.10.3) wrapped in bash -c \"exec {command} ...\". Any user able to reach the MCP server settings (\"Settings → MCP Servers → Add MCP Server\", POST/PATCH /api/v2/mcp/serv",
       "epss": {
         "epss": 0.00396,
-        "percentile": 0.31601
+        "percentile": 0.31684
       }
     },
     {
@@ -911,11 +899,15 @@
       "cwe": [
         "CWE-78"
       ],
-      "ssvc": null,
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
       "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.0, any authenticated Langflow user can achieve Remote Code Execution (RCE) on the server by adding an MCP server with the \"Stdio\" transport. The user-supplied command field is passed directly to bash -c \"exec {command}\" with zero validation, no allowlisting, and no sandboxing. The command executes immediate",
       "epss": {
         "epss": 0.00589,
-        "percentile": 0.46381
+        "percentile": 0.46462
       }
     },
     {
@@ -942,7 +934,7 @@
       "description": "Subscriber Remote Code Execution (RCE) in WooCommerce Designer Pro <= 1.9.33 versions.",
       "epss": {
         "epss": 0.00736,
-        "percentile": 0.52946
+        "percentile": 0.5302
       }
     },
     {
@@ -969,7 +961,7 @@
       "description": "Subscriber Arbitrary File Upload in WP Duplicate <= 1.1.11 versions.",
       "epss": {
         "epss": 0.00447,
-        "percentile": 0.36729
+        "percentile": 0.36804
       }
     },
     {
@@ -996,7 +988,7 @@
       "description": "Subscriber Arbitrary File Upload in Taskbot <= 6.6 versions.",
       "epss": {
         "epss": 0.00479,
-        "percentile": 0.39281
+        "percentile": 0.39364
       }
     },
     {
@@ -1023,7 +1015,7 @@
       "description": "Employer / Sales Representative Arbitrary File Upload in Workreap Core <= 3.4.5 versions.",
       "epss": {
         "epss": 0.00479,
-        "percentile": 0.39286
+        "percentile": 0.39364
       }
     },
     {
@@ -1043,7 +1035,32 @@
         "CWE-269"
       ],
       "ssvc": null,
-      "description": "Dell Container Storage Modules (CSM) Operator, versions prior to 1.18.0 contains an Improper Privilege Management vulnerability in the ContainerStorageModule Custom Resource reconciler. A low privileged remote attacker could potentially exploit this vulnerability, leading to escalation of privileges and gaining root-level access on cluster nodes."
+      "description": "Dell Container Storage Modules (CSM) Operator, versions prior to 1.18.0 contains an Improper Privilege Management vulnerability in the ContainerStorageModule Custom Resource reconciler. A low privileged remote attacker could potentially exploit this vulnerability, leading to escalation of privileges and gaining root-level access on cluster nodes.",
+      "epss": {
+        "epss": 0.00534,
+        "percentile": 0.4326
+      }
+    },
+    {
+      "cve_id": "CVE-2026-79798",
+      "state": "PUBLISHED",
+      "assigner": "hpe",
+      "date_published": "2026-10-06T19:17:01.977Z",
+      "vendor": "Hewlett Packard Enterprise (HPE)",
+      "product": "ClearPass Policy Manager (CPPM)",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 9.9,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "cwe": [],
+      "ssvc": null,
+      "description": "SQL injection vulnerabilities in the web-based management interface of ClearPass Policy Manager could allow a low-privileged authenticated remote attacker to conduct SQL injection attacks against the ClearPass Policy Manager instance. Successful exploitation could allow an attacker to run arbitrary database commands.",
+      "epss": {
+        "epss": 0.00344,
+        "percentile": 0.2582
+      }
     },
     {
       "cve_id": "CVE-2026-79901",
@@ -1069,7 +1086,7 @@
       "description": "In deployments using BoKS keytab management, affected versions of boks_keytabmd generate Active Directory service-account passwords from a predictable pseudo-random sequence seeded with the current Unix timestamp. An attacker who knows the service principal and can estimate the password-change time can reproduce a limited candidate set and verify candidates offline.",
       "epss": {
         "epss": 0.00266,
-        "percentile": 0.17146
+        "percentile": 0.17203
       }
     },
     {
@@ -1096,7 +1113,7 @@
       "description": "GitLab has remediated a vulnerability in the GitLab AI Gateway component affecting all versions of the AI Gateway from 18.1.6 before 19.2.4, 19.3 before 19.3.2, and 19.4 before 19.4.1 that, under certain conditions, could have allowed an authenticated user with Duo Agent Platform access to escape the prompt template sandbox via a specially crafted flow configuration, resulting in arbitrary command",
       "epss": {
         "epss": 0.00943,
-        "percentile": 0.59764
+        "percentile": 0.59828
       }
     },
     {
@@ -1123,7 +1140,7 @@
       "description": "Insufficient validation allows arbitrary commands to be executed via the Multilang adminbin.",
       "epss": {
         "epss": 0.00464,
-        "percentile": 0.38097
+        "percentile": 0.38178
       }
     },
     {
@@ -1149,89 +1166,8 @@
       },
       "description": "A flaw was found in Foreman. An authenticated attacker with low-level permissions can achieve remote code execution (RCE) by bypassing the safemode sandbox within the templating engine. Due to improper handling of delegated methods, an attacker can append unauthorized functions to the allowed execution list, enabling them to run arbitrary commands on the hosting server.",
       "epss": {
-        "epss": 0.00703,
-        "percentile": 0.51742
-      }
-    },
-    {
-      "cve_id": "CVE-2026-100512",
-      "state": "PUBLISHED",
-      "assigner": "Patchstack",
-      "date_published": "2026-09-30T17:39:04.412Z",
-      "vendor": "Hook & Filter",
-      "product": "Nested Pages",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 9.8,
-        "severity": "CRITICAL",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-502"
-      ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "Contributor PHP Object Injection in Nested Pages <= 3.3.2 versions.",
-      "epss": {
-        "epss": 0.00331,
-        "percentile": 0.24139
-      }
-    },
-    {
-      "cve_id": "CVE-2026-102115",
-      "state": "PUBLISHED",
-      "assigner": "cisa-cg",
-      "date_published": "2026-09-30T20:19:55.265Z",
-      "vendor": "Kiteworks",
-      "product": "Core",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 9.8,
-        "severity": "CRITICAL",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-640"
-      ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "Kiteworks Core did not correctly validate a parameter submitted to the password reset workflow. An unauthenticated attacker who knew the email address of a user with a locally stored password could potentially reset that account's password without access to the emailed reset link and then authenticate as that user, including where the account holds administrative privileges.",
-      "epss": {
-        "epss": 0.00334,
-        "percentile": 0.24635
-      }
-    },
-    {
-      "cve_id": "CVE-2026-103110",
-      "state": "PUBLISHED",
-      "assigner": "mitre",
-      "date_published": "2026-09-30T03:03:07.449Z",
-      "vendor": "Pexip",
-      "product": "Infinity",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 9.8,
-        "severity": "CRITICAL",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-787"
-      ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "Pexip Infinity before 38.2, plus 39.0, 39.1 and 40.0, is affected by improper input validation that allows a remote attacker to execute code remotely as an unprivileged user on a Pexip Infinity Conferencing Node.",
-      "epss": {
-        "epss": 0.00608,
-        "percentile": 0.47369
+        "epss": 0.0072,
+        "percentile": 0.52447
       }
     },
     {
@@ -1258,7 +1194,7 @@
       "description": "Unauthenticated Privilege Escalation in Authorizer <= 3.15.3 versions.",
       "epss": {
         "epss": 0.00268,
-        "percentile": 0.17333
+        "percentile": 0.17396
       }
     },
     {
@@ -1287,7 +1223,7 @@
       "description": "Authlib version 1.7.2 and below contains a vulnerability where discovery JSON metadata is cached without validation or issuer-origin binding. This allows a poisoned discovery response to replace all endpoint values with attacker-controlled values rather than endpoint URLs that share the origin of the configured server metadata URL.",
       "epss": {
         "epss": 0.00167,
-        "percentile": 0.05451
+        "percentile": 0.05478
       }
     },
     {
@@ -1314,7 +1250,30 @@
       "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
       "epss": {
         "epss": 0.02201,
-        "percentile": 0.81946
+        "percentile": 0.81977
+      }
+    },
+    {
+      "cve_id": "CVE-2026-104334",
+      "state": "PUBLISHED",
+      "assigner": "ibm",
+      "date_published": "2026-10-06T23:57:57.605Z",
+      "vendor": "IBM",
+      "product": "Langflow OSS",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-94"
+      ],
+      "ssvc": null,
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote attacker to execute arbitrary code due to improper control of code generation.",
+      "epss": {
+        "epss": 0.00617,
+        "percentile": 0.47913
       }
     },
     {
@@ -1340,12 +1299,848 @@
       },
       "description": "Improper neutralization of special elements used in an expression language statement ('Expression Language Injection') vulnerability in Apache Struts. If the application is configured to use the legacy RESTful action mapper, a crafted request can inject an OGNL expression that may lead to remote code execution. Struts 7 is affected only when the OGNL allowlist is disabled; it is enabled by default",
       "epss": {
-        "epss": 0.00364,
-        "percentile": 0.28019
+        "epss": 0.00863,
+        "percentile": 0.5731
+      }
+    },
+    {
+      "cve_id": "CVE-2026-104846",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-02T15:59:45.802Z",
+      "vendor": "lxsmnsyc",
+      "product": "seroval",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-843"
+      ],
+      "ssvc": {
+        "exploitation": "none",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. From 0.12.0 until 1.6.2, fromJSON deserialization of a fulfilled Promise control node can pass a plugin-produced callable-bearing thenable to a native Promise resolver. ECMAScript thenable assimilation then invokes the callable unexpectedly, allowing attacker-controlled JSON to trigger co",
+      "epss": {
+        "epss": 0.00345,
+        "percentile": 0.25916
       }
     }
   ],
   "ssvc_poc_or_active": [
+    {
+      "cve_id": "CVE-2026-62176",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-07T16:06:56.016Z",
+      "vendor": "MervinPraison",
+      "product": "PraisonAI",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 9.1,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-94"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "PraisonAI is a multi-agent teams system. Prior to version 4.6.78, the `deploy/api.py` module generates Python server code by directly interpolating the `agents_file` parameter into an f-string that is then written to a file and executed via `subprocess.Popen()`. An attacker who controls the `agents_file` value (via CLI argument, configuration, or upstream API) can inject arbitrary Python code. Ver"
+    },
+    {
+      "cve_id": "CVE-2026-107270",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-07T15:44:03.555Z",
+      "vendor": "gophish",
+      "product": "gophish",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 7.1,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-639"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Gophish through 0.12.1 contains an insecure direct object reference vulnerability that allows authenticated users to take over other users' groups, templates, landing pages and sending profiles. Attackers can supply another user's sequential id in POST requests to /api/groups/, /api/templates/, /api/pages/ or /api/smtp/ to overwrite and reassign objects, locking out owners and exposing victims' re"
+    },
+    {
+      "cve_id": "CVE-2026-107272",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-07T15:44:05.720Z",
+      "vendor": "gophish",
+      "product": "gophish",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 2.3,
+        "severity": "LOW",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+      },
+      "cwe": [
+        "CWE-79"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Gophish through 0.12.1 contains stored and reflected cross-site scripting vulnerabilities that allow attackers to inject script by returning malicious SMTP server error messages. Attackers controlling or intercepting a sending profile's SMTP server can execute script when administrators view campaign results or send test emails, stealing API keys."
+    },
+    {
+      "cve_id": "CVE-2026-107204",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-07T15:24:03.214Z",
+      "vendor": "LMCache",
+      "product": "LMCache",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 9.3,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-306"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "LMCache through 0.5.5 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute Python code by posting scripts to the /run_script endpoint. Attackers can recover real builtins through the injected FastAPI app object, bypassing the guarded __import__, to import os and run operating system commands as the LMCache process."
+    },
+    {
+      "cve_id": "CVE-2026-107206",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-07T15:24:04.682Z",
+      "vendor": "LMCache",
+      "product": "LMCache",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.8,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-306"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "LMCache through 0.5.5 contains a missing authentication vulnerability in the multiprocess mode HTTP server that allows remote unauthenticated attackers to access management endpoints listening on all interfaces by default. Attackers can read environment credentials via GET /env and configuration via GET /config, clear caches, delete cache objects, and modify tenant quotas to evict other tenants' c"
+    },
+    {
+      "cve_id": "CVE-2025-70518",
+      "state": "PUBLISHED",
+      "assigner": "mitre",
+      "date_published": "2026-10-07T00:00:00.000Z",
+      "vendor": "n/a",
+      "product": "n/a",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 10,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "The management portal's diagnostic ping tool of Fanvil x7a firmware version 2.6.0.1182 does not handle user supplied input securely. The lack of secure user input handling allows any unauthenticated attacker to inject commands and run code in the underlying Android operating system."
+    },
+    {
+      "cve_id": "CVE-2026-46434",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-07T13:55:19.566Z",
+      "vendor": "wger-project",
+      "product": "wger",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 7.1,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N"
+      },
+      "cwe": [
+        "CWE-269"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "wger is a free, open-source workout and fitness manager. Prior to version 2.6, a user with only the `gym_trainer` permission can deactivate any account in the same gym, including `gym_manager` and `general_gym_manager` accounts. The `UserDeactivateView` grants access to anyone holding any one of `gym.manage_gym`, `gym.manage_gyms`, or `gym.gym_trainer` (OR logic via `WgerMultiplePermissionRequired"
+    },
+    {
+      "cve_id": "CVE-2026-107181",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-07T13:35:40.907Z",
+      "vendor": "Telegram",
+      "product": "Telegram Desktop",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.6,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-143"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "Telegram Desktop before 7.2.9 contains an IPC record-separator injection vulnerability in Core::Sandbox that allows remote attackers to inject OPEN: records via crafted tg:// links containing unescaped semicolons. Attackers can reach the interpret: scheme handler to upload local files, including tdata session keys, to an attacker channel, enabling account takeover."
+    },
+    {
+      "cve_id": "CVE-2026-89182",
+      "state": "PUBLISHED",
+      "assigner": "Gitea",
+      "date_published": "2026-10-06T21:36:01.187Z",
+      "vendor": "Gitea",
+      "product": "Gitea",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 5.4,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+      },
+      "cwe": [
+        "CWE-863"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "With `[repository] FORCE_PRIVATE = true`, Gitea creates new repositories as private, but the post-receive hook still applied the `repo.private=false` push option to an empty repository created by push. Any user who can create repositories could make their new repository public in violation of the instance policy. The default configuration is not affected.",
+      "epss": {
+        "epss": 0.00148,
+        "percentile": 0.03493
+      }
+    },
+    {
+      "cve_id": "CVE-2026-104045",
+      "state": "PUBLISHED",
+      "assigner": "redhat",
+      "date_published": "2026-10-06T20:37:41.257Z",
+      "vendor": "Red Hat",
+      "product": "Red Hat Enterprise Linux 10",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 4.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "cwe": [
+        "CWE-772"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A flaw was found in SSSD. A local user can trigger a Denial of Service (DoS) by exploiting a race condition in the autofs responder between asynchronous enumeration completion and map invalidation. By repeatedly sending concurrent map enumeration and invalidation requests, an attacker can cause memory to leak, leading to excessive memory consumption that can disrupt or crash the autofs service.",
+      "epss": {
+        "epss": 0.00095,
+        "percentile": 0.00617
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106454",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T19:55:36.523Z",
+      "vendor": "twisted",
+      "product": "twisted",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 4.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+      },
+      "cwe": [
+        "CWE-1333"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Twisted is an event-based framework for internet applications, supporting Python 3.6+. In 25.5.0 and earlier, wildcardToRegexp() in twisted/mail/imap4.py translates the IMAP asterisk and percent wildcards but passes all other characters from an authenticated client's LIST or LSUB pattern directly to re.compile(), allowing nested or otherwise expensive regular expression constructs to cause catastr",
+      "epss": {
+        "epss": 0.0033,
+        "percentile": 0.24094
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106447",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T19:44:03.028Z",
+      "vendor": "StableLib",
+      "product": "stablelib",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.7,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-674"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "StableLib is a stable library of useful TypeScript and JavaScript code. Prior to 2.0.4, the @stablelib/cbor decoder recursively processes nested CBOR arrays, maps, and tags through _decodeValue() without enforcing a maximum nesting depth. A sufficiently deep structure exhausts the JavaScript call stack, causing a decoding exception and potentially terminating an uncaught request worker or process.",
+      "epss": {
+        "epss": 0.00371,
+        "percentile": 0.28954
+      }
+    },
+    {
+      "cve_id": "CVE-2026-104048",
+      "state": "PUBLISHED",
+      "assigner": "redhat",
+      "date_published": "2026-10-06T19:34:25.863Z",
+      "vendor": "Red Hat",
+      "product": "Red Hat Enterprise Linux 10",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 6.8,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "cwe": [
+        "CWE-1025"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "A flaw was found in SSSD. In trust-enabled identity management environments, SSSD evaluates Host-Based Access Control (HBAC) rules by stripping domain qualifiers and comparing only short usernames. An authenticated user in a trusted domain who shares the same username as an authorized local account can bypass access policies and gain unauthorized access to protected services or hosts.",
+      "epss": {
+        "epss": 0.00276,
+        "percentile": 0.18353
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106444",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T19:01:14.626Z",
+      "vendor": "handlebars-lang",
+      "product": "handlebars.js",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 4.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      },
+      "cwe": [
+        "CWE-116"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.precompile() uses quotedString() in lib/handlebars/compiler/code-gen.js to emit static template text into generated JavaScript without escaping sequences that terminate an enclosing HTML script element. When an application precompiles attacker-controlled template text and embeds the g",
+      "epss": {
+        "epss": 0.00294,
+        "percentile": 0.20211
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106386",
+      "state": "PUBLISHED",
+      "assigner": "Chrome",
+      "date_published": "2026-10-06T18:41:32.108Z",
+      "vendor": "Google",
+      "product": "Chrome",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 6.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+      },
+      "cwe": [
+        "CWE-908"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Uninitialized resource in WebAudio in Google Chrome prior to 155.0.8059.39 allowed a remote attacker to read memory inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+      "epss": {
+        "epss": 0.0019,
+        "percentile": 0.07959
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106439",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T18:49:12.110Z",
+      "vendor": "hydra-ecosystem",
+      "product": "hydra",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.5,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-470",
+        "CWE-693"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "Hydra is a framework for elegantly configuring complex applications. From 1.3.4 until 1.3.7 and 1.4.0.dev10, Hydra stores legacy instantiate target blocklists and related execution-policy collections in mutable module-level state. An attacker who controls multiple sibling target entries can resolve hydra._internal.target_policy.UNCONTROLLED_EXECUTION_TARGETS.discard through instantiate(), remove a",
+      "epss": {
+        "epss": 0.00463,
+        "percentile": 0.38147
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106121",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T18:08:52.026Z",
+      "vendor": "rabbitmq",
+      "product": "rabbitmq-java-client",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 4.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "cwe": [
+        "CWE-835"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "The RabbitMQ Java client library allows Java and JVM-based applications to connect to and interact with RabbitMQ nodes. Prior to 5.37.0, com.rabbitmq.tools.json.JSONReader.read() fails to terminate when input ends inside a quoted string or a line comment because its string and whitespace scanners do not stop at CharacterIterator.DONE. The default DefaultJsonRpcMapper passes JSON-RPC message bodies",
+      "epss": {
+        "epss": 0.00493,
+        "percentile": 0.4036
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106122",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T18:10:18.748Z",
+      "vendor": "rabbitmq",
+      "product": "rabbitmq-java-client",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-172",
+        "CWE-248"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "The RabbitMQ Java client library allows Java and JVM-based applications to connect to and interact with RabbitMQ nodes. Prior to 5.36.0, ValueReader.readShortstr decodes malformed UTF-8 bytes into replacement characters that can re-encode beyond the AMQP shortstr limit enforced by ValueWriter.writeShortstr. An attacker who can submit an RPC message with a malformed echoed property can cause reply ",
+      "epss": {
+        "epss": 0.00409,
+        "percentile": 0.33044
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106117",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:53:46.448Z",
+      "vendor": "SixLabors",
+      "product": "ImageSharp",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "cwe": [
+        "CWE-787"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "ImageSharp is a 2D graphics library. From 3.0.0 until 4.1.1, decoding a strip TIFF using CCITT Group 3 or Modified Huffman compression can pass attacker-expanded runs to BitWriterUtils.WriteBits without first checking the current row width. T4TiffCompression.WritePixelRun can accumulate oversized makeup-code runs, and ModifiedHuffmanTiffCompression.Decompress validates the width only after writing",
+      "epss": {
+        "epss": 0.00425,
+        "percentile": 0.34758
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106114",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:48:41.736Z",
+      "vendor": "SixLabors",
+      "product": "ImageSharp",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      },
+      "cwe": [
+        "CWE-789"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "ImageSharp is a 2D graphics library. From 1.0.0-beta0001 until 4.1.2, ICC CLUT parsing calculates allocation sizes from attacker-declared channel and grid dimensions before confirming that the profile contains the declared values. IccDataReader.ReadClutF32 can request a large float array, and earlier public IccProfile.Entries parsing paths can allocate a large jagged representation, from a short t",
+      "epss": {
+        "epss": 0.00366,
+        "percentile": 0.28335
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106116",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:51:36.366Z",
+      "vendor": "SixLabors",
+      "product": "ImageSharp",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      },
+      "cwe": [
+        "CWE-835"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "ImageSharp is a 2D graphics library. From 2.0.0 until 4.1.2, ExifReader.ReadValues64 trusts the 64-bit BigTIFF IFD entry count and iterates once per declared entry. When fewer than 20 bytes remain, ExifReader.ReadValue64 returns without advancing the stream or terminating the outer loop, so a small malformed BigTIFF can keep one decoder thread executing for an attacker-controlled duration. This re",
+      "epss": {
+        "epss": 0.00366,
+        "percentile": 0.28336
+      }
+    },
+    {
+      "cve_id": "CVE-2026-88252",
+      "state": "PUBLISHED",
+      "assigner": "redhat",
+      "date_published": "2026-10-06T17:50:41.501Z",
+      "vendor": "Red Hat",
+      "product": "Red Hat Enterprise Linux 10",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 4.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "cwe": [
+        "CWE-835"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A flaw was found in sssd. A local user can cause a Denial of Service (DoS) by exhausting the responder service's available file descriptors (system handles used for open connections). By opening and maintaining many concurrent connections to a responder socket while continuing to queue new connection attempts, an attacker can trigger an unthrottled retry loop. This condition leads to high CPU util",
+      "epss": {
+        "epss": 0.00143,
+        "percentile": 0.03132
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106111",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:44:24.782Z",
+      "vendor": "SixLabors",
+      "product": "ImageSharp",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 5.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "cwe": [
+        "CWE-226"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "ImageSharp is a 2D graphics library. From 4.0.0 until 4.1.2, ExrBaseDecompressor.UndoZipCompression accepts a nonempty ZIP or ZIPS inflate result that is shorter than the EXR block's required size. ZipExrCompression.Decompress reconstructs the returned prefix while ExrDecoderCore processes the full expected block from a buffer obtained through Configuration.Default, allowing bytes retained from a ",
+      "epss": {
+        "epss": 0.0035,
+        "percentile": 0.2647
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106106",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:24:07.788Z",
+      "vendor": "quasarframework",
+      "product": "quasar",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 7.1,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:A/AC:H/AT:P/PR:N/UI:P/VC:H/VI:L/VA:N/SC:H/SI:H/SA:N"
+      },
+      "cwe": [
+        "CWE-497",
+        "CWE-79"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Quasar Framework is a framework for building high-performance Vue.js user interfaces. Prior to @quasar/render-ssr-error 2.2.4 and @quasar/app-vite 3.3.0, renderSSRError() in utils/render-ssr-error/src/index.js used diagnostic data from utils/render-ssr-error/src/env.js to serialize process.env, request headers, and cookies into the HTTP page returned by serve.devError(), while the development serv",
+      "epss": {
+        "epss": 0.00279,
+        "percentile": 0.18616
+      }
+    },
+    {
+      "cve_id": "CVE-2026-106101",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T17:04:39.673Z",
+      "vendor": "quasarframework",
+      "product": "quasar",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 3.1,
+        "severity": "LOW",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L"
+      },
+      "cwe": [
+        "CWE-843"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Quasar Framework is a framework for building high-performance Vue.js user interfaces. Prior to 2.32.2, the openURL() utility in ui/src/utils/open-url/open-url.js trusted window.SafariViewController whenever that global existed in an iOS environment. Attacker-controlled HTML rendered by components such as QEditor can create a named SafariViewController element, causing browser named-property resolu",
+      "epss": {
+        "epss": 0.00259,
+        "percentile": 0.16146
+      }
+    },
+    {
+      "cve_id": "CVE-2025-71384",
+      "state": "PUBLISHED",
+      "assigner": "mitre",
+      "date_published": "2026-10-06T00:00:00.000Z",
+      "vendor": "n/a",
+      "product": "n/a",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 6.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-121"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "Dbit WIFI4 N300 1.0.0 devices allows administrators (from the local Wi-Fi network) to execute OS commands by leveraging a stack-based buffer overflow via the /api/addStaticDHCP comment field,",
+      "epss": {
+        "epss": 0.0022,
+        "percentile": 0.11541
+      }
+    },
+    {
+      "cve_id": "CVE-2026-95140",
+      "state": "PUBLISHED",
+      "assigner": "mitre",
+      "date_published": "2026-10-06T00:00:00.000Z",
+      "vendor": "n/a",
+      "product": "n/a",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "kkFileView v5.0.0 through v5.0.2 contains a directory traversal vulnerability in FileController.java. The fileUpload, createFolder and existsFile endpoints accept a \"path\" parameter that is concatenated into the upload base path without validation, allowing unauthenticated attackers to create arbitrary directories and write arbitrary files outside the intended fileDir root via a crafted multipart ",
+      "epss": {
+        "epss": 0.00586,
+        "percentile": 0.46308
+      }
+    },
+    {
+      "cve_id": "CVE-2026-95153",
+      "state": "PUBLISHED",
+      "assigner": "mitre",
+      "date_published": "2026-10-06T00:00:00.000Z",
+      "vendor": "n/a",
+      "product": "n/a",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 4.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "cwe": [
+        "CWE-200"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "An issue in Bludit CMS 3.22.0 allows a remote attacker to obtain sensitive information via the /admin/ajax/clippy and /admin/ajax/save-as-draft endpoints",
+      "epss": {
+        "epss": 0.00356,
+        "percentile": 0.27203
+      }
+    },
+    {
+      "cve_id": "CVE-2026-105800",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T14:48:05.267Z",
+      "vendor": "i18next",
+      "product": "i18next-http-backend",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 3.7,
+        "severity": "LOW",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-918"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "i18next-http-backend is a backend layer for i18next that loads translation resources in Node.js, browsers, and Deno. Prior to 4.0.2, attacker-controlled language or namespace values interpolated into a custom loadPath or addPath that begins directly with {{lng}} or {{ns}} can make colon-based input become an absolute URL or, in browsers, make a double-slash namespace become a protocol-relative URL",
+      "epss": {
+        "epss": 0.00289,
+        "percentile": 0.19666
+      }
+    },
+    {
+      "cve_id": "CVE-2026-105922",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-06T14:45:15.075Z",
+      "vendor": "vllm-project",
+      "product": "vLLM",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-404"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A security flaw has been discovered in vllm-project vLLM up to 0.31.0. This impacts the function get_token_bin_counts_and_mask of the file vllm/model_executor/layers/utils.py of the component Penalty Handler. Performing a manipulation results in denial of service. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks. The project was",
+      "epss": {
+        "epss": 0.00303,
+        "percentile": 0.21093
+      }
+    },
+    {
+      "cve_id": "CVE-2026-105792",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T14:10:52.316Z",
+      "vendor": "microsoft",
+      "product": "UFO",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 6.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "cwe": [
+        "CWE-833"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Microsoft UFO is an open-source framework for intelligent automation across devices and platforms. Prior to 3.0.9, the /api/task_result/{task_name} endpoint calls SessionManager.get_result_by_task() in ufo/server/services/session_manager.py, which acquires a non-reentrant lock and then calls SessionManager.get_result() to acquire the same lock again when the task name maps to a session. An authent",
+      "epss": {
+        "epss": 0.00692,
+        "percentile": 0.51356
+      }
+    },
     {
       "cve_id": "CVE-2026-105793",
       "state": "PUBLISHED",
@@ -1367,7 +2162,39 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "Microsoft UFO is an open-source framework for intelligent automation across devices and platforms. Prior to 3.0.9, the press_key tool in ufo/client/mcp/http_servers/mobile_mcp_server.py accepts a free-form key_code parameter and passes it to `adb shell input keyevent`. The adb client joins the arguments into a remote command string that the Android shell reparses, allowing an authenticated Mobile "
+      "description": "Microsoft UFO is an open-source framework for intelligent automation across devices and platforms. Prior to 3.0.9, the press_key tool in ufo/client/mcp/http_servers/mobile_mcp_server.py accepts a free-form key_code parameter and passes it to `adb shell input keyevent`. The adb client joins the arguments into a remote command string that the Android shell reparses, allowing an authenticated Mobile ",
+      "epss": {
+        "epss": 0.00865,
+        "percentile": 0.57361
+      }
+    },
+    {
+      "cve_id": "CVE-2026-105797",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T14:23:42.012Z",
+      "vendor": "microsoft",
+      "product": "simplechat",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 8.8,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "cwe": [
+        "CWE-78",
+        "CWE-863"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "SimpleChat is a secure AI conversation application with personal and group workspaces for document-grounded interactions. In versions 0.261.003 and 0.261.027, an authorization ordering flaw in POST /api/user/plugins allows an authenticated low-privileged user to omit the top-level MCP type so that _reject_non_admin_mcp_stdio skips inspection before the type is restored from metadata. The stored pe",
+      "epss": {
+        "epss": 0.00564,
+        "percentile": 0.45102
+      }
     },
     {
       "cve_id": "CVE-2026-105798",
@@ -1390,7 +2217,11 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "SimpleChat is a secure AI conversation application with personal and group workspaces for document-grounded interactions. Prior to 0.261.029, POST /api/group_documents/upload stores an attacker-controlled group document filename that group_workspaces.html later interpolates into inline Share event handlers. The escapeGroupHtml function leaves apostrophes unchanged, while escapeHtml produces an HTM"
+      "description": "SimpleChat is a secure AI conversation application with personal and group workspaces for document-grounded interactions. Prior to 0.261.029, POST /api/group_documents/upload stores an attacker-controlled group document filename that group_workspaces.html later interpolates into inline Share event handlers. The escapeGroupHtml function leaves apostrophes unchanged, while escapeHtml produces an HTM",
+      "epss": {
+        "epss": 0.00465,
+        "percentile": 0.38263
+      }
     },
     {
       "cve_id": "CVE-2026-105921",
@@ -1414,7 +2245,11 @@
         "automatable": "no",
         "technical_impact": "partial"
       },
-      "description": "A vulnerability was identified in Kusalkasilva Learning-Management-System up to ffeb873f8803f1e9664384ff75000c7da45466d2. This affects an unknown function of the file search_class.php. Such manipulation of the argument school_year leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used. This product operates on a rolling release basis, ensur"
+      "description": "A vulnerability was identified in Kusalkasilva Learning-Management-System up to ffeb873f8803f1e9664384ff75000c7da45466d2. This affects an unknown function of the file search_class.php. Such manipulation of the argument school_year leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used. This product operates on a rolling release basis, ensur",
+      "epss": {
+        "epss": 0.002,
+        "percentile": 0.0905
+      }
     },
     {
       "cve_id": "CVE-2026-105788",
@@ -1438,7 +2273,38 @@
         "automatable": "no",
         "technical_impact": "total"
       },
-      "description": "Microsoft UFO is an open-source framework for intelligent automation across devices and platforms. Prior to 3.0.10, the type_text and launch_app tools in ufo/client/mcp/http_servers/mobile_mcp_server.py pass the authenticated caller-controlled text and package_name parameters into adb shell command argument positions without comprehensive validation. The adb client joins those arguments into a rem"
+      "description": "Microsoft UFO is an open-source framework for intelligent automation across devices and platforms. Prior to 3.0.10, the type_text and launch_app tools in ufo/client/mcp/http_servers/mobile_mcp_server.py pass the authenticated caller-controlled text and package_name parameters into adb shell command argument positions without comprehensive validation. The adb client joins those arguments into a rem",
+      "epss": {
+        "epss": 0.01055,
+        "percentile": 0.63342
+      }
+    },
+    {
+      "cve_id": "CVE-2026-105790",
+      "state": "PUBLISHED",
+      "assigner": "GitHub_M",
+      "date_published": "2026-10-06T14:08:24.075Z",
+      "vendor": "microsoft",
+      "product": "UFO",
+      "cvss": {
+        "version": "cvssV3_1",
+        "score": 6.4,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      },
+      "cwe": [
+        "CWE-918"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Microsoft UFO is an open-source framework for intelligent automation across devices and platforms. Prior to 3.0.9, authenticated device registration through /api/devices can supply a permitted attacker-controlled WebSocket endpoint while aip/transport/websocket.py applies pinned_addresses only to the initial destination. The pinned websockets.connect() client follows cross-origin redirects and ope",
+      "epss": {
+        "epss": 0.00534,
+        "percentile": 0.43298
+      }
     },
     {
       "cve_id": "CVE-2026-106037",
@@ -1461,7 +2327,11 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "Mooncake through 0.3.13.post1 contains a missing authentication vulnerability in the Store REST service, which binds to 0.0.0.0 without authentication on any route. Unauthenticated attackers can call routes such as /api/get, /api/put, /api/remove_all and /api/mount to read cached KV data with user prompts, inject or delete objects, and mount attacker-described segments."
+      "description": "Mooncake through 0.3.13.post1 contains a missing authentication vulnerability in the Store REST service, which binds to 0.0.0.0 without authentication on any route. Unauthenticated attackers can call routes such as /api/get, /api/put, /api/remove_all and /api/mount to read cached KV data with user prompts, inject or delete objects, and mount attacker-described segments.",
+      "epss": {
+        "epss": 0.00704,
+        "percentile": 0.51844
+      }
     },
     {
       "cve_id": "CVE-2026-106039",
@@ -1484,759 +2354,24 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "Mooncake Store master through 0.3.13.post1 contains a missing authorization vulnerability that allows unauthenticated attackers to create, steal, and falsely complete replication tasks via the coro_rpc port. Attackers can invoke CreateCopyTask, CreateMoveTask, FetchTasks, and MarkTaskToComplete with victim client UUIDs disclosed by QueryTask to hijack task queues and record replication that never "
+      "description": "Mooncake Store master through 0.3.13.post1 contains a missing authorization vulnerability that allows unauthenticated attackers to create, steal, and falsely complete replication tasks via the coro_rpc port. Attackers can invoke CreateCopyTask, CreateMoveTask, FetchTasks, and MarkTaskToComplete with victim client UUIDs disclosed by QueryTask to hijack task queues and record replication that never ",
+      "epss": {
+        "epss": 0.00332,
+        "percentile": 0.24346
+      }
     },
     {
-      "cve_id": "CVE-2026-82531",
+      "cve_id": "CVE-2026-106041",
       "state": "PUBLISHED",
       "assigner": "VulnCheck",
-      "date_published": "2026-10-06T12:18:31.801Z",
-      "vendor": "smarty-php",
-      "product": "smarty",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 9.2,
-        "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-94"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Smarty before 4.5.8 and 5.x before 5.8.5 contains a code injection vulnerability where the top-level nocache_hash is never restored during extends:/multi-component template inheritance, leaving it null. Attackers can supply assigned data containing a forged SmartyNocache marker that is copied verbatim into the regenerated PHP cache file, executing arbitrary PHP on include for remote code execution"
-    },
-    {
-      "cve_id": "CVE-2026-94206",
-      "state": "PUBLISHED",
-      "assigner": "EEF",
-      "date_published": "2026-10-06T08:38:04.584Z",
-      "vendor": "danielberkompas",
-      "product": "cloak_ecto",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-916"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Use of Password Hash With Insufficient Computational Effort vulnerability in danielberkompas cloak_ecto and danielberkompas cloak allows an attacker who holds the hashed values and the configured secret to brute-force low-entropy plaintexts much faster than configured.\n\nThe dump/1 callback that Cloak.Ecto.PBKDF2 (Cloak.Fields.PBKDF2 in cloak before the Ecto code moved to cloak_ecto) injects into a",
-      "epss": {
-        "epss": 0.00256,
-        "percentile": 0.15724
-      }
-    },
-    {
-      "cve_id": "CVE-2026-95105",
-      "state": "PUBLISHED",
-      "assigner": "EEF",
-      "date_published": "2026-10-06T08:37:56.987Z",
-      "vendor": "danielberkompas",
-      "product": "cloak",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 8.2,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-649"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Reliance on Obfuscation or Encryption of Security-Relevant Inputs without Integrity Checking vulnerability in danielberkompas cloak allows an attacker with write access to stored ciphertext to make it decrypt to a chosen value via bit flipping.\n\nCloak.Ciphers.AES.CTR encrypts with AES-256 in CTR mode and stores the key tag, the IV and the ciphertext with no MAC. decrypt/2 checks only the key tag a",
-      "epss": {
-        "epss": 0.00115,
-        "percentile": 0.01413
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105809",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T08:15:14.703Z",
-      "vendor": "SourceCodester",
-      "product": "Simple Student Information System",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-79",
-        "CWE-94"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability was identified in SourceCodester Simple Student Information System 1.0. This issue affects some unknown processing of the file /register.php of the component Profile Field Handler. The manipulation of the argument firstname/lastname leads to cross site scripting. The attack may be initiated remotely. The exploit is publicly available and might be used.",
-      "epss": {
-        "epss": 0.00348,
-        "percentile": 0.26185
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105776",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T06:00:13.889Z",
-      "vendor": "bhagya3929",
-      "product": "Employee-Movement-Tracking-and-Monitoring-Website-for-IOCL",
+      "date_published": "2026-10-06T14:03:17.708Z",
+      "vendor": "kvcache-ai",
+      "product": "Mooncake",
       "cvss": {
         "version": "cvssV4_0",
         "score": 6.9,
         "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-74",
-        "CWE-89"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "A flaw has been found in bhagya3929 Employee-Movement-Tracking-and-Monitoring-Website-for-IOCL up to ae783195ba7e0390d3b3bfaddd99944b7e9735a4. Affected by this vulnerability is an unknown functionality of the file /admin_transaction.php. This manipulation of the argument Username causes sql injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. T",
-      "epss": {
-        "epss": 0.00328,
-        "percentile": 0.2379
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105708",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T05:15:15.121Z",
-      "vendor": "n/a",
-      "product": "imgproxy",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-79",
-        "CWE-94"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A flaw has been found in imgproxy up to 4.0.17. Affected by this vulnerability is the function sanitizeElement of the file processing/svg/svg.go of the component SVG Handler. Executing a manipulation can lead to cross site scripting. It is possible to launch the attack remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report bu",
-      "epss": {
-        "epss": 0.00273,
-        "percentile": 0.17959
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105706",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T04:45:12.325Z",
-      "vendor": "SourceCodester",
-      "product": "Drug Recommendation System",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-352",
-        "CWE-862"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A weakness has been identified in SourceCodester Drug Recommendation System 1.0. Affected is an unknown function. Executing a manipulation can lead to cross-site request forgery. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
-      "epss": {
-        "epss": 0.00159,
-        "percentile": 0.04373
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105704",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T04:15:13.691Z",
-      "vendor": "SourceCodester",
-      "product": "Drug Recommendation System",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.9,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-287"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability was identified in SourceCodester Drug Recommendation System 1.0. This affects an unknown function of the component Auth Guard. Such manipulation of the argument user_id leads to improper authentication. The attack can be executed remotely. The exploit is publicly available and might be used.",
-      "epss": {
-        "epss": 0.00397,
-        "percentile": 0.31689
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105621",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T03:30:13.220Z",
-      "vendor": "jishenghua",
-      "product": "jshERP",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-266",
-        "CWE-285"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A security flaw has been discovered in jishenghua jshERP up to 3.5. Affected is the function updateAccountHeadAndDetail of the file jshERP-boot/src/main/java/com/jsh/erp/service/AccountHeadService.java of the component Financial Receipt Update Handler. Performing a manipulation results in improper authorization. The attack may be initiated remotely. The exploit has been released to the public and ",
-      "epss": {
-        "epss": 0.0023,
-        "percentile": 0.12597
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105610",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T03:00:16.515Z",
-      "vendor": "chillzhuang",
-      "product": "SpringBlade",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.1,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-266",
-        "CWE-285"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability was found in chillzhuang SpringBlade up to 5.0.1. The impacted element is an unknown function of the file blade-service/blade-system/src/main/java/org/springblade/system/controller/ParamController.java of the component Parameter Submit Management. The manipulation of the argument initPassword results in improper authorization. It is possible to launch the attack remotely. The explo",
-      "epss": {
-        "epss": 0.00227,
-        "percentile": 0.12297
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105572",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T02:30:15.772Z",
-      "vendor": "n/a",
-      "product": "PickMall Lilishop",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-285",
-        "CWE-639"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability has been found in PickMall Lilishop up to 4.2.4. This affects an unknown function of the file /buyer/trade/receipt of the component Buyer Invoice List. Such manipulation of the argument memberId leads to authorization bypass. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early thro",
-      "epss": {
-        "epss": 0.00223,
-        "percentile": 0.11768
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105487",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-06T01:45:12.198Z",
-      "vendor": "yogeshojha",
-      "product": "reNgine",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-77",
-        "CWE-78"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability was found in yogeshojha reNgine up to 2.2.0. Affected by this vulnerability is the function subdomain_discovery of the file web/reNgine/tasks.py of the component listTargets Endpoint. The manipulation of the argument Name results in os command injection. The attack can be launched remotely. The exploit has been made public and could be used. The pull request to fix this issue await",
-      "epss": {
-        "epss": 0.01089,
-        "percentile": 0.64238
-      }
-    },
-    {
-      "cve_id": "CVE-2026-104041",
-      "state": "PUBLISHED",
-      "assigner": "redhat",
-      "date_published": "2026-10-06T01:00:49.767Z",
-      "vendor": "Red Hat",
-      "product": "Red Hat Enterprise Linux 10",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 5.5,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
-      },
-      "cwe": [
-        "CWE-770"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A flaw was found in SSSD. An unprivileged local user can repeatedly request lookups for nonexistent entries through the Name Service Switch (NSS) responder. Because the negative cache does not limit the total number of stored entries and only removes expired records when an existing key is rechecked, the cache can grow without bound. This behavior can lead to memory exhaustion, resulting in a Deni",
-      "epss": {
-        "epss": 0.00095,
-        "percentile": 0.00613
-      }
-    },
-    {
-      "cve_id": "CVE-2026-104032",
-      "state": "PUBLISHED",
-      "assigner": "redhat",
-      "date_published": "2026-10-06T00:12:12.027Z",
-      "vendor": "Red Hat",
-      "product": "Red Hat Enterprise Linux 10",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 5.5,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
-      },
-      "cwe": [
-        "CWE-408"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A flaw was found in SSSD. An unprivileged local user can repeatedly request master automount map updates through the autofs responder due to missing authorization checks. This triggers global cache invalidation and forces repeated lookups to backend directory providers, leading to a Denial of Service (DoS) from degraded automount availability and elevated resource consumption.",
-      "epss": {
-        "epss": 0.00095,
-        "percentile": 0.00625
-      }
-    },
-    {
-      "cve_id": "CVE-2026-104037",
-      "state": "PUBLISHED",
-      "assigner": "redhat",
-      "date_published": "2026-10-06T00:12:24.661Z",
-      "vendor": "Red Hat",
-      "product": "Red Hat Enterprise Linux 10",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 5.5,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
-      },
-      "cwe": [
-        "CWE-125"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A flaw was found in SSSD. A local attacker can exploit this issue by sending a specially crafted request with an invalid packet length to the autofs responder UNIX socket. This causes an integer underflow and an out-of-bounds memory read, which can crash the responder process and result in a denial of service (DoS).",
-      "epss": {
-        "epss": 0.00095,
-        "percentile": 0.00624
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105471",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-05T23:15:18.716Z",
-      "vendor": "girishsaraf",
-      "product": "Online-Appointment-Booking-System",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.9,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-74",
-        "CWE-89"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "A security flaw has been discovered in girishsaraf Online-Appointment-Booking-System up to f427b4757128ca253d33d0cc4e87bbb9c999a4d5. Impacted is an unknown function of the file signup.php of the component Registration Handler. The manipulation of the argument fname results in sql injection. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks",
-      "epss": {
-        "epss": 0.00263,
-        "percentile": 0.16582
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105762",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T23:04:58.593Z",
-      "vendor": "langgenius",
-      "product": "dify",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.3,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L"
-      },
-      "cwe": [
-        "CWE-918"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "Dify is an open-source LLM app development platform. Prior to 1.13.0, the /console/api/remote-files/upload endpoint in api/controllers/web/remote_files.py accepted an attacker-controlled URL without authentication and caused the Dify server to retrieve it. A remote attacker could use the endpoint to send requests to internal services or cloud metadata endpoints, potentially exposing sensitive data",
-      "epss": {
-        "epss": 0.00345,
-        "percentile": 0.25822
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105784",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T23:11:35.029Z",
-      "vendor": "laurent22",
-      "product": "joplin",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 4.6,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
-      },
-      "cwe": [
-        "CWE-79"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to 3.7.13, selecting a note containing a jsoncanvas fence causes the whiteboard text and file-node components in packages/app-desktop/gui/NoteEditor/NoteBody/WhiteboardEditor/nodes/TextNode.tsx and packages/app-desktop/gui/NoteEditor/NoteBody/WhiteboardEditor/nodes/FileNode.tsx to render",
-      "epss": {
-        "epss": 0.00199,
-        "percentile": 0.08825
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105469",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-05T22:15:17.066Z",
-      "vendor": "girishsaraf",
-      "product": "Online-Appointment-Booking-System",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.9,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-74",
-        "CWE-89"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability was determined in girishsaraf Online-Appointment-Booking-System up to f427b4757128ca253d33d0cc4e87bbb9c999a4d5. This vulnerability affects unknown code of the file get_town.php of the component AJAX Endpoint. Executing a manipulation of the argument countryid/townid/cid/didval/cidval can lead to sql injection. The attack may be launched remotely. The exploit has been publicly discl",
-      "epss": {
-        "epss": 0.00329,
-        "percentile": 0.23913
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105748",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T21:34:25.628Z",
-      "vendor": "docling-project",
-      "product": "docling",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 4.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
-      },
-      "cwe": [
-        "CWE-200",
-        "CWE-73"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Docling simplifies document processing by parsing diverse formats and providing integrations with the generative AI ecosystem. From 2.16.0 until 2.131.0, the InputFormat.JSON_DOCLING backend in docling/backend/json/docling_json_backend.py validates serialized DoclingDocument input without rejecting picture image references that contain local paths or file URIs. When the document is enriched or exp",
-      "epss": {
-        "epss": 0.00218,
-        "percentile": 0.11162
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105751",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T21:40:45.997Z",
-      "vendor": "docling-project",
-      "product": "docling",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.9,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-22"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Docling simplifies document processing by parsing diverse formats and providing integrations with the generative AI ecosystem. From 2.107.0 until 2.120.3, docling/backend/opendocument_backend.py uses the xlink:href attribute value of a draw:image element as a filesystem path when the referenced part is not found in the document archive. The _image_ref_from_odf_image function reads that attacker-co",
-      "epss": {
-        "epss": 0.00366,
-        "percentile": 0.28293
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105742",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T21:21:43.538Z",
-      "vendor": "docling-project",
-      "product": "docling",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 3.7,
-        "severity": "LOW",
-        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
-      },
-      "cwe": [
-        "CWE-201",
-        "CWE-522"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Docling simplifies document processing by parsing diverse formats and providing integrations with the generative AI ecosystem. From 2.95.0 until 2.132.0, the HTML image resource loader in docling/backend/utils/image_resource_loader.py forwards headers configured through the HTMLBackendOptions.headers setting to every remote image URL named by an untrusted document when enable_remote_fetch=True and",
-      "epss": {
-        "epss": 0.00218,
-        "percentile": 0.11199
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105698",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T20:20:27.287Z",
-      "vendor": "langflow-ai",
-      "product": "langflow",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 5.4,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
-      },
-      "cwe": [
-        "CWE-639",
-        "CWE-862"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. From 1.0.0 until 1.10.1, Langflow did not verify flow ownership in the deprecated POST /api/v1/build/{flow_id}/vertices and POST /api/v1/build/{flow_id}/vertices/{vertex_id} handlers. Through version 1.7.1, an unauthenticated caller who knew another user's flow UUID could reach these handlers; from version 1.7.2 through",
-      "epss": {
-        "epss": 0.00177,
-        "percentile": 0.06645
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105741",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T20:56:00.060Z",
-      "vendor": "langflow-ai",
-      "product": "langflow",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 7.1,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L"
-      },
-      "cwe": [
-        "CWE-290",
-        "CWE-345"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. From 1.5.0 until 1.10.3, an IP spoofing vulnerability in the Model Context Protocol (MCP) configuration installation endpoint (POST /api/v1/mcp/project/{project_id}/install) allowed authenticated remote attackers to bypass the \"local-only\" access restriction. By sending a spoofed X-Forwarded-For: 127.0.0.1 header, an at",
-      "epss": {
-        "epss": 0.00212,
-        "percentile": 0.10481
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105686",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T19:47:56.283Z",
-      "vendor": "penpot",
-      "product": "penpot",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-770"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Penpot is an open-source design and prototyping platform. Prior to 2.18.0, the chunked media upload RPC validates that a chunk index is in range but neither rejects an already stored index nor replaces its previous object. An authenticated user can repeatedly upload the same valid index, causing each successful request to allocate another temporary object and increasing stored bytes beyond the upl",
-      "epss": {
-        "epss": 0.00259,
-        "percentile": 0.16114
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105688",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T19:50:01.439Z",
-      "vendor": "penpot",
-      "product": "penpot",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 6.7,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-269"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Penpot is an open-source design and prototyping platform. Prior to 2.18.0, create-team-invitations and the invitation acceptance path allow a non-owner team administrator to assign the owner role because invitation roles are persisted and applied without the role-ceiling check used by update-team-member-role. An administrator can invite another account as an owner, create multiple owners, and then",
-      "epss": {
-        "epss": 0.00264,
-        "percentile": 0.16781
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105691",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T19:53:54.552Z",
-      "vendor": "penpot",
-      "product": "penpot",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 9.9,
-        "severity": "CRITICAL",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-78"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Penpot is an open-source design and prototyping platform. Prior to 2.18.0, the SVG exporter places an attacker-controlled text object's fill-color value into a ppmcolormask command string and executes that string through child_process.exec. A user who can edit a file can store shell metacharacters in the fill color and trigger SVG export, causing commands to execute with the exporter service's pri",
-      "epss": {
-        "epss": 0.00372,
-        "percentile": 0.28924
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105693",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T19:56:47.826Z",
-      "vendor": "penpot",
-      "product": "penpot",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
       },
       "cwe": [
         "CWE-862"
@@ -2246,176 +2381,10 @@
         "automatable": "yes",
         "technical_impact": "partial"
       },
-      "description": "Penpot is an open-source design and prototyping platform. Prior to 2.18.0, the unauthenticated get-view-only-bundle RPC returns every share-link row for a file even when the caller authenticated with only one scoped share link. A holder of a restrictive link can obtain other links' secret IDs, page scopes, comment permissions, and inspection permissions, then replay a more permissive token to acce",
+      "description": "Mooncake Store master through 0.3.13.post1 contains a missing authorization vulnerability that allows unauthenticated attackers to inject completed LOCAL_DISK replicas through the NotifyOffloadSuccess RPC. Attackers can mount a local disk segment with a self-chosen client UUID, then attach replicas pointing at attacker-controlled endpoints to serve poisoned disk-tier reads and fake key existence.",
       "epss": {
-        "epss": 0.00224,
-        "percentile": 0.119
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105695",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T20:04:22.743Z",
-      "vendor": "penpot",
-      "product": "penpot",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 5.9,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:L"
-      },
-      "cwe": [
-        "CWE-862"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Penpot is an open-source design and prototyping platform. Prior to 2.18.0, assemble-chunks retrieves an upload session using only its session ID, while upload-chunk correctly scopes the lookup to the authenticated profile. An authenticated user who obtains another user's live, completed upload-session UUID can assemble the victim's chunks into the attacker's own file, team font, or project import,",
-      "epss": {
-        "epss": 0.00299,
-        "percentile": 0.20637
-      }
-    },
-    {
-      "cve_id": "CVE-2026-78861",
-      "state": "PUBLISHED",
-      "assigner": "mitre",
-      "date_published": "2026-10-05T00:00:00.000Z",
-      "vendor": "n/a",
-      "product": "n/a",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 7.7,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
-      },
-      "cwe": [
-        "CWE-789"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "An issue in Mercusys AC12 V2 allows a local attacker to execute arbitrary code via a hardcoded 512-bit RSA Private Key",
-      "epss": {
-        "epss": 0.0017,
-        "percentile": 0.05806
-      }
-    },
-    {
-      "cve_id": "CVE-2026-95265",
-      "state": "PUBLISHED",
-      "assigner": "mitre",
-      "date_published": "2026-10-05T00:00:00.000Z",
-      "vendor": "n/a",
-      "product": "n/a",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 7.5,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
-      },
-      "cwe": [
-        "CWE-918"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "Feehi CMS 2.1.1 contains a Server-Side Request Forgery (SSRF) vulnerability in the UEditor catchimage endpoint. The private-IP validation does not block loopback or link-local addresses, allowing an attacker to make the server probe internal HTTP services through response differences.",
-      "epss": {
-        "epss": 0.00145,
-        "percentile": 0.03207
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105388",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-05T19:15:14.166Z",
-      "vendor": "feelec-yishu",
-      "product": "feelcrm-os",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-74",
-        "CWE-89"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A weakness has been identified in feelec-yishu feelcrm-os 1.0.0. This vulnerability affects the function index of the file App/Feelcrm/Index/Controller/MemberController.class.php of the component Member Endpoint. This manipulation of the argument group_id causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The",
-      "epss": {
-        "epss": 0.0025,
-        "percentile": 0.14881
-      }
-    },
-    {
-      "cve_id": "CVE-2026-78860",
-      "state": "PUBLISHED",
-      "assigner": "mitre",
-      "date_published": "2026-10-05T00:00:00.000Z",
-      "vendor": "n/a",
-      "product": "n/a",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 7.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-311",
-        "CWE-347"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "An issue in Mercusys AC12 V2 allows a local attacker to execute arbitrary code via the storage of information in plaintext",
-      "epss": {
-        "epss": 0.00162,
-        "percentile": 0.04853
-      }
-    },
-    {
-      "cve_id": "CVE-2026-105635",
-      "state": "PUBLISHED",
-      "assigner": "GitHub_M",
-      "date_published": "2026-10-05T18:01:52.446Z",
-      "vendor": "makeplane",
-      "product": "plane",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 7.4,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
-      },
-      "cwe": [
-        "CWE-200",
-        "CWE-284",
-        "CWE-862"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Plane is an open-source project management tool. Prior to 1.4.0, ProjectJoinEndpoint at GET /api/workspaces/{slug}/projects/{project_id}/join/{pk}/ uses permission_classes = [AllowAny] and returns the full ProjectMemberInvite record, including its email, token, and role, to unauthenticated callers. The corresponding POST endpoint checks only whether the submitted email matches project_invite.email",
-      "epss": {
-        "epss": 0.00446,
-        "percentile": 0.36679
+        "epss": 0.00332,
+        "percentile": 0.24346
       }
     }
   ],

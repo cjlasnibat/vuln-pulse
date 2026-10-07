@@ -1,0 +1,142 @@
+{
+ "date": "2026-10-07",
+ "window_7d": {
+  "start": "2026-10-01",
+  "end": "2026-10-07",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.04"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2658,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2493
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.04",
+  "catalog_total": 1734,
+  "added_7d": 4,
+  "added_7d_ids": [
+   "CVE-2026-104286",
+   "CVE-2026-102490",
+   "CVE-2026-102489",
+   "CVE-2026-88779"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Zammad GmbH": 2,
+   "Fortinet": 1,
+   "Citrix": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2650,
+  "rejected": 8,
+  "updated": 2609,
+  "by_severity": {
+   "MEDIUM": 1059,
+   "HIGH": 968,
+   "CRITICAL": 275,
+   "LOW": 85,
+   "SIN_CVSS": 263
+  },
+  "with_cvss_pct": 90.1,
+  "ssvc_poc_or_active": 327,
+  "ssvc_automatable_total_impact": 108,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Google",
+    291
+   ],
+   [
+    "Linux",
+    210
+   ],
+   [
+    "Apache Software Foundation",
+    117
+   ],
+   [
+    "Unknown",
+    97
+   ],
+   [
+    "n/a",
+    93
+   ],
+   [
+    "Red Hat",
+    74
+   ],
+   [
+    "TryGhost",
+    54
+   ],
+   [
+    "backstage",
+    41
+   ],
+   [
+    "Hewlett Packard Enterprise (HPE)",
+    38
+   ],
+   [
+    "makeplane",
+    38
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    299
+   ],
+   [
+    "CWE-862",
+    187
+   ],
+   [
+    "CWE-89",
+    131
+   ],
+   [
+    "CWE-863",
+    109
+   ],
+   [
+    "CWE-22",
+    98
+   ],
+   [
+    "CWE-639",
+    80
+   ],
+   [
+    "CWE-918",
+    76
+   ],
+   [
+    "CWE-200",
+    74
+   ],
+   [
+    "CWE-94",
+    72
+   ],
+   [
+    "CWE-74",
+    69
+   ]
+  ]
+ }
+}
