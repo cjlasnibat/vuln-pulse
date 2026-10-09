@@ -1,0 +1,147 @@
+{
+ "date": "2026-10-09",
+ "window_7d": {
+  "start": "2026-10-03",
+  "end": "2026-10-09",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.08"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2706,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2503
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.08",
+  "catalog_total": 1739,
+  "added_7d": 6,
+  "added_7d_ids": [
+   "CVE-2026-88779",
+   "CVE-2015-5477",
+   "CVE-2016-3081",
+   "CVE-2023-22894",
+   "CVE-2021-3199",
+   "CVE-2015-3306"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Citrix": 1,
+   "ISC": 1,
+   "Apache": 1,
+   "Strapi": 1,
+   "ONLYOFFICE": 1,
+   "ProFTPD": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2681,
+  "rejected": 25,
+  "updated": 4113,
+  "by_severity": {
+   "MEDIUM": 1118,
+   "HIGH": 970,
+   "SIN_CVSS": 218,
+   "CRITICAL": 274,
+   "LOW": 101
+  },
+  "with_cvss_pct": 91.9,
+  "ssvc_poc_or_active": 295,
+  "ssvc_automatable_total_impact": 141,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Google",
+    282
+   ],
+   [
+    "Linux",
+    220
+   ],
+   [
+    "IBM",
+    117
+   ],
+   [
+    "Unknown",
+    100
+   ],
+   [
+    "n/a",
+    76
+   ],
+   [
+    "Red Hat",
+    73
+   ],
+   [
+    "Brocade",
+    61
+   ],
+   [
+    "Dell",
+    41
+   ],
+   [
+    "backstage",
+    41
+   ],
+   [
+    "Apache Software Foundation",
+    40
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    246
+   ],
+   [
+    "CWE-862",
+    189
+   ],
+   [
+    "CWE-89",
+    129
+   ],
+   [
+    "CWE-863",
+    116
+   ],
+   [
+    "CWE-22",
+    89
+   ],
+   [
+    "CWE-639",
+    78
+   ],
+   [
+    "CWE-200",
+    77
+   ],
+   [
+    "CWE-787",
+    66
+   ],
+   [
+    "CWE-918",
+    64
+   ],
+   [
+    "CWE-94",
+    62
+   ]
+  ]
+ }
+}
