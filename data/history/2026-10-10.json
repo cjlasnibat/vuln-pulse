@@ -1,0 +1,147 @@
+{
+ "date": "2026-10-10",
+ "window_7d": {
+  "start": "2026-10-04",
+  "end": "2026-10-10",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.08"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2845,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2790
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.08",
+  "catalog_total": 1739,
+  "added_7d": 6,
+  "added_7d_ids": [
+   "CVE-2026-88779",
+   "CVE-2015-5477",
+   "CVE-2016-3081",
+   "CVE-2023-22894",
+   "CVE-2021-3199",
+   "CVE-2015-3306"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Citrix": 1,
+   "ISC": 1,
+   "Apache": 1,
+   "Strapi": 1,
+   "ONLYOFFICE": 1,
+   "ProFTPD": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2815,
+  "rejected": 30,
+  "updated": 3699,
+  "by_severity": {
+   "HIGH": 1006,
+   "MEDIUM": 1179,
+   "LOW": 107,
+   "CRITICAL": 314,
+   "SIN_CVSS": 209
+  },
+  "with_cvss_pct": 92.6,
+  "ssvc_poc_or_active": 317,
+  "ssvc_automatable_total_impact": 152,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Google",
+    282
+   ],
+   [
+    "Linux",
+    220
+   ],
+   [
+    "IBM",
+    117
+   ],
+   [
+    "Unknown",
+    95
+   ],
+   [
+    "n/a",
+    83
+   ],
+   [
+    "Red Hat",
+    73
+   ],
+   [
+    "Brocade",
+    61
+   ],
+   [
+    "Apache Software Foundation",
+    44
+   ],
+   [
+    "Dell",
+    41
+   ],
+   [
+    "backstage",
+    41
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    280
+   ],
+   [
+    "CWE-862",
+    196
+   ],
+   [
+    "CWE-89",
+    131
+   ],
+   [
+    "CWE-863",
+    120
+   ],
+   [
+    "CWE-22",
+    90
+   ],
+   [
+    "CWE-639",
+    85
+   ],
+   [
+    "CWE-200",
+    77
+   ],
+   [
+    "CWE-787",
+    67
+   ],
+   [
+    "CWE-918",
+    65
+   ],
+   [
+    "CWE-502",
+    62
+   ]
+  ]
+ }
+}

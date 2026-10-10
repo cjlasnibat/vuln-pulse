@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-10-03 a 2026-10-09
+# Reporte semanal de vulnerabilidades — 2026-10-04 a 2026-10-10
 
 ## Resumen
 
 - KEV agregadas: **6** (catálogo total: 1739; ransomware conocido: 0)
-- CVE nuevos publicados: **2681** (rechazados: 25; registros actualizados: 4113)
-- Por severidad CVSS: {'MEDIUM': 1118, 'HIGH': 970, 'SIN_CVSS': 218, 'CRITICAL': 274, 'LOW': 101}  — con CVSS: 91.9%
-- SSVC (CISA ADP) explotación PoC/activa: 295; automatizable + impacto total: 141
+- CVE nuevos publicados: **2815** (rechazados: 30; registros actualizados: 3699)
+- Por severidad CVSS: {'HIGH': 1006, 'MEDIUM': 1179, 'LOW': 107, 'CRITICAL': 314, 'SIN_CVSS': 209}  — con CVSS: 92.6%
+- SSVC (CISA ADP) explotación PoC/activa: 317; automatizable + impacto total: 152
 - EPSS ≥ 10%: 0
 
 ## KEV agregadas en la semana
@@ -40,12 +40,13 @@
 | CVE-2026-63688 | 10 | Dell | Dell Container Storage Modules (CSM) | CWE-306 | none |
 | CVE-2026-63692 | 10 | Dell | Container Storage Modules | CWE-306 | none |
 | CVE-2026-76482 | 10 | Cisco | Cisco License On-Prem | CWE-347 | none |
-| CVE-2026-94503 | 10 | PX-lab | Zombify | CWE-434 |  |
+| CVE-2026-94503 | 10 | PX-lab | Zombify | CWE-434 | none |
 | CVE-2026-96207 | 10 | Microsoft | Microsoft Partner Center | CWE-295 | none |
 | CVE-2026-105636 | 9.9 | makeplane | plane | CWE-918 | poc |
 | CVE-2026-105691 | 9.9 | penpot | penpot | CWE-78 | poc |
 | CVE-2026-105697 | 9.9 | langflow-ai | langflow | CWE-78 | none |
 | CVE-2026-105740 | 9.9 | langflow-ai | langflow | CWE-78 | poc |
+| CVE-2026-108263 | 9.9 | iflytek | astron-agent | CWE-1392,CWE-306 |  |
 | CVE-2026-32568 | 9.9 | JMAPlugins | WooCommerce Designer Pro | CWE-94 | none |
 | CVE-2026-39755 | 9.9 | revmakx | WP Duplicate | CWE-434 | none |
 | CVE-2026-39757 | 9.9 | AmentoTech | Taskbot | CWE-434 | none |
@@ -57,38 +58,37 @@
 | CVE-2025-71383 | 9.8 | n/a | n/a | CWE-20 | poc |
 | CVE-2026-103646 | 9.8 | Unknown | Ultimate Multisite | CWE-287 | none |
 | CVE-2026-103692 | 9.8 | Unknown | Frontend Dashboard | CWE-269 | none |
+| CVE-2026-103889 | 9.8 | expivi | 3D Product configurator for WooCommerce | CWE-434 |  |
 | CVE-2026-104334 | 9.8 | IBM | Langflow OSS | CWE-94 | none |
 | CVE-2026-104711 | 9.8 | Apache Software Foundation | Apache Struts | CWE-917 | none |
-| CVE-2026-105105 | 9.8 | NASA-AMMOS | AIT-Core | CWE-306 | none |
-| CVE-2026-105192 | 9.8 | LMCache | LMCache | CWE-306,CWE-502 | none |
-| CVE-2026-105639 | 9.8 | makeplane | plane | CWE-200,CWE-287 | none |
-| CVE-2026-105641 | 9.8 | makeplane | plane | CWE-798 | poc |
+| CVE-2026-104732 | 9.8 | inilerm | Advanced IP Blocker | CWE-287 |  |
+| CVE-2026-104803 | 9.8 | whyun | WPCOM Member | CWE-287 |  |
 
 ## Top proveedores (CVE nuevos)
 
 - Google: 282
 - Linux: 220
 - IBM: 117
-- Unknown: 100
-- n/a: 76
+- Unknown: 95
+- n/a: 83
 - Red Hat: 73
 - Brocade: 61
+- Apache Software Foundation: 44
 - Dell: 41
 - backstage: 41
-- Apache Software Foundation: 40
 
 ## Top CWE
 
-- CWE-79: 246
-- CWE-862: 189
-- CWE-89: 129
-- CWE-863: 116
-- CWE-22: 89
-- CWE-639: 78
+- CWE-79: 280
+- CWE-862: 196
+- CWE-89: 131
+- CWE-863: 120
+- CWE-22: 90
+- CWE-639: 85
 - CWE-200: 77
-- CWE-787: 66
-- CWE-918: 64
-- CWE-94: 62
+- CWE-787: 67
+- CWE-918: 65
+- CWE-502: 62
 
 ## Estado de fuentes
 
@@ -102,12 +102,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 2706,
+    "fetched": 2845,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 2503
+    "scored": 2790
   }
 }
 ```
