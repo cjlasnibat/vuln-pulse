@@ -1,0 +1,145 @@
+{
+ "date": "2026-10-11",
+ "window_7d": {
+  "start": "2026-10-05",
+  "end": "2026-10-11",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.08"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3175,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 3034
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.08",
+  "catalog_total": 1739,
+  "added_7d": 5,
+  "added_7d_ids": [
+   "CVE-2015-5477",
+   "CVE-2016-3081",
+   "CVE-2023-22894",
+   "CVE-2021-3199",
+   "CVE-2015-3306"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "ISC": 1,
+   "Apache": 1,
+   "Strapi": 1,
+   "ONLYOFFICE": 1,
+   "ProFTPD": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3144,
+  "rejected": 31,
+  "updated": 3813,
+  "by_severity": {
+   "HIGH": 1134,
+   "MEDIUM": 1319,
+   "LOW": 122,
+   "CRITICAL": 360,
+   "SIN_CVSS": 209
+  },
+  "with_cvss_pct": 93.4,
+  "ssvc_poc_or_active": 286,
+  "ssvc_automatable_total_impact": 213,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Google",
+    282
+   ],
+   [
+    "Linux",
+    220
+   ],
+   [
+    "Unknown",
+    152
+   ],
+   [
+    "IBM",
+    117
+   ],
+   [
+    "jeecgboot",
+    100
+   ],
+   [
+    "n/a",
+    80
+   ],
+   [
+    "Red Hat",
+    73
+   ],
+   [
+    "Brocade",
+    61
+   ],
+   [
+    "Apache Software Foundation",
+    44
+   ],
+   [
+    "Dell",
+    41
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-862",
+    340
+   ],
+   [
+    "CWE-79",
+    319
+   ],
+   [
+    "CWE-89",
+    144
+   ],
+   [
+    "CWE-863",
+    128
+   ],
+   [
+    "CWE-639",
+    105
+   ],
+   [
+    "CWE-22",
+    97
+   ],
+   [
+    "CWE-502",
+    97
+   ],
+   [
+    "CWE-200",
+    78
+   ],
+   [
+    "CWE-918",
+    75
+   ],
+   [
+    "CWE-94",
+    65
+   ]
+  ]
+ }
+}
