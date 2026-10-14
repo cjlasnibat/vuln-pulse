@@ -1,0 +1,149 @@
+{
+ "date": "2026-10-14",
+ "window_7d": {
+  "start": "2026-10-08",
+  "end": "2026-10-14",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.13"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 4820,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 4562
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.13",
+  "catalog_total": 1741,
+  "added_7d": 7,
+  "added_7d_ids": [
+   "CVE-2015-5477",
+   "CVE-2016-3081",
+   "CVE-2023-22894",
+   "CVE-2021-3199",
+   "CVE-2015-3306",
+   "CVE-2026-104935",
+   "CVE-2026-96951"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "ISC": 1,
+   "Apache": 1,
+   "Strapi": 1,
+   "ONLYOFFICE": 1,
+   "ProFTPD": 1,
+   "Ivanti": 1,
+   "Microsoft": 1
+  }
+ },
+ "cve_7d": {
+  "new": 4781,
+  "rejected": 39,
+  "updated": 3915,
+  "by_severity": {
+   "HIGH": 2215,
+   "MEDIUM": 1803,
+   "CRITICAL": 423,
+   "SIN_CVSS": 210,
+   "LOW": 130
+  },
+  "with_cvss_pct": 95.6,
+  "ssvc_poc_or_active": 397,
+  "ssvc_automatable_total_impact": 227,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Microsoft",
+    1414
+   ],
+   [
+    "Adobe",
+    177
+   ],
+   [
+    "Unknown",
+    172
+   ],
+   [
+    "IBM",
+    172
+   ],
+   [
+    "jeecgboot",
+    100
+   ],
+   [
+    "frappe",
+    89
+   ],
+   [
+    "Mozilla",
+    83
+   ],
+   [
+    "n/a",
+    66
+   ],
+   [
+    "Linux",
+    57
+   ],
+   [
+    "Red Hat",
+    46
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-416",
+    398
+   ],
+   [
+    "CWE-79",
+    393
+   ],
+   [
+    "CWE-862",
+    390
+   ],
+   [
+    "CWE-122",
+    346
+   ],
+   [
+    "CWE-125",
+    278
+   ],
+   [
+    "CWE-89",
+    163
+   ],
+   [
+    "CWE-863",
+    144
+   ],
+   [
+    "CWE-639",
+    132
+   ],
+   [
+    "CWE-22",
+    115
+   ],
+   [
+    "CWE-502",
+    99
+   ]
+  ]
+ }
+}
