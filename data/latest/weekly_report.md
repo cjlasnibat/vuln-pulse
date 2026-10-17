@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-10-10 a 2026-10-16
+# Reporte semanal de vulnerabilidades — 2026-10-11 a 2026-10-17
 
 ## Resumen
 
-- KEV agregadas: **7** (catálogo total: 1746; ransomware conocido: 0)
-- CVE nuevos publicados: **5217** (rechazados: 27; registros actualizados: 4856)
-- Por severidad CVSS: {'SIN_CVSS': 146, 'CRITICAL': 445, 'HIGH': 2476, 'MEDIUM': 2017, 'LOW': 133}  — con CVSS: 97.2%
-- SSVC (CISA ADP) explotación PoC/activa: 630; automatizable + impacto total: 251
+- KEV agregadas: **9** (catálogo total: 1748; ransomware conocido: 0)
+- CVE nuevos publicados: **5072** (rechazados: 28; registros actualizados: 6516)
+- Por severidad CVSS: {'HIGH': 2434, 'MEDIUM': 1954, 'SIN_CVSS': 145, 'CRITICAL': 410, 'LOW': 129}  — con CVSS: 97.1%
+- SSVC (CISA ADP) explotación PoC/activa: 655; automatizable + impacto total: 224
 - EPSS ≥ 10%: 2
 
 ## KEV agregadas en la semana
@@ -19,6 +19,8 @@
 | 2026-10-14 | CVE-2026-105133 | Ahsay AhsayCBS | Ahsay AhsayCBS Improper Authentication Vulnerability | 2026-10-17 | Unknown |
 | 2026-10-14 | CVE-2026-0322 | Palo Alto Networks PAN-OS | Palo Alto Networks PAN-OS Code Injection Vulnerability | 2026-10-17 | Unknown |
 | 2026-10-15 | CVE-2026-21589 | Atlassian Multiple Products | Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability | 2026-10-18 | Unknown |
+| 2026-10-16 | CVE-2026-102764 | BeyondTrust Remote Support | BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability | 2026-10-19 | Unknown |
+| 2026-10-16 | CVE-2025-61624 | Fortinet Multiple Products | Fortinet Multiple Products Path Traversal Vulnerability | 2026-10-19 | Unknown |
 
 ## CVE críticos (CVSS ≥ 9.0) publicados
 
@@ -42,20 +44,20 @@
 | CVE-2026-110536 | 10 | D-Link | DIR-868L | CWE-77,CWE-78 | poc |
 | CVE-2026-110957 | 10 | Wavlink | WL-WN530BE2-A | CWE-77,CWE-78 |  |
 | CVE-2026-110958 | 10 | Wavlink | WN530HG4B | CWE-119,CWE-122 | poc |
-| CVE-2026-42696 | 10 | Royal Plugins | SiteVault – Backup, Restore, Migration & | CWE-94 | none |
 | CVE-2026-48382 | 10 | Adobe | Adobe Experience Manager as a Cloud Serv | CWE-863 | none |
 | CVE-2026-48383 | 10 | Adobe | Adobe Experience Manager as a Cloud Serv | CWE-863 | none |
 | CVE-2026-55572 | 10 | e107inc | e107 | CWE-89 |  |
 | CVE-2026-55675 | 10 | saltyorg | docs | CWE-1357,CWE-829 | poc |
 | CVE-2026-65162 | 10 | NVIDIA | AIStore framework | CWE-250 | none |
 | CVE-2026-89111 | 10 | SAP_SE | SAP Cloud | CWE-918 | none |
-| CVE-2026-89309 | 10 | JTL SW GmbH | JTL-WMS | CWE-306 |  |
+| CVE-2026-89309 | 10 | JTL SW GmbH | JTL-WMS | CWE-306 | none |
 | CVE-2026-90532 | 10 | Adobe | Adobe Experience Manager as a Cloud Serv | CWE-863 | none |
 | CVE-2026-94169 | 10 | Theme-one | The Grid | CWE-94 | none |
 | CVE-2026-94603 | 10 | podman-container-tools | podman | CWE-693 | none |
+| CVE-2026-95182 | 10 | n/a | n/a | CWE-426 | poc |
 | CVE-2026-97229 | 10 | GitLab | GitLab | CWE-190 | none |
 | CVE-2026-103848 | 9.9 | Adobe | Adobe Experience Manager 6.5 LTS | CWE-78 | none |
-| CVE-2026-105037 | 9.9 | EnergizeLab | station-middleware | CWE-73 |  |
+| CVE-2026-105037 | 9.9 | EnergizeLab | station-middleware | CWE-73 | none |
 | CVE-2026-105895 | 9.9 | Adobe | Adobe Experience Manager 6.5 | CWE-20 | none |
 | CVE-2026-105903 | 9.9 | Adobe | ColdFusion 2025 | CWE-94 | none |
 | CVE-2026-106042 | 9.9 | Ivanti | Xtraction | CWE-73 | none |
@@ -63,33 +65,33 @@
 | CVE-2026-108390 | 9.9 | hestiacp | hestiacp | CWE-427,CWE-88 | poc |
 | CVE-2026-109412 | 9.9 | Ivanti | Neurons Patch for Intune | CWE-749 | none |
 | CVE-2026-57155 | 9.9 | opnsense | core | CWE-22,CWE-73 | poc |
-| CVE-2026-62024 | 9.9 | CodeBard | CodeBard Help Desk | CWE-434 | none |
+| CVE-2026-75732 | 9.9 | Adobe | Adobe Experience Manager 6.5 LTS | CWE-863 | none |
 
 ## Top proveedores (CVE nuevos)
 
-- Microsoft: 1439
+- Microsoft: 1441
 - Adobe: 177
-- Unknown: 159
+- Unknown: 155
 - Juniper Networks: 153
-- jeecgboot: 100
-- frappe: 91
+- frappe: 95
+- IBM: 88
 - Mozilla: 83
-- IBM: 79
-- n/a: 65
-- Red Hat: 60
+- n/a: 73
+- Red Hat: 71
+- FreeRDP: 60
 
 ## Top CWE
 
-- CWE-79: 431
-- CWE-862: 414
-- CWE-416: 407
-- CWE-122: 373
-- CWE-125: 325
-- CWE-89: 177
-- CWE-639: 159
-- CWE-863: 156
-- CWE-22: 131
-- CWE-787: 114
+- CWE-416: 410
+- CWE-122: 372
+- CWE-79: 355
+- CWE-862: 335
+- CWE-125: 329
+- CWE-639: 196
+- CWE-89: 172
+- CWE-863: 158
+- CWE-22: 127
+- CWE-787: 120
 
 ## Estado de fuentes
 
@@ -98,17 +100,17 @@
   "kev": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
-    "catalogVersion": "2026.10.15"
+    "catalogVersion": "2026.10.16"
   },
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 5244,
+    "fetched": 5100,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 5173
+    "scored": 4748
   }
 }
 ```
