@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-10-11 a 2026-10-17
+# Reporte semanal de vulnerabilidades — 2026-10-12 a 2026-10-18
 
 ## Resumen
 
 - KEV agregadas: **9** (catálogo total: 1748; ransomware conocido: 0)
-- CVE nuevos publicados: **5072** (rechazados: 28; registros actualizados: 6516)
-- Por severidad CVSS: {'HIGH': 2434, 'MEDIUM': 1954, 'SIN_CVSS': 145, 'CRITICAL': 410, 'LOW': 129}  — con CVSS: 97.1%
-- SSVC (CISA ADP) explotación PoC/activa: 655; automatizable + impacto total: 224
+- CVE nuevos publicados: **4983** (rechazados: 31; registros actualizados: 6380)
+- Por severidad CVSS: {'MEDIUM': 1925, 'LOW': 115, 'HIGH': 2419, 'CRITICAL': 400, 'SIN_CVSS': 124}  — con CVSS: 97.5%
+- SSVC (CISA ADP) explotación PoC/activa: 599; automatizable + impacto total: 214
 - EPSS ≥ 10%: 2
 
 ## KEV agregadas en la semana
@@ -32,7 +32,6 @@
 | CVE-2026-106622 | 10 | Adobe | ColdFusion 2025 | CWE-918 | none |
 | CVE-2026-106624 | 10 | Adobe | ColdFusion 2025 | CWE-94 | none |
 | CVE-2026-107594 | 10 | Unknown | File Upload to Order | CWE-73 | none |
-| CVE-2026-108576 | 10 | TOZED | X300 | CWE-77,CWE-78 | none |
 | CVE-2026-108804 | 10 | TRENDnet | TEW-751DR | CWE-77,CWE-78 | poc |
 | CVE-2026-108892 | 10 | Linksys | E1700 | CWE-119,CWE-121 | poc |
 | CVE-2026-108907 | 10 | Netcore | NR268 | CWE-287 | poc |
@@ -66,32 +65,33 @@
 | CVE-2026-109412 | 9.9 | Ivanti | Neurons Patch for Intune | CWE-749 | none |
 | CVE-2026-57155 | 9.9 | opnsense | core | CWE-22,CWE-73 | poc |
 | CVE-2026-75732 | 9.9 | Adobe | Adobe Experience Manager 6.5 LTS | CWE-863 | none |
+| CVE-2026-77366 | 9.9 | The-40-Thieves | obsidian-tc | CWE-639,CWE-863 | none |
 
 ## Top proveedores (CVE nuevos)
 
 - Microsoft: 1441
 - Adobe: 177
-- Unknown: 155
 - Juniper Networks: 153
-- frappe: 95
+- Unknown: 105
+- frappe: 92
 - IBM: 88
 - Mozilla: 83
-- n/a: 73
 - Red Hat: 71
-- FreeRDP: 60
+- n/a: 70
+- FreeRDP: 62
 
 ## Top CWE
 
-- CWE-416: 410
+- CWE-416: 407
 - CWE-122: 372
-- CWE-79: 355
-- CWE-862: 335
-- CWE-125: 329
-- CWE-639: 196
-- CWE-89: 172
-- CWE-863: 158
-- CWE-22: 127
-- CWE-787: 120
+- CWE-79: 345
+- CWE-125: 335
+- CWE-862: 298
+- CWE-639: 191
+- CWE-863: 163
+- CWE-89: 154
+- CWE-22: 125
+- CWE-787: 123
 
 ## Estado de fuentes
 
@@ -105,12 +105,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 5100,
+    "fetched": 5014,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4748
+    "scored": 4514
   }
 }
 ```
