@@ -1,0 +1,152 @@
+{
+ "date": "2026-10-19",
+ "window_7d": {
+  "start": "2026-10-13",
+  "end": "2026-10-19",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.16"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 5058,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 4805
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.16",
+  "catalog_total": 1748,
+  "added_7d": 9,
+  "added_7d_ids": [
+   "CVE-2026-104935",
+   "CVE-2026-96951",
+   "CVE-2026-105134",
+   "CVE-2026-76519",
+   "CVE-2026-105133",
+   "CVE-2026-0322",
+   "CVE-2026-21589",
+   "CVE-2026-102764",
+   "CVE-2025-61624"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Ahsay": 2,
+   "Ivanti": 1,
+   "Microsoft": 1,
+   "Cisco": 1,
+   "Palo Alto Networks": 1,
+   "Atlassian": 1,
+   "BeyondTrust": 1,
+   "Fortinet": 1
+  }
+ },
+ "cve_7d": {
+  "new": 5028,
+  "rejected": 30,
+  "updated": 8864,
+  "by_severity": {
+   "MEDIUM": 1770,
+   "HIGH": 2234,
+   "SIN_CVSS": 578,
+   "CRITICAL": 356,
+   "LOW": 90
+  },
+  "with_cvss_pct": 88.5,
+  "ssvc_poc_or_active": 515,
+  "ssvc_automatable_total_impact": 196,
+  "epss_ge_10pct": 2,
+  "top_vendors": [
+   [
+    "Microsoft",
+    1441
+   ],
+   [
+    "Linux",
+    483
+   ],
+   [
+    "Adobe",
+    177
+   ],
+   [
+    "Juniper Networks",
+    153
+   ],
+   [
+    "Unknown",
+    121
+   ],
+   [
+    "Mozilla",
+    83
+   ],
+   [
+    "Apache Software Foundation",
+    79
+   ],
+   [
+    "n/a",
+    66
+   ],
+   [
+    "Red Hat",
+    64
+   ],
+   [
+    "Google",
+    49
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-416",
+    402
+   ],
+   [
+    "CWE-122",
+    373
+   ],
+   [
+    "CWE-125",
+    337
+   ],
+   [
+    "CWE-79",
+    296
+   ],
+   [
+    "CWE-862",
+    246
+   ],
+   [
+    "CWE-639",
+    168
+   ],
+   [
+    "CWE-863",
+    138
+   ],
+   [
+    "CWE-89",
+    133
+   ],
+   [
+    "CWE-787",
+    116
+   ],
+   [
+    "CWE-22",
+    110
+   ]
+  ]
+ }
+}
