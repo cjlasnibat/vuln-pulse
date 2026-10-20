@@ -1,0 +1,148 @@
+{
+ "date": "2026-10-20",
+ "window_7d": {
+  "start": "2026-10-14",
+  "end": "2026-10-20",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.16"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3268,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 3054
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.16",
+  "catalog_total": 1748,
+  "added_7d": 7,
+  "added_7d_ids": [
+   "CVE-2026-105134",
+   "CVE-2026-76519",
+   "CVE-2026-105133",
+   "CVE-2026-0322",
+   "CVE-2026-21589",
+   "CVE-2026-102764",
+   "CVE-2025-61624"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Ahsay": 2,
+   "Cisco": 1,
+   "Palo Alto Networks": 1,
+   "Atlassian": 1,
+   "BeyondTrust": 1,
+   "Fortinet": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3147,
+  "rejected": 121,
+  "updated": 10436,
+  "by_severity": {
+   "MEDIUM": 1242,
+   "HIGH": 1006,
+   "LOW": 90,
+   "SIN_CVSS": 585,
+   "CRITICAL": 224
+  },
+  "with_cvss_pct": 81.4,
+  "ssvc_poc_or_active": 517,
+  "ssvc_automatable_total_impact": 114,
+  "epss_ge_10pct": 2,
+  "top_vendors": [
+   [
+    "Linux",
+    483
+   ],
+   [
+    "Juniper Networks",
+    153
+   ],
+   [
+    "Unknown",
+    121
+   ],
+   [
+    "Apache Software Foundation",
+    92
+   ],
+   [
+    "Red Hat",
+    66
+   ],
+   [
+    "n/a",
+    53
+   ],
+   [
+    "Eclipse Foundation",
+    49
+   ],
+   [
+    "Gitea",
+    48
+   ],
+   [
+    "IBM",
+    47
+   ],
+   [
+    "Apple",
+    46
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    224
+   ],
+   [
+    "CWE-862",
+    200
+   ],
+   [
+    "CWE-639",
+    142
+   ],
+   [
+    "CWE-125",
+    124
+   ],
+   [
+    "CWE-89",
+    105
+   ],
+   [
+    "CWE-863",
+    82
+   ],
+   [
+    "CWE-78",
+    80
+   ],
+   [
+    "CWE-22",
+    78
+   ],
+   [
+    "CWE-200",
+    76
+   ],
+   [
+    "CWE-787",
+    75
+   ]
+  ]
+ }
+}
