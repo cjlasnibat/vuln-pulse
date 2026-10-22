@@ -1,0 +1,148 @@
+{
+ "date": "2026-10-22",
+ "window_7d": {
+  "start": "2026-10-16",
+  "end": "2026-10-22",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.21"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 4372,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 4184
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.21",
+  "catalog_total": 1754,
+  "added_7d": 8,
+  "added_7d_ids": [
+   "CVE-2026-102764",
+   "CVE-2025-61624",
+   "CVE-2026-106931",
+   "CVE-2026-96656",
+   "CVE-2026-96655",
+   "CVE-2026-96654",
+   "CVE-2026-96652",
+   "CVE-2026-110936"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Plex": 4,
+   "BeyondTrust": 1,
+   "Fortinet": 1,
+   "EG Secure Solutions": 1,
+   "Siemens": 1
+  }
+ },
+ "cve_7d": {
+  "new": 4251,
+  "rejected": 121,
+  "updated": 7451,
+  "by_severity": {
+   "MEDIUM": 1729,
+   "HIGH": 1374,
+   "SIN_CVSS": 651,
+   "CRITICAL": 304,
+   "LOW": 193
+  },
+  "with_cvss_pct": 84.7,
+  "ssvc_poc_or_active": 394,
+  "ssvc_automatable_total_impact": 107,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Oracle Corporation",
+    1077
+   ],
+   [
+    "Linux",
+    437
+   ],
+   [
+    "Google",
+    358
+   ],
+   [
+    "Apache Software Foundation",
+    165
+   ],
+   [
+    "Unknown",
+    131
+   ],
+   [
+    "Drupal",
+    72
+   ],
+   [
+    "n/a",
+    58
+   ],
+   [
+    "IBM",
+    58
+   ],
+   [
+    "Apple",
+    46
+   ],
+   [
+    "Red Hat",
+    43
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-862",
+    222
+   ],
+   [
+    "CWE-79",
+    213
+   ],
+   [
+    "CWE-119",
+    177
+   ],
+   [
+    "CWE-416",
+    149
+   ],
+   [
+    "CWE-284",
+    145
+   ],
+   [
+    "CWE-639",
+    126
+   ],
+   [
+    "CWE-89",
+    114
+   ],
+   [
+    "CWE-22",
+    106
+   ],
+   [
+    "CWE-306",
+    97
+   ],
+   [
+    "CWE-200",
+    94
+   ]
+  ]
+ }
+}
