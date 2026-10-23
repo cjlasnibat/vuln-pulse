@@ -1,0 +1,144 @@
+{
+ "date": "2026-10-23",
+ "window_7d": {
+  "start": "2026-10-17",
+  "end": "2026-10-23",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.21"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 4579,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 4127
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.21",
+  "catalog_total": 1754,
+  "added_7d": 6,
+  "added_7d_ids": [
+   "CVE-2026-106931",
+   "CVE-2026-96656",
+   "CVE-2026-96655",
+   "CVE-2026-96654",
+   "CVE-2026-96652",
+   "CVE-2026-110936"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Plex": 4,
+   "EG Secure Solutions": 1,
+   "Siemens": 1
+  }
+ },
+ "cve_7d": {
+  "new": 4459,
+  "rejected": 120,
+  "updated": 6697,
+  "by_severity": {
+   "HIGH": 1374,
+   "MEDIUM": 1698,
+   "CRITICAL": 334,
+   "LOW": 220,
+   "SIN_CVSS": 833
+  },
+  "with_cvss_pct": 81.3,
+  "ssvc_poc_or_active": 333,
+  "ssvc_automatable_total_impact": 96,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Oracle Corporation",
+    1077
+   ],
+   [
+    "Linux",
+    655
+   ],
+   [
+    "Google",
+    359
+   ],
+   [
+    "Apache Software Foundation",
+    153
+   ],
+   [
+    "Unknown",
+    135
+   ],
+   [
+    "Drupal",
+    72
+   ],
+   [
+    "Hewlett Packard Enterprise (HPE)",
+    71
+   ],
+   [
+    "n/a",
+    53
+   ],
+   [
+    "IBM",
+    49
+   ],
+   [
+    "Apple",
+    46
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-284",
+    311
+   ],
+   [
+    "CWE-862",
+    199
+   ],
+   [
+    "CWE-79",
+    193
+   ],
+   [
+    "CWE-119",
+    179
+   ],
+   [
+    "CWE-416",
+    149
+   ],
+   [
+    "CWE-22",
+    111
+   ],
+   [
+    "CWE-89",
+    99
+   ],
+   [
+    "CWE-863",
+    95
+   ],
+   [
+    "CWE-306",
+    88
+   ],
+   [
+    "CWE-125",
+    88
+   ]
+  ]
+ }
+}
