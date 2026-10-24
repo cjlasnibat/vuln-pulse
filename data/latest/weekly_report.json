@@ -1,49 +1,51 @@
 {
   "window": {
-    "start": "2026-10-17",
-    "end": "2026-10-23",
+    "start": "2026-10-18",
+    "end": "2026-10-24",
     "utc_offset": -3
   },
-  "generated_at": "2026-10-23T15:11:15.843847+00:00",
+  "generated_at": "2026-10-24T14:02:23.613169+00:00",
   "sources_status": {
     "kev": {
       "ok": true,
       "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
-      "catalogVersion": "2026.10.21"
+      "catalogVersion": "2026.10.23"
     },
     "cvelist": {
       "ok": true,
       "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-      "fetched": 4579,
+      "fetched": 4609,
       "errors": 0
     },
     "epss": {
       "ok": true,
-      "scored": 4127
+      "scored": 4035
     }
   },
   "summary": {
-    "kev_added": 6,
-    "kev_catalog_total": 1754,
+    "kev_added": 8,
+    "kev_catalog_total": 1756,
     "kev_ransomware_known": 0,
     "kev_vendors": {
       "Plex": 4,
       "EG Secure Solutions": 1,
-      "Siemens": 1
+      "Siemens": 1,
+      "Arista": 1,
+      "Collabora": 1
     },
-    "cve_new": 4459,
-    "cve_rejected": 120,
-    "cve_updated": 6697,
+    "cve_new": 4490,
+    "cve_rejected": 119,
+    "cve_updated": 6824,
     "cve_by_severity": {
-      "HIGH": 1374,
-      "MEDIUM": 1698,
-      "CRITICAL": 334,
-      "LOW": 220,
-      "SIN_CVSS": 833
+      "SIN_CVSS": 855,
+      "CRITICAL": 343,
+      "MEDIUM": 1684,
+      "HIGH": 1382,
+      "LOW": 226
     },
-    "cve_with_cvss_pct": 81.3,
-    "ssvc_poc_or_active": 333,
-    "ssvc_automatable_total_impact": 96,
+    "cve_with_cvss_pct": 81.0,
+    "ssvc_poc_or_active": 323,
+    "ssvc_automatable_total_impact": 106,
     "epss_ge_10pct": 1,
     "top_vendors": [
       [
@@ -64,7 +66,7 @@
       ],
       [
         "Unknown",
-        135
+        139
       ],
       [
         "Drupal",
@@ -76,7 +78,7 @@
       ],
       [
         "n/a",
-        53
+        57
       ],
       [
         "IBM",
@@ -84,7 +86,7 @@
       ],
       [
         "Apple",
-        46
+        47
       ],
       [
         "Eclipse Foundation",
@@ -110,11 +112,7 @@
     "top_cwe": [
       [
         "CWE-284",
-        311
-      ],
-      [
-        "CWE-862",
-        199
+        351
       ],
       [
         "CWE-79",
@@ -122,31 +120,35 @@
       ],
       [
         "CWE-119",
-        179
+        193
+      ],
+      [
+        "CWE-862",
+        192
       ],
       [
         "CWE-416",
-        149
+        152
       ],
       [
         "CWE-22",
-        111
+        112
       ],
       [
         "CWE-89",
         99
       ],
       [
-        "CWE-863",
+        "CWE-306",
+        98
+      ],
+      [
+        "CWE-400",
         95
       ],
       [
-        "CWE-306",
-        88
-      ],
-      [
-        "CWE-125",
-        88
+        "CWE-863",
+        93
       ]
     ],
     "top_cna": [
@@ -160,7 +162,7 @@
       ],
       [
         "VulnCheck",
-        508
+        471
       ],
       [
         "Chrome",
@@ -168,11 +170,11 @@
       ],
       [
         "GitHub_M",
-        288
+        315
       ],
       [
         "VulDB",
-        203
+        205
       ],
       [
         "apache",
@@ -180,11 +182,11 @@
       ],
       [
         "WPScan",
-        135
+        139
       ],
       [
         "Patchstack",
-        126
+        138
       ],
       [
         "hpe",
@@ -312,6 +314,46 @@
         "epss": 0.00238,
         "percentile": 0.14021
       }
+    },
+    {
+      "cveID": "CVE-2026-114625",
+      "vendorProject": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "vulnerabilityName": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+      "dateAdded": "2026-10-23",
+      "shortDescription": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-10-26",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
+      "cwes": [
+        "CWE-89"
+      ],
+      "epss": {
+        "epss": 0.00555,
+        "percentile": 0.45586
+      }
+    },
+    {
+      "cveID": "CVE-2026-110447",
+      "vendorProject": "Collabora",
+      "product": "Collabora Online – Built-in CODE Server",
+      "vulnerabilityName": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+      "dateAdded": "2026-10-23",
+      "shortDescription": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-10-26",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516 ; https://github.com/CollaboraOnline/online/security/advisories/GHSA-g3vx-3m76-fghh ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+      "cwes": [
+        "CWE-78"
+      ],
+      "epss": {
+        "epss": 0.01225,
+        "percentile": 0.68615
+      }
     }
   ],
   "critical_cves": [
@@ -385,7 +427,11 @@
       "cwe": [
         "CWE-306"
       ],
-      "ssvc": null,
+      "ssvc": {
+        "exploitation": "none",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
       "description": "Apache Pulsar Manager is a web console for administering Apache Pulsar clusters. It has its own user accounts and login, and it can be configured with an HTTP authentication credential, such as a token, that it uses to call the Pulsar admin API on behalf of its users. Pulsar Manager has the following security issues:\n\n- The operation for creating the initial administrator (superuser) account is av",
       "epss": {
         "epss": 0.00703,
@@ -653,7 +699,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:44.829Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -668,7 +714,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Authentication bypass vulnerabilities in the affected interface of AOS-10 could allow an unauthenticated remote attacker to run arbitrary commands on the underlying host if certain preconditions outside of the attacker's control are met. Successful exploitation could allow an attacker to execute arbitrary commands on the underlying operating system.",
       "epss": {
         "epss": 0.004,
         "percentile": 0.33077
@@ -680,7 +726,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:47.248Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -693,7 +739,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Command injection vulnerabilities exist in the affected interface of AOS-8 that could allow an unauthenticated remote attacker to run arbitrary commands on the underlying host if certain preconditions outside of the attacker's control are met. Successful exploitation could allow an attacker to execute arbitrary commands on the underlying operating system.",
       "epss": {
         "epss": 0.00499,
         "percentile": 0.41876
@@ -705,7 +751,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:53.557Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -720,7 +766,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Buffer overflow vulnerabilities in the affected interface of AOS-10 could lead to unauthenticated remote code execution by sending specially crafted packets to the affected interface. Successful exploitation of this vulnerability results in the ability to execute arbitrary code as a privileged user on the underlying operating system.",
       "epss": {
         "epss": 0.00499,
         "percentile": 0.41876
@@ -732,7 +778,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:54.781Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -747,7 +793,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Vulnerabilities in the affected interface of AOS-8 could allow an unauthenticated remote attacker to conduct SQL injection attacks against an affected AOS-8 instance. Successful exploitation could allow an attacker to execute arbitrary commands on the underlying operating system.",
       "epss": {
         "epss": 0.00539,
         "percentile": 0.44613
@@ -759,7 +805,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:55.951Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -774,7 +820,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Vulnerabilities in the affected interface of AOS-8 could allow an unauthenticated remote attacker to conduct SQL injection attacks against an affected AOS-8 instance. Successful exploitation could allow an attacker to execute arbitrary commands on the underlying operating system.",
       "epss": {
         "epss": 0.00539,
         "percentile": 0.44613
@@ -786,7 +832,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:57.112Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -801,7 +847,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Vulnerabilities in the affected interface of AOS-8 could allow an unauthenticated remote attacker to bypass existing authentication controls and run arbitrary commands on the underlying host. Successful exploitation could allow an attacker to execute arbitrary commands as root on the underlying operating system leading to complete system compromise.",
       "epss": {
         "epss": 0.004,
         "percentile": 0.33077
@@ -813,7 +859,7 @@
       "assigner": "hpe",
       "date_published": "2026-10-22T19:04:58.382Z",
       "vendor": "Hewlett Packard Enterprise (HPE)",
-      "product": "Unknown product",
+      "product": "ArubaOS (AOS)",
       "cvss": {
         "version": "cvssV3_1",
         "score": 10,
@@ -828,7 +874,7 @@
         "automatable": "yes",
         "technical_impact": "total"
       },
-      "description": "No description provided",
+      "description": "Buffer overflow vulnerabilities exist in the affected interface of AOS-10 that could lead to unauthenticated remote code execution. Successful exploitation could allow an attacker to execute arbitrary code as a privileged user on the underlying operating system, leading to complete system compromise.",
       "epss": {
         "epss": 0.00499,
         "percentile": 0.41875
@@ -1307,6 +1353,501 @@
   ],
   "ssvc_poc_or_active": [
     {
+      "cve_id": "CVE-2026-115537",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-23T01:30:25.554Z",
+      "vendor": "gedelumbung",
+      "product": "HospitalManagement",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-601"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A weakness has been identified in gedelumbung HospitalManagement up to c2d45543789a3887067d3915f69d44cfc2cf76a8. This affects the function simpan of the file application/modules/admin/controllers/routing_pages.php of the component URL Validation. This manipulation of the argument url_route causes open redirect. It is possible to initiate the attack remotely. The exploit has been made available to ",
+      "epss": {
+        "epss": 0.00258,
+        "percentile": 0.16582
+      }
+    },
+    {
+      "cve_id": "CVE-2026-115534",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-22T23:45:15.462Z",
+      "vendor": "gedelumbung",
+      "product": "HospitalManagement",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-79",
+        "CWE-94"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability was determined in gedelumbung HospitalManagement up to c2d45543789a3887067d3915f69d44cfc2cf76a8. Impacted is the function kirim of the file application/modules/web/controllers/contact.php of the component Contact Form. Executing a manipulation of the argument nama/email/alamat/telepon/pesan can lead to cross site scripting. The attack can be executed remotely. The exploit has been ",
+      "epss": {
+        "epss": 0.00273,
+        "percentile": 0.18653
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114625",
+      "state": "PUBLISHED",
+      "assigner": "Arista",
+      "date_published": "2026-10-22T20:47:56.427Z",
+      "vendor": "Arista Networks",
+      "product": "VeloCloud Orchestrator",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 9.4,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "active",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nOn an affected system, any authenticated user can gain operator privileges and ma",
+      "epss": {
+        "epss": 0.00555,
+        "percentile": 0.45586
+      }
+    },
+    {
+      "cve_id": "CVE-2026-115506",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-22T19:14:06.001Z",
+      "vendor": "libexpat",
+      "product": "libexpat",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.7,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-776"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "libexpat through 2.9.0 contains a denial of service vulnerability because billion laughs protection in accountingDiffTolerated() in xmlparse.c detects entity amplification too late. Attackers can supply a moderately sized XML document with a large DTD and nested entity expansions to consume tens of seconds of CPU per parse.",
+      "epss": {
+        "epss": 0.0035,
+        "percentile": 0.27483
+      }
+    },
+    {
+      "cve_id": "CVE-2026-115247",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-22T13:15:19.125Z",
+      "vendor": "subhajitkhan",
+      "product": "online-clinic-management-system",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-310",
+        "CWE-311"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A security vulnerability has been detected in subhajitkhan online-clinic-management-system up to e9ee77a8827a1446220fa07ee693dc4d9a29a578. This vulnerability affects unknown code of the file patientregistration.php. The manipulation of the argument pat_pswd/doc_pswd leads to missing encryption of sensitive data. It is possible to initiate the attack remotely. The exploit has been disclosed publicl",
+      "epss": {
+        "epss": 0.00107,
+        "percentile": 0.01098
+      }
+    },
+    {
+      "cve_id": "CVE-2017-20289",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-22T10:57:23.974Z",
+      "vendor": "Broadstreet",
+      "product": "Ad Widget",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 7.7,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-98"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "Broadstreet Ad Widget plugin for WordPress 2.2.0 before 2.12.0 contains a local file inclusion vulnerability that allows authenticated users to execute attacker-chosen PHP files by passing unsanitized input to require in views/modal/index.php. Attackers can supply directory traversal sequences in the 'step' parameter, optionally with a null byte, to include local files and execute PHP code. Exploi",
+      "epss": {
+        "epss": 0.00762,
+        "percentile": 0.54894
+      }
+    },
+    {
+      "cve_id": "CVE-2019-25778",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-22T10:57:26.733Z",
+      "vendor": "SeaCMS",
+      "product": "SeaCMS",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.8,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "SeaCMS through 8.7 contains an unauthenticated SQL injection vulnerability that allows remote attackers to manipulate database queries by injecting SQL through the rlist[] array parameter. Attackers can send GET requests to /comment/api/index.php with crafted rlist[] values using backtick-quoted variables and extractvalue to extract database information via error messages. Exploitation evidence wa",
+      "epss": {
+        "epss": 0.00377,
+        "percentile": 0.3054
+      }
+    },
+    {
+      "cve_id": "CVE-2021-48014",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-22T10:57:29.782Z",
+      "vendor": "FanRuan",
+      "product": "FineReport",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 9.3,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "total"
+      },
+      "description": "FineReport 9.0 contains a path traversal vulnerability in the /WebReport/ReportServer design_save_svg operation that allows unauthenticated attackers to write arbitrary files via the filePath parameter. Attackers can send a POST request with directory traversal sequences in filePath and a __CONTENT__ payload to write a JSP webshell and achieve remote code execution. Exploitation evidence was first",
+      "epss": {
+        "epss": 0.01669,
+        "percentile": 0.76617
+      }
+    },
+    {
+      "cve_id": "CVE-2022-51025",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-22T10:57:35.298Z",
+      "vendor": "Penta Security Systems",
+      "product": "WAPPLES",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 7.1,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "Penta Security WAPPLES 4.0.54.1, 5.0, and 6.0 contains a path traversal vulnerability that allows authenticated attackers to download arbitrary files via the name parameter of /webapi/file/transfer. Attackers can send GET requests with type=db_backup and ../ sequences in name to read files like /etc/passwd, and a hardcoded systemi account makes authentication effectively trivial. Exploitation evid",
+      "epss": {
+        "epss": 0.00373,
+        "percentile": 0.30072
+      }
+    },
+    {
+      "cve_id": "CVE-2024-58396",
+      "state": "PUBLISHED",
+      "assigner": "VulnCheck",
+      "date_published": "2026-10-22T10:57:38.109Z",
+      "vendor": "YouDataSum",
+      "product": "CPAS Audit Management System",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 8.7,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "YouDataSum CPAS Audit Management System V4 contains a path traversal vulnerability that allows unauthenticated attackers to read arbitrary files by manipulating the fileId parameter. Attackers can send GET requests to /cpasm4/plugInManController/downPlugs with ../ sequences in fileId to retrieve system files like /etc/passwd. Exploitation evidence was first observed by the Shadowserver Foundation ",
+      "epss": {
+        "epss": 0.00389,
+        "percentile": 0.31867
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114576",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-22T01:30:21.675Z",
+      "vendor": "Linksys",
+      "product": "RE6250",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-310",
+        "CWE-330"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability has been found in Linksys RE6250 1.0.04.001. This affects the function strcmp of the component Web Management Interface. The manipulation of the argument session_id leads to insufficiently random values. The attack may be initiated remotely. The complexity of an attack is rather high. It is indicated that the exploitability is difficult. The exploit has been disclosed to the public",
+      "epss": {
+        "epss": 0.0041,
+        "percentile": 0.34114
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114441",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T22:45:18.510Z",
+      "vendor": "oretnom23",
+      "product": "php-travel-agency-system",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A weakness has been identified in oretnom23 php-travel-agency-system. This issue affects some unknown processing of the file admin/update.php. This manipulation of the argument action/full_name/visa_no/hiden/title/description/page_id/user causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. This product uses a ",
+      "epss": {
+        "epss": 0.00343,
+        "percentile": 0.26621
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114384",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T22:00:18.707Z",
+      "vendor": "itsourcecode",
+      "product": "Online Cake Ordering System",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A security vulnerability has been detected in itsourcecode Online Cake Ordering System 1.0. Affected is an unknown function of the file /transactionsave.php. Such manipulation of the argument del leads to sql injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "epss": {
+        "epss": 0.00261,
+        "percentile": 0.16906
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114381",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T21:15:17.882Z",
+      "vendor": "itsourcecode",
+      "product": "Online Cake Ordering System",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability was determined in itsourcecode Online Cake Ordering System 1.0. The affected element is an unknown function of the file /orderdetail.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
+      "epss": {
+        "epss": 0.00261,
+        "percentile": 0.16906
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114378",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T20:30:18.507Z",
+      "vendor": "itsourcecode",
+      "product": "Online Cake Ordering System",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability was detected in itsourcecode Online Cake Ordering System 1.0. This affects an unknown part of the file /deleteproduct.php. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit is now public and may be used.",
+      "epss": {
+        "epss": 0.00209,
+        "percentile": 0.10549
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114375",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T19:45:20.856Z",
+      "vendor": "leomoon-studios",
+      "product": "wiki-go",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A security flaw has been discovered in leomoon-studios wiki-go up to 1.9.1. Affected is the function RenameFileHandler of the file internal/handlers/files.go of the component Files Rename API. Performing a manipulation of the argument currentPath/newName results in path traversal. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. Upgradi",
+      "epss": {
+        "epss": 0.00308,
+        "percentile": 0.2244
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114266",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T18:15:13.700Z",
+      "vendor": "ProjectWorlds",
+      "product": "Advanced Library Management System",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "no",
+        "technical_impact": "partial"
+      },
+      "description": "A security vulnerability has been detected in ProjectWorlds Advanced Library Management System 1.0. This impacts the function mysqli_query of the file profile.php. The manipulation of the argument admin_id leads to sql injection. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used.",
+      "epss": {
+        "epss": 0.00201,
+        "percentile": 0.09488
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114263",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T17:30:08.284Z",
+      "vendor": "ProjectWorlds",
+      "product": "Advanced Library Management System",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability was identified in ProjectWorlds Advanced Library Management System 1.0. The affected element is the function mysqli_query of the file individual_report_search.php. Such manipulation of the argument roll_number leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used.",
+      "epss": {
+        "epss": 0.00265,
+        "percentile": 0.17483
+      }
+    },
+    {
       "cve_id": "CVE-2026-53986",
       "state": "PUBLISHED",
       "assigner": "VulnCheck",
@@ -1332,6 +1873,90 @@
       "epss": {
         "epss": 0.00216,
         "percentile": 0.11383
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114260",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T16:45:08.221Z",
+      "vendor": "oretnom23",
+      "product": "file-management-system-php",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-287",
+        "CWE-306"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability has been found in oretnom23 file-management-system-php up to 2e3c1ebe60f121e8df4fb3f544f0e9591d9a01e4. This vulnerability affects the function delete_folder of the file ajax.php of the component AJAX Handler. The manipulation of the argument ID leads to missing authentication. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. Contin",
+      "epss": {
+        "epss": 0.00459,
+        "percentile": 0.388
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114257",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T16:00:20.862Z",
+      "vendor": "oretnom23",
+      "product": "file-management-system-php",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A security vulnerability has been detected in oretnom23 file-management-system-php up to 2e3c1ebe60f121e8df4fb3f544f0e9591d9a01e4. Affected by this vulnerability is the function readfile of the file download.php of the component File Download. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be use",
+      "epss": {
+        "epss": 0.00328,
+        "percentile": 0.24723
+      }
+    },
+    {
+      "cve_id": "CVE-2026-114254",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-10-21T15:15:07.790Z",
+      "vendor": "oretnom23",
+      "product": "file-management-system-php",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 6.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+      },
+      "cwe": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "ssvc": {
+        "exploitation": "poc",
+        "automatable": "yes",
+        "technical_impact": "partial"
+      },
+      "description": "A vulnerability was identified in oretnom23 file-management-system-php up to 2e3c1ebe60f121e8df4fb3f544f0e9591d9a01e4. This affects the function Login of the file admin_class.php. The manipulation of the argument username/password leads to sql injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. This product follows a rolling release approa",
+      "epss": {
+        "epss": 0.00343,
+        "percentile": 0.26621
       }
     },
     {
@@ -1824,573 +2449,6 @@
       "epss": {
         "epss": 0.00204,
         "percentile": 0.0991
-      }
-    },
-    {
-      "cve_id": "CVE-2026-114067",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-21T00:36:39.566Z",
-      "vendor": "triggerdotdev",
-      "product": "trigger.dev",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 7.1,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-863"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Trigger.dev 4.5.0 before 4.6.2 contains an improper authorization vulnerability in the PUT snapshot-url session endpoint that allows public session token holders to obtain presigned S3 write URLs. End users can overwrite their own session's durable chat snapshot to forge the agent's conversation history, since the route lacks a secret-key-only check.",
-      "epss": {
-        "epss": 0.00221,
-        "percentile": 0.11954
-      }
-    },
-    {
-      "cve_id": "CVE-2026-114077",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-21T00:36:46.529Z",
-      "vendor": "triggerdotdev",
-      "product": "trigger.dev",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.1,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-639"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Trigger.dev before 4.5.6 contains an authorization bypass vulnerability in createDeploymentBackgroundWorkerV4 that resolves a WorkerDeployment by friendlyId alone, without environment, project, or organization scoping. Attackers holding only their own environment API key can POST to the deployment background-workers endpoint with a victim's deployment ID to re-point that in-progress deployment at ",
-      "epss": {
-        "epss": 0.0024,
-        "percentile": 0.1428
-      }
-    },
-    {
-      "cve_id": "CVE-2026-114087",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-21T00:36:53.452Z",
-      "vendor": "triggerdotdev",
-      "product": "trigger.dev",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 9.2,
-        "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-653"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Trigger.dev before 4.5.6 self-hosted Docker Compose deployments using the default secrets from hosting/docker/.env.example allow authentication bypass because the hardcoded MAGIC_LINK_SECRET lets anyone forge valid magic link tokens. Unauthenticated attackers can log in as any email address, then reach Postgres, Redis, and ClickHouse with default credentials from runner containers on infrastructur",
-      "epss": {
-        "epss": 0.00346,
-        "percentile": 0.27005
-      }
-    },
-    {
-      "cve_id": "CVE-2026-114092",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-21T00:36:56.982Z",
-      "vendor": "triggerdotdev",
-      "product": "trigger.dev",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 8.3,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-306"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Trigger.dev before 4.5.0 performs no authentication or organization check in the action handler of the dashboard run replay route (resources.taskruns.$runParam.replay) and looks up the run by friendlyId alone. A remote attacker who knows a victim's run friendlyId can replay it into an environment of their choosing, exposing the victim's task payload or running the task again with the victim's secr",
-      "epss": {
-        "epss": 0.00436,
-        "percentile": 0.36868
-      }
-    },
-    {
-      "cve_id": "CVE-2026-114102",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-21T00:37:03.910Z",
-      "vendor": "cthackers",
-      "product": "adm-zip",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 8.7,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-248"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "adm-zip before 0.6.1 contains a denial of service vulnerability that allows unauthenticated attackers to crash the Node.js process via a malformed ZIP file, because inflateAsync in methods/inflater.js lacks a zlib stream error listener. Attackers can supply a ZIP with corrupted DEFLATE data processed by readFileAsync, readAsTextAsync, extractAllToAsync, or getDataAsync, triggering an uncatchable e",
-      "epss": {
-        "epss": 0.00291,
-        "percentile": 0.20546
-      }
-    },
-    {
-      "cve_id": "CVE-2026-114117",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-21T00:37:14.741Z",
-      "vendor": "vyperlang",
-      "product": "vyper",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 8.2,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-682"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Vyper 0.3.8 through 0.5.0b1 contains an optimizer miscompilation in which (msg.value | K) or (len(msg.data) | K), where K is any nonzero integer literal, is compiled to the constant 1 when used as a ternary expression branch under -O gas (the default) or -O codesize. Affected contracts use the wrong value in storage writes, arithmetic, indexes, return values, or events without warning or revert, w",
-      "epss": {
-        "epss": 0.00207,
-        "percentile": 0.10206
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113735",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-10-20T23:45:35.500Z",
-      "vendor": "D-Link",
-      "product": "DCS-6501LH",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 6.3,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P"
-      },
-      "cwe": [
-        "CWE-1391"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "A vulnerability was determined in D-Link DCS-6501LH 3.03.02. Affected by this vulnerability is the function mydlink_set_root_pwd of the file /mnt/mtd/aoni_ipc. Executing a manipulation can lead to use of weak credentials. The attack may be launched remotely. The attack requires a high level of complexity. The exploitation appears to be difficult. The exploit has been publicly disclosed and may be ",
-      "epss": {
-        "epss": 0.00588,
-        "percentile": 0.47407
-      }
-    },
-    {
-      "cve_id": "CVE-2026-112995",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:15.935Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-416"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Use after free in Animation in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.00385,
-        "percentile": 0.31338
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113009",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:14.816Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-416"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Use after free in WindowControlsOverlay in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.00385,
-        "percentile": 0.31338
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113010",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:20.166Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 6.5,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
-      },
-      "cwe": [
-        "CWE-125"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Out of bounds read in Extensions in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to read memory inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.00265,
-        "percentile": 0.17437
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113022",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:01:59.021Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-119"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Memory corruption in PDFium in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.0042,
-        "percentile": 0.35224
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113118",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:11.226Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-119"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Memory corruption in Extensions in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.0035,
-        "percentile": 0.27489
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113139",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:22.612Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 6.5,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
-      },
-      "cwe": [
-        "CWE-119"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Memory corruption in Autofill in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to potentially read memory inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.003,
-        "percentile": 0.21614
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113141",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:01:50.430Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-416"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Use after free in Transactions Platform in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "epss": {
-        "epss": 0.00385,
-        "percentile": 0.31338
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113142",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:01.926Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 6.5,
-        "severity": "MEDIUM",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
-      },
-      "cwe": [
-        "CWE-119"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "Memory corruption in Extensions in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to potentially read memory inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.00348,
-        "percentile": 0.27154
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113146",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:10.476Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-119"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Memory corruption in PerformanceAPIs in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.00385,
-        "percentile": 0.31338
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113147",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:05.596Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-20"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Improper input validation in WebShare in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "epss": {
-        "epss": 0.00486,
-        "percentile": 0.40983
-      }
-    },
-    {
-      "cve_id": "CVE-2026-113331",
-      "state": "PUBLISHED",
-      "assigner": "Chrome",
-      "date_published": "2026-10-20T21:02:50.974Z",
-      "vendor": "Google",
-      "product": "Chrome",
-      "cvss": {
-        "version": "cvssV3_1",
-        "score": 8.8,
-        "severity": "HIGH",
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
-      },
-      "cwe": [
-        "CWE-119"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "Memory corruption in Controls in Google Chrome prior to 156.0.8078.47 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Low)",
-      "epss": {
-        "epss": 0.00443,
-        "percentile": 0.37478
-      }
-    },
-    {
-      "cve_id": "CVE-2012-20004",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-20T20:31:19.801Z",
-      "vendor": "Carles Reverter",
-      "product": "K-news",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 5.1,
-        "severity": "MEDIUM",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
-      },
-      "cwe": [
-        "CWE-79"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "no",
-        "technical_impact": "partial"
-      },
-      "description": "K-news plugin for WordPress before 1.1.1 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject script by supplying unsanitized input through the 'ff' parameter. Attackers can craft GET requests to /wp-content/plugins/knews/wysiwyg/fontpicker/index.php with malicious 'ff' values echoed into option tags to execute script and steal session cookies. Ex",
-      "epss": {
-        "epss": 0.00215,
-        "percentile": 0.11322
-      }
-    },
-    {
-      "cve_id": "CVE-2014-125134",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-20T20:31:23.591Z",
-      "vendor": "ChurcHope",
-      "product": "ChurcHope",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 8.7,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-22"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "ChurcHope theme for WordPress before 2.2 contains a path traversal vulnerability that allows unauthenticated attackers to download arbitrary files through the 'file' parameter of /wp-content/themes/churchope/lib/downloadlink.php. Attackers can supply directory traversal sequences to read sensitive files like wp-config.php or /etc/passwd, exposing database credentials. Exploitation evidence was fir",
-      "epss": {
-        "epss": 0.00638,
-        "percentile": 0.49973
-      }
-    },
-    {
-      "cve_id": "CVE-2015-20124",
-      "state": "PUBLISHED",
-      "assigner": "VulnCheck",
-      "date_published": "2026-10-20T20:31:24.966Z",
-      "vendor": "Aspose",
-      "product": "Aspose Importer & Exporter",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 8.7,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-22"
-      ],
-      "ssvc": {
-        "exploitation": "poc",
-        "automatable": "yes",
-        "technical_impact": "partial"
-      },
-      "description": "Aspose Importer & Exporter plugin for WordPress before 3.0 contains a path traversal vulnerability that allows unauthenticated attackers to download arbitrary files via the unsanitized 'file' parameter. Attackers can send GET requests to aspose_import_export_download.php with traversal sequences like ../../../wp-config.php to read database credentials. Exploitation evidence was first observed by t",
-      "epss": {
-        "epss": 0.00389,
-        "percentile": 0.31868
       }
     }
   ],

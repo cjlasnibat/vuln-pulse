@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-10-17 a 2026-10-23
+# Reporte semanal de vulnerabilidades — 2026-10-18 a 2026-10-24
 
 ## Resumen
 
-- KEV agregadas: **6** (catálogo total: 1754; ransomware conocido: 0)
-- CVE nuevos publicados: **4459** (rechazados: 120; registros actualizados: 6697)
-- Por severidad CVSS: {'HIGH': 1374, 'MEDIUM': 1698, 'CRITICAL': 334, 'LOW': 220, 'SIN_CVSS': 833}  — con CVSS: 81.3%
-- SSVC (CISA ADP) explotación PoC/activa: 333; automatizable + impacto total: 96
+- KEV agregadas: **8** (catálogo total: 1756; ransomware conocido: 0)
+- CVE nuevos publicados: **4490** (rechazados: 119; registros actualizados: 6824)
+- Por severidad CVSS: {'SIN_CVSS': 855, 'CRITICAL': 343, 'MEDIUM': 1684, 'HIGH': 1382, 'LOW': 226}  — con CVSS: 81.0%
+- SSVC (CISA ADP) explotación PoC/activa: 323; automatizable + impacto total: 106
 - EPSS ≥ 10%: 1
 
 ## KEV agregadas en la semana
@@ -18,6 +18,8 @@
 | 2026-10-20 | CVE-2026-96654 | Plex Media Server | Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability | 2026-10-23 | Unknown |
 | 2026-10-20 | CVE-2026-96652 | Plex Media Server | Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability | 2026-11-03 | Unknown |
 | 2026-10-20 | CVE-2026-110936 | Siemens Software Center | Siemens Software Center Uncontrolled Search Path Element Vulnerability | 2026-11-03 | Unknown |
+| 2026-10-23 | CVE-2026-114625 | Arista VeloCloud Orchestrator | Arista VeloCloud Orchestrator SQL Injection Vulnerability | 2026-10-26 | Unknown |
+| 2026-10-23 | CVE-2026-110447 | Collabora Collabora Online – Built-in CODE Server | Collabora Online – Built-in CODE Server OS Command Injection Vulnerability | 2026-10-26 | Unknown |
 
 ## CVE críticos (CVSS ≥ 9.0) publicados
 
@@ -25,7 +27,7 @@
 |---|---|---|---|---|---|
 | CVE-2026-101809 | 10 | Oracle Corporation | Workflow | CWE-284 | none |
 | CVE-2026-102785 | 10 | yootheme.com | YOOtheme Pro extension for Joomla | CWE-434 | none |
-| CVE-2026-105944 | 10 | Apache Software Foundation | Apache Pulsar Manager | CWE-306 |  |
+| CVE-2026-105944 | 10 | Apache Software Foundation | Apache Pulsar Manager | CWE-306 | none |
 | CVE-2026-110063 | 10 | Microsoft | VM Inspector for Azure Virtual Machines | CWE-59 | none |
 | CVE-2026-110264 | 10 | GitLab | GitLab | CWE-190 | none |
 | CVE-2026-111057 | 10 | mljar | mercury | CWE-185,CWE-284 |  |
@@ -36,13 +38,13 @@
 | CVE-2026-114383 | 10 | TOTOLINK | EX200 | CWE-119,CWE-121 |  |
 | CVE-2026-114575 | 10 | TOTOLINK | A950RG | CWE-74,CWE-77 |  |
 | CVE-2026-78162 | 10 | Apache Software Foundation | Apache Camel | CWE-502 | poc |
-| CVE-2026-79844 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product | CWE-288 | none |
-| CVE-2026-79846 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product |  | none |
-| CVE-2026-79847 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product | CWE-119 | none |
-| CVE-2026-79848 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product | CWE-89 | none |
-| CVE-2026-79849 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product | CWE-89 | none |
-| CVE-2026-79850 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product | CWE-288 | none |
-| CVE-2026-79851 | 10 | Hewlett Packard Enterprise (HPE) | Unknown product | CWE-119 | none |
+| CVE-2026-79844 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-288 | none |
+| CVE-2026-79846 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) |  | none |
+| CVE-2026-79847 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-119 | none |
+| CVE-2026-79848 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-89 | none |
+| CVE-2026-79849 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-89 | none |
+| CVE-2026-79850 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-288 | none |
+| CVE-2026-79851 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-119 | none |
 | CVE-2026-81212 | 10 | IBM | DataStage on Cloud Pak for Data | CWE-285 |  |
 | CVE-2026-83938 | 10 | Microsoft | Azure Kubernetes Configuration Service | CWE-306 |  |
 | CVE-2026-87337 | 10 | Oracle Corporation | Oracle Access Manager |  |  |
@@ -70,25 +72,25 @@
 - Linux: 655
 - Google: 359
 - Apache Software Foundation: 153
-- Unknown: 135
+- Unknown: 139
 - Drupal: 72
 - Hewlett Packard Enterprise (HPE): 71
-- n/a: 53
+- n/a: 57
 - IBM: 49
-- Apple: 46
+- Apple: 47
 
 ## Top CWE
 
-- CWE-284: 311
-- CWE-862: 199
+- CWE-284: 351
 - CWE-79: 193
-- CWE-119: 179
-- CWE-416: 149
-- CWE-22: 111
+- CWE-119: 193
+- CWE-862: 192
+- CWE-416: 152
+- CWE-22: 112
 - CWE-89: 99
-- CWE-863: 95
-- CWE-306: 88
-- CWE-125: 88
+- CWE-306: 98
+- CWE-400: 95
+- CWE-863: 93
 
 ## Estado de fuentes
 
@@ -97,17 +99,17 @@
   "kev": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
-    "catalogVersion": "2026.10.21"
+    "catalogVersion": "2026.10.23"
   },
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 4579,
+    "fetched": 4609,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4127
+    "scored": 4035
   }
 }
 ```
