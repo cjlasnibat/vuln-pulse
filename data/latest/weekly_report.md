@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-10-18 a 2026-10-24
+# Reporte semanal de vulnerabilidades — 2026-10-19 a 2026-10-25
 
 ## Resumen
 
 - KEV agregadas: **8** (catálogo total: 1756; ransomware conocido: 0)
-- CVE nuevos publicados: **4490** (rechazados: 119; registros actualizados: 6824)
-- Por severidad CVSS: {'SIN_CVSS': 855, 'CRITICAL': 343, 'MEDIUM': 1684, 'HIGH': 1382, 'LOW': 226}  — con CVSS: 81.0%
-- SSVC (CISA ADP) explotación PoC/activa: 323; automatizable + impacto total: 106
+- CVE nuevos publicados: **4051** (rechazados: 120; registros actualizados: 7186)
+- Por severidad CVSS: {'MEDIUM': 1671, 'LOW': 230, 'HIGH': 1444, 'CRITICAL': 344, 'SIN_CVSS': 362}  — con CVSS: 91.1%
+- SSVC (CISA ADP) explotación PoC/activa: 260; automatizable + impacto total: 113
 - EPSS ≥ 10%: 1
 
 ## KEV agregadas en la semana
@@ -68,14 +68,14 @@
 
 ## Top proveedores (CVE nuevos)
 
-- Oracle Corporation: 1077
-- Linux: 655
-- Google: 359
+- Oracle Corporation: 1078
+- Google: 357
+- Linux: 220
 - Apache Software Foundation: 153
-- Unknown: 139
+- Unknown: 141
 - Drupal: 72
 - Hewlett Packard Enterprise (HPE): 71
-- n/a: 57
+- n/a: 58
 - IBM: 49
 - Apple: 47
 
@@ -83,14 +83,14 @@
 
 - CWE-284: 351
 - CWE-79: 193
-- CWE-119: 193
-- CWE-862: 192
+- CWE-119: 192
+- CWE-862: 188
 - CWE-416: 152
-- CWE-22: 112
-- CWE-89: 99
-- CWE-306: 98
-- CWE-400: 95
-- CWE-863: 93
+- CWE-22: 117
+- CWE-89: 97
+- CWE-400: 96
+- CWE-306: 94
+- CWE-863: 90
 
 ## Estado de fuentes
 
@@ -104,12 +104,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 4609,
+    "fetched": 4171,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4035
+    "scored": 3916
   }
 }
 ```

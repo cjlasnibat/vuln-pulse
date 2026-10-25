@@ -1,0 +1,148 @@
+{
+ "date": "2026-10-25",
+ "window_7d": {
+  "start": "2026-10-19",
+  "end": "2026-10-25",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.23"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 4171,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 3916
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.23",
+  "catalog_total": 1756,
+  "added_7d": 8,
+  "added_7d_ids": [
+   "CVE-2026-106931",
+   "CVE-2026-96656",
+   "CVE-2026-96655",
+   "CVE-2026-96654",
+   "CVE-2026-96652",
+   "CVE-2026-110936",
+   "CVE-2026-114625",
+   "CVE-2026-110447"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Plex": 4,
+   "EG Secure Solutions": 1,
+   "Siemens": 1,
+   "Arista": 1,
+   "Collabora": 1
+  }
+ },
+ "cve_7d": {
+  "new": 4051,
+  "rejected": 120,
+  "updated": 7186,
+  "by_severity": {
+   "MEDIUM": 1671,
+   "LOW": 230,
+   "HIGH": 1444,
+   "CRITICAL": 344,
+   "SIN_CVSS": 362
+  },
+  "with_cvss_pct": 91.1,
+  "ssvc_poc_or_active": 260,
+  "ssvc_automatable_total_impact": 113,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Oracle Corporation",
+    1078
+   ],
+   [
+    "Google",
+    357
+   ],
+   [
+    "Linux",
+    220
+   ],
+   [
+    "Apache Software Foundation",
+    153
+   ],
+   [
+    "Unknown",
+    141
+   ],
+   [
+    "Drupal",
+    72
+   ],
+   [
+    "Hewlett Packard Enterprise (HPE)",
+    71
+   ],
+   [
+    "n/a",
+    58
+   ],
+   [
+    "IBM",
+    49
+   ],
+   [
+    "Apple",
+    47
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-284",
+    351
+   ],
+   [
+    "CWE-79",
+    193
+   ],
+   [
+    "CWE-119",
+    192
+   ],
+   [
+    "CWE-862",
+    188
+   ],
+   [
+    "CWE-416",
+    152
+   ],
+   [
+    "CWE-22",
+    117
+   ],
+   [
+    "CWE-89",
+    97
+   ],
+   [
+    "CWE-400",
+    96
+   ],
+   [
+    "CWE-306",
+    94
+   ],
+   [
+    "CWE-863",
+    90
+   ]
+  ]
+ }
+}
