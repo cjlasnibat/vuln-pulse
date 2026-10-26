@@ -1,12 +1,12 @@
-# Reporte semanal de vulnerabilidades — 2026-10-19 a 2026-10-25
+# Reporte semanal de vulnerabilidades — 2026-10-20 a 2026-10-26
 
 ## Resumen
 
 - KEV agregadas: **8** (catálogo total: 1756; ransomware conocido: 0)
-- CVE nuevos publicados: **4051** (rechazados: 120; registros actualizados: 7186)
-- Por severidad CVSS: {'MEDIUM': 1671, 'LOW': 230, 'HIGH': 1444, 'CRITICAL': 344, 'SIN_CVSS': 362}  — con CVSS: 91.1%
-- SSVC (CISA ADP) explotación PoC/activa: 260; automatizable + impacto total: 113
-- EPSS ≥ 10%: 1
+- CVE nuevos publicados: **3842** (rechazados: 33; registros actualizados: 4006)
+- Por severidad CVSS: {'SIN_CVSS': 312, 'HIGH': 1382, 'MEDIUM': 1584, 'CRITICAL': 334, 'LOW': 230}  — con CVSS: 91.9%
+- SSVC (CISA ADP) explotación PoC/activa: 155; automatizable + impacto total: 96
+- EPSS ≥ 10%: 3
 
 ## KEV agregadas en la semana
 
@@ -30,14 +30,13 @@
 | CVE-2026-105944 | 10 | Apache Software Foundation | Apache Pulsar Manager | CWE-306 | none |
 | CVE-2026-110063 | 10 | Microsoft | VM Inspector for Azure Virtual Machines | CWE-59 | none |
 | CVE-2026-110264 | 10 | GitLab | GitLab | CWE-190 | none |
-| CVE-2026-111057 | 10 | mljar | mercury | CWE-185,CWE-284 |  |
 | CVE-2026-111813 | 10 | Apache Software Foundation | Apache Traffic Server | CWE-88 | none |
 | CVE-2026-111832 | 10 | WP Mailster | WP Mailster | CWE-434 | none |
 | CVE-2026-113744 | 10 | Tenda | AC19 | CWE-119,CWE-121 |  |
 | CVE-2026-114382 | 10 | TOTOLINK | EX200 | CWE-119,CWE-121 |  |
 | CVE-2026-114383 | 10 | TOTOLINK | EX200 | CWE-119,CWE-121 |  |
 | CVE-2026-114575 | 10 | TOTOLINK | A950RG | CWE-74,CWE-77 |  |
-| CVE-2026-78162 | 10 | Apache Software Foundation | Apache Camel | CWE-502 | poc |
+| CVE-2026-115905 | 10 | zip-rs | zip2 | CWE-20,CWE-436 |  |
 | CVE-2026-79844 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-288 | none |
 | CVE-2026-79846 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) |  | none |
 | CVE-2026-79847 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-119 | none |
@@ -46,51 +45,52 @@
 | CVE-2026-79850 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-288 | none |
 | CVE-2026-79851 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-119 | none |
 | CVE-2026-81212 | 10 | IBM | DataStage on Cloud Pak for Data | CWE-285 |  |
-| CVE-2026-83938 | 10 | Microsoft | Azure Kubernetes Configuration Service | CWE-306 |  |
+| CVE-2026-83938 | 10 | Microsoft | Azure Kubernetes Configuration Service | CWE-306 | none |
 | CVE-2026-87337 | 10 | Oracle Corporation | Oracle Access Manager |  |  |
 | CVE-2026-91216 | 10 | Oracle Corporation | Oracle SOA Suite |  |  |
 | CVE-2026-91221 | 10 | Oracle Corporation | Oracle SOA Suite |  |  |
 | CVE-2026-91231 | 10 | Oracle Corporation | Oracle SOA Suite |  |  |
 | CVE-2026-91299 | 10 | Oracle Corporation | JD Edwards EnterpriseOne Orchestrator | CWE-284 | none |
-| CVE-2026-97785 | 10 | Microsoft | Microsoft Entra application proxy | CWE-287 |  |
+| CVE-2026-97785 | 10 | Microsoft | Microsoft Entra application proxy | CWE-287 | none |
 | CVE-2026-101446 | 9.9 | Oracle Corporation | Siebel CRM Cloud Applications |  |  |
 | CVE-2026-101501 | 9.9 | Oracle Corporation | Oracle Trusted Answer Search |  |  |
 | CVE-2026-101503 | 9.9 | Oracle Corporation | Oracle Trusted Answer Search |  |  |
 | CVE-2026-101528 | 9.9 | Oracle Corporation | Oracle Enterprise Manager for Oracle Dat |  |  |
 | CVE-2026-101529 | 9.9 | Oracle Corporation | Oracle Enterprise Manager for Oracle Dat |  |  |
 | CVE-2026-105312 | 9.9 | Red Hat | StreamsHub Console for Apache Kafka® | CWE-269 | none |
-| CVE-2026-110887 | 9.9 | HivePress | HivePress | CWE-94 | none |
-| CVE-2026-111406 | 9.9 | PT Norther Lights Production | MapSVG | CWE-434 | none |
 | CVE-2026-111834 | 9.9 | Kitae Park | Mang Board WP | CWE-434 | none |
 | CVE-2026-113672 | 9.9 | argoproj | argo-cd | CWE-22 |  |
 | CVE-2026-113708 | 9.9 | argoproj | argo-cd | CWE-88 | none |
 | CVE-2026-113709 | 9.9 | argoproj | argo-cd | CWE-829 | none |
+| CVE-2026-114612 | 9.9 | BerriAI | litellm | CWE-269,CWE-345 |  |
+| CVE-2026-115188 | 9.9 |  |  | CWE-434,CWE-94 | none |
+| CVE-2026-115889 | 9.9 | bytecodealliance | wasmtime | CWE-197,CWE-843 |  |
 
 ## Top proveedores (CVE nuevos)
 
 - Oracle Corporation: 1078
 - Google: 357
-- Linux: 220
-- Apache Software Foundation: 153
-- Unknown: 141
+- Linux: 231
+- Unknown: 128
+- Apache Software Foundation: 101
+- n/a: 75
 - Drupal: 72
 - Hewlett Packard Enterprise (HPE): 71
-- n/a: 58
-- IBM: 49
-- Apple: 47
+- Eclipse Foundation: 41
+- Cisco: 34
 
 ## Top CWE
 
-- CWE-284: 351
-- CWE-79: 193
-- CWE-119: 192
-- CWE-862: 188
-- CWE-416: 152
-- CWE-22: 117
-- CWE-89: 97
-- CWE-400: 96
-- CWE-306: 94
-- CWE-863: 90
+- CWE-284: 354
+- CWE-79: 197
+- CWE-119: 193
+- CWE-862: 166
+- CWE-416: 146
+- CWE-22: 110
+- CWE-89: 92
+- CWE-306: 91
+- CWE-400: 90
+- CWE-863: 88
 
 ## Estado de fuentes
 
@@ -104,12 +104,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 4171,
+    "fetched": 3875,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 3916
+    "scored": 3666
   }
 }
 ```
