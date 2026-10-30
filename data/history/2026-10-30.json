@@ -1,0 +1,150 @@
+{
+ "date": "2026-10-30",
+ "window_7d": {
+  "start": "2026-10-24",
+  "end": "2026-10-30",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.29"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3404,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2944
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.29",
+  "catalog_total": 1764,
+  "added_7d": 8,
+  "added_7d_ids": [
+   "CVE-2026-109618",
+   "CVE-2026-109619",
+   "CVE-2026-48356",
+   "CVE-2026-111497",
+   "CVE-2026-41709",
+   "CVE-2026-46300",
+   "CVE-2026-97229",
+   "CVE-2026-76418"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "PHP Group": 2,
+   "Adobe": 1,
+   "Google": 1,
+   "Broadcom": 1,
+   "Linux": 1,
+   "GitLab": 1,
+   "Cisco": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3189,
+  "rejected": 215,
+  "updated": 6301,
+  "by_severity": {
+   "MEDIUM": 1156,
+   "HIGH": 831,
+   "SIN_CVSS": 847,
+   "CRITICAL": 230,
+   "LOW": 125
+  },
+  "with_cvss_pct": 73.4,
+  "ssvc_poc_or_active": 128,
+  "ssvc_automatable_total_impact": 59,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Apple",
+    328
+   ],
+   [
+    "Mozilla",
+    176
+   ],
+   [
+    "Linux",
+    129
+   ],
+   [
+    "Unknown",
+    123
+   ],
+   [
+    "n/a",
+    117
+   ],
+   [
+    "Drupal",
+    104
+   ],
+   [
+    "Google",
+    75
+   ],
+   [
+    "Dell",
+    65
+   ],
+   [
+    "n/d",
+    55
+   ],
+   [
+    "Red Hat",
+    37
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    313
+   ],
+   [
+    "CWE-862",
+    207
+   ],
+   [
+    "CWE-89",
+    95
+   ],
+   [
+    "CWE-639",
+    80
+   ],
+   [
+    "CWE-22",
+    79
+   ],
+   [
+    "CWE-863",
+    77
+   ],
+   [
+    "CWE-787",
+    75
+   ],
+   [
+    "CWE-502",
+    74
+   ],
+   [
+    "CWE-78",
+    73
+   ],
+   [
+    "CWE-125",
+    68
+   ]
+  ]
+ }
+}
