@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-10-25 a 2026-10-31
+# Reporte semanal de vulnerabilidades — 2026-10-26 a 2026-11-01
 
 ## Resumen
 
 - KEV agregadas: **10** (catálogo total: 1766; ransomware conocido: 0)
-- CVE nuevos publicados: **3440** (rechazados: 217; registros actualizados: 7315)
-- Por severidad CVSS: {'SIN_CVSS': 783, 'MEDIUM': 1273, 'HIGH': 991, 'CRITICAL': 255, 'LOW': 138}  — con CVSS: 77.2%
-- SSVC (CISA ADP) explotación PoC/activa: 183; automatizable + impacto total: 87
+- CVE nuevos publicados: **3386** (rechazados: 217; registros actualizados: 7460)
+- Por severidad CVSS: {'MEDIUM': 1212, 'SIN_CVSS': 807, 'CRITICAL': 273, 'HIGH': 969, 'LOW': 125}  — con CVSS: 76.2%
+- SSVC (CISA ADP) explotación PoC/activa: 145; automatizable + impacto total: 86
 - EPSS ≥ 10%: 0
 
 ## KEV agregadas en la semana
@@ -31,6 +31,10 @@
 | CVE-2026-112816 | 10 | Canonical | LXD | CWE-295 | none |
 | CVE-2026-115905 | 10 | zip-rs | zip2 | CWE-20,CWE-436 |  |
 | CVE-2026-116508 | 10 | TOTOLINK | A950RG | CWE-119,CWE-121 | poc |
+| CVE-2026-120189 | 10 | D-Link | DIR-505 | CWE-119,CWE-121 |  |
+| CVE-2026-120195 | 10 | WAVLINK | WL-WN579A3-A | CWE-77,CWE-78 |  |
+| CVE-2026-120198 | 10 | WAVLINK | WL-WN530BE1-A | CWE-74,CWE-77 |  |
+| CVE-2026-120338 | 10 | PrefectHQ | prefab-ui | CWE-269,CWE-693 |  |
 | CVE-2026-61564 | 10 | WWBN | AVideo-Encoder | CWE-94 |  |
 | CVE-2026-61567 | 10 | WWBN | AVideo-Encoder | CWE-78 |  |
 | CVE-2026-61738 | 10 | socfortress | CoPilot | CWE-22,CWE-434 |  |
@@ -49,6 +53,9 @@
 | CVE-2026-110720 | 9.9 | HashiCorp | Tooling | CWE-863 | none |
 | CVE-2026-113617 | 9.9 | Unknown | Automated Import Products to Cart | CWE-22 | none |
 | CVE-2026-115188 | 9.9 |  |  | CWE-434,CWE-94 | none |
+| CVE-2026-120306 | 9.9 | beam-cloud | Beta9 worker | CWE-269,CWE-653 |  |
+| CVE-2026-120307 | 9.9 | beam-cloud | Beta9 worker | CWE-22,CWE-23 |  |
+| CVE-2026-120308 | 9.9 | beam-cloud | Beta9 gateway | CWE-22,CWE-668 |  |
 | CVE-2026-44179 | 9.9 | xwikisas | xwiki-pro-macros | CWE-95 |  |
 | CVE-2026-61728 | 9.9 | socfortress | CoPilot | CWE-79,CWE-922 |  |
 | CVE-2026-62853 | 9.9 | mqttsnet | thinglinks | CWE-78,CWE-94 |  |
@@ -60,39 +67,32 @@
 | CVE-2026-103688 | 9.8 | Unknown | Checkout Files Upload for WooCommerce | CWE-434 | none |
 | CVE-2026-103780 | 9.8 | Dell | PowerProtect Data Domain | CWE-121 | none |
 | CVE-2026-104339 | 9.8 | IBM | Langflow OSS | CWE-94 | none |
-| CVE-2026-106013 | 9.8 | artbees | Jupiter X Core | CWE-287 | none |
-| CVE-2026-107058 | 9.8 | n/a | n/a | CWE-287 | poc |
-| CVE-2026-107092 | 9.8 | n/a | n/a | CWE-22 | poc |
-| CVE-2026-107249 | 9.8 | Drupal | Block AJAX | CWE-915 | none |
-| CVE-2026-10757 | 9.8 | Esri | ArcGIS Server | CWE-89 | none |
-| CVE-2026-109218 | 9.8 | kleor | Contact Manager | CWE-434 | none |
-| CVE-2026-109220 | 9.8 | addonsorg | PDF Invoice for WooCommerce + Drag and D | CWE-502 |  |
 
 ## Top proveedores (CVE nuevos)
 
 - Apple: 328
 - Mozilla: 176
 - Linux: 129
-- Unknown: 119
-- n/a: 115
+- n/a: 112
+- Unknown: 109
 - Drupal: 106
 - Google: 75
 - Dell: 65
-- n/d: 63
+- n/d: 62
 - Red Hat: 43
 
 ## Top CWE
 
-- CWE-79: 364
-- CWE-862: 233
-- CWE-89: 102
-- CWE-22: 90
-- CWE-863: 89
+- CWE-79: 358
+- CWE-862: 229
+- CWE-89: 92
+- CWE-863: 88
+- CWE-22: 87
 - CWE-502: 83
-- CWE-639: 83
-- CWE-787: 78
-- CWE-78: 77
-- CWE-125: 74
+- CWE-78: 82
+- CWE-639: 78
+- CWE-787: 76
+- CWE-125: 73
 
 ## Estado de fuentes
 
@@ -106,12 +106,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 3657,
+    "fetched": 3603,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 3441
+    "scored": 3370
   }
 }
 ```
