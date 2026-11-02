@@ -1,0 +1,150 @@
+{
+ "date": "2026-11-02",
+ "window_7d": {
+  "start": "2026-10-27",
+  "end": "2026-11-02",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.30"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3285,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2624
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.30",
+  "catalog_total": 1766,
+  "added_7d": 8,
+  "added_7d_ids": [
+   "CVE-2026-48356",
+   "CVE-2026-111497",
+   "CVE-2026-41709",
+   "CVE-2026-46300",
+   "CVE-2026-97229",
+   "CVE-2026-76418",
+   "CVE-2026-118527",
+   "CVE-2026-111357"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Ivanti": 2,
+   "Adobe": 1,
+   "Google": 1,
+   "Broadcom": 1,
+   "Linux": 1,
+   "GitLab": 1,
+   "Cisco": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3089,
+  "rejected": 196,
+  "updated": 7214,
+  "by_severity": {
+   "HIGH": 953,
+   "SIN_CVSS": 651,
+   "CRITICAL": 277,
+   "MEDIUM": 1089,
+   "LOW": 119
+  },
+  "with_cvss_pct": 78.9,
+  "ssvc_poc_or_active": 176,
+  "ssvc_automatable_total_impact": 99,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Google",
+    204
+   ],
+   [
+    "Mozilla",
+    174
+   ],
+   [
+    "Linux",
+    143
+   ],
+   [
+    "Drupal",
+    106
+   ],
+   [
+    "Unknown",
+    103
+   ],
+   [
+    "Dell",
+    85
+   ],
+   [
+    "n/a",
+    83
+   ],
+   [
+    "MediaTek, Inc.",
+    56
+   ],
+   [
+    "n/d",
+    54
+   ],
+   [
+    "Apache Software Foundation",
+    47
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    334
+   ],
+   [
+    "CWE-862",
+    208
+   ],
+   [
+    "CWE-78",
+    96
+   ],
+   [
+    "CWE-22",
+    92
+   ],
+   [
+    "CWE-89",
+    87
+   ],
+   [
+    "CWE-787",
+    86
+   ],
+   [
+    "CWE-863",
+    86
+   ],
+   [
+    "CWE-639",
+    82
+   ],
+   [
+    "CWE-502",
+    81
+   ],
+   [
+    "CWE-94",
+    62
+   ]
+  ]
+ }
+}
