@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-03",
+ "window_7d": {
+  "start": "2026-10-28",
+  "end": "2026-11-03",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.10.30"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2990,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2556
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.10.30",
+  "catalog_total": 1766,
+  "added_7d": 6,
+  "added_7d_ids": [
+   "CVE-2026-41709",
+   "CVE-2026-46300",
+   "CVE-2026-97229",
+   "CVE-2026-76418",
+   "CVE-2026-118527",
+   "CVE-2026-111357"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Ivanti": 2,
+   "Broadcom": 1,
+   "Linux": 1,
+   "GitLab": 1,
+   "Cisco": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2801,
+  "rejected": 189,
+  "updated": 7330,
+  "by_severity": {
+   "HIGH": 938,
+   "MEDIUM": 1085,
+   "LOW": 107,
+   "SIN_CVSS": 448,
+   "CRITICAL": 223
+  },
+  "with_cvss_pct": 84.0,
+  "ssvc_poc_or_active": 216,
+  "ssvc_automatable_total_impact": 100,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Linux",
+    171
+   ],
+   [
+    "Google",
+    162
+   ],
+   [
+    "Unknown",
+    108
+   ],
+   [
+    "Drupal",
+    106
+   ],
+   [
+    "n/a",
+    85
+   ],
+   [
+    "Dell",
+    73
+   ],
+   [
+    "n/d",
+    56
+   ],
+   [
+    "MediaTek, Inc.",
+    56
+   ],
+   [
+    "Apache Software Foundation",
+    50
+   ],
+   [
+    "Red Hat",
+    47
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    315
+   ],
+   [
+    "CWE-862",
+    222
+   ],
+   [
+    "CWE-22",
+    92
+   ],
+   [
+    "CWE-863",
+    86
+   ],
+   [
+    "CWE-639",
+    84
+   ],
+   [
+    "CWE-78",
+    83
+   ],
+   [
+    "CWE-502",
+    80
+   ],
+   [
+    "CWE-89",
+    78
+   ],
+   [
+    "CWE-787",
+    75
+   ],
+   [
+    "CWE-94",
+    60
+   ]
+  ]
+ }
+}
