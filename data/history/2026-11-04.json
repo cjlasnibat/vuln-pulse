@@ -1,0 +1,144 @@
+{
+ "date": "2026-11-04",
+ "window_7d": {
+  "start": "2026-10-29",
+  "end": "2026-11-04",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.03"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2901,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2760
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.03",
+  "catalog_total": 1767,
+  "added_7d": 5,
+  "added_7d_ids": [
+   "CVE-2026-97229",
+   "CVE-2026-76418",
+   "CVE-2026-118527",
+   "CVE-2026-111357",
+   "CVE-2026-119977"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Ivanti": 2,
+   "GitLab": 1,
+   "Cisco": 1,
+   "WordPress": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2870,
+  "rejected": 31,
+  "updated": 8404,
+  "by_severity": {
+   "HIGH": 996,
+   "MEDIUM": 1072,
+   "SIN_CVSS": 410,
+   "CRITICAL": 270,
+   "LOW": 122
+  },
+  "with_cvss_pct": 85.7,
+  "ssvc_poc_or_active": 204,
+  "ssvc_automatable_total_impact": 107,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Google",
+    375
+   ],
+   [
+    "Drupal",
+    106
+   ],
+   [
+    "Unknown",
+    98
+   ],
+   [
+    "n/a",
+    90
+   ],
+   [
+    "n/d",
+    62
+   ],
+   [
+    "Apache Software Foundation",
+    61
+   ],
+   [
+    "MediaTek, Inc.",
+    56
+   ],
+   [
+    "Hewlett Packard Enterprise (HPE)",
+    55
+   ],
+   [
+    "Linux",
+    52
+   ],
+   [
+    "Red Hat",
+    46
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    289
+   ],
+   [
+    "CWE-862",
+    210
+   ],
+   [
+    "CWE-863",
+    133
+   ],
+   [
+    "CWE-22",
+    98
+   ],
+   [
+    "CWE-416",
+    96
+   ],
+   [
+    "CWE-639",
+    92
+   ],
+   [
+    "CWE-787",
+    92
+   ],
+   [
+    "CWE-200",
+    76
+   ],
+   [
+    "CWE-502",
+    76
+   ],
+   [
+    "CWE-78",
+    70
+   ]
+  ]
+ }
+}
