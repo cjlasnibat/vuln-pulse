@@ -1,0 +1,139 @@
+{
+ "date": "2026-11-06",
+ "window_7d": {
+  "start": "2026-10-31",
+  "end": "2026-11-06",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.04"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2858,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2366
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.04",
+  "catalog_total": 1768,
+  "added_7d": 2,
+  "added_7d_ids": [
+   "CVE-2026-119977",
+   "CVE-2024-27834"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "WordPress": 1,
+   "Apple": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2607,
+  "rejected": 251,
+  "updated": 9296,
+  "by_severity": {
+   "HIGH": 961,
+   "LOW": 137,
+   "MEDIUM": 1037,
+   "CRITICAL": 236,
+   "SIN_CVSS": 236
+  },
+  "with_cvss_pct": 90.9,
+  "ssvc_poc_or_active": 204,
+  "ssvc_automatable_total_impact": 72,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Google",
+    354
+   ],
+   [
+    "Apache Software Foundation",
+    119
+   ],
+   [
+    "Unknown",
+    117
+   ],
+   [
+    "JetBrains",
+    89
+   ],
+   [
+    "Hewlett Packard Enterprise (HPE)",
+    56
+   ],
+   [
+    "MediaTek, Inc.",
+    56
+   ],
+   [
+    "Red Hat",
+    47
+   ],
+   [
+    "n/d",
+    44
+   ],
+   [
+    "Linux",
+    44
+   ],
+   [
+    "FreeRDP",
+    42
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    209
+   ],
+   [
+    "CWE-862",
+    179
+   ],
+   [
+    "CWE-863",
+    111
+   ],
+   [
+    "CWE-787",
+    93
+   ],
+   [
+    "CWE-639",
+    90
+   ],
+   [
+    "CWE-22",
+    90
+   ],
+   [
+    "CWE-416",
+    87
+   ],
+   [
+    "CWE-200",
+    84
+   ],
+   [
+    "CWE-89",
+    79
+   ],
+   [
+    "CWE-125",
+    67
+   ]
+  ]
+ }
+}
