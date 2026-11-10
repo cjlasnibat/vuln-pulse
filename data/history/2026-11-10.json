@@ -1,0 +1,147 @@
+{
+ "date": "2026-11-10",
+ "window_7d": {
+  "start": "2026-11-04",
+  "end": "2026-11-10",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.09"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3321,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2688
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.09",
+  "catalog_total": 1773,
+  "added_7d": 6,
+  "added_7d_ids": [
+   "CVE-2024-27834",
+   "CVE-2026-19868",
+   "CVE-2026-102895",
+   "CVE-2026-123158",
+   "CVE-2026-116779",
+   "CVE-2026-123218"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Apple": 1,
+   "SonicWall": 1,
+   "GPUStack": 1,
+   "OpenBSD": 1,
+   "SignalWire": 1,
+   "IBM": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3059,
+  "rejected": 262,
+  "updated": 6827,
+  "by_severity": {
+   "HIGH": 1138,
+   "MEDIUM": 1321,
+   "CRITICAL": 276,
+   "LOW": 161,
+   "SIN_CVSS": 163
+  },
+  "with_cvss_pct": 94.7,
+  "ssvc_poc_or_active": 279,
+  "ssvc_automatable_total_impact": 95,
+  "epss_ge_10pct": 2,
+  "top_vendors": [
+   [
+    "IBM",
+    322
+   ],
+   [
+    "Unknown",
+    164
+   ],
+   [
+    "Apache Software Foundation",
+    157
+   ],
+   [
+    "n/a",
+    130
+   ],
+   [
+    "FFmpeg",
+    121
+   ],
+   [
+    "Mozilla",
+    103
+   ],
+   [
+    "JetBrains",
+    89
+   ],
+   [
+    "Red Hat",
+    75
+   ],
+   [
+    "openemr",
+    60
+   ],
+   [
+    "SAP_SE",
+    42
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    280
+   ],
+   [
+    "CWE-862",
+    203
+   ],
+   [
+    "CWE-639",
+    154
+   ],
+   [
+    "CWE-918",
+    134
+   ],
+   [
+    "CWE-22",
+    110
+   ],
+   [
+    "CWE-89",
+    96
+   ],
+   [
+    "CWE-863",
+    92
+   ],
+   [
+    "CWE-787",
+    86
+   ],
+   [
+    "CWE-200",
+    78
+   ],
+   [
+    "CWE-416",
+    65
+   ]
+  ]
+ }
+}
