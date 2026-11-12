@@ -1,0 +1,156 @@
+{
+ "date": "2026-11-12",
+ "window_7d": {
+  "start": "2026-11-06",
+  "end": "2026-11-12",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.10"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 4798,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 4599
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.10",
+  "catalog_total": 1779,
+  "added_7d": 11,
+  "added_7d_ids": [
+   "CVE-2026-19868",
+   "CVE-2026-102895",
+   "CVE-2026-123158",
+   "CVE-2026-116779",
+   "CVE-2026-123218",
+   "CVE-2026-124194",
+   "CVE-2026-111793",
+   "CVE-2026-20320",
+   "CVE-2026-111560",
+   "CVE-2026-116606",
+   "CVE-2026-125350"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Barracuda Networks": 2,
+   "SonicWall": 1,
+   "GPUStack": 1,
+   "OpenBSD": 1,
+   "SignalWire": 1,
+   "IBM": 1,
+   "Microsoft": 1,
+   "Openwave Messaging Limited": 1,
+   "Cisco": 1,
+   "Google": 1
+  }
+ },
+ "cve_7d": {
+  "new": 4753,
+  "rejected": 45,
+  "updated": 8094,
+  "by_severity": {
+   "HIGH": 2157,
+   "CRITICAL": 337,
+   "MEDIUM": 1763,
+   "LOW": 185,
+   "SIN_CVSS": 311
+  },
+  "with_cvss_pct": 93.5,
+  "ssvc_poc_or_active": 186,
+  "ssvc_automatable_total_impact": 132,
+  "epss_ge_10pct": 0,
+  "top_vendors": [
+   [
+    "Microsoft",
+    1095
+   ],
+   [
+    "IBM",
+    295
+   ],
+   [
+    "Google",
+    248
+   ],
+   [
+    "Unknown",
+    189
+   ],
+   [
+    "n/a",
+    180
+   ],
+   [
+    "FFmpeg",
+    121
+   ],
+   [
+    "Adobe",
+    110
+   ],
+   [
+    "Apache Software Foundation",
+    108
+   ],
+   [
+    "Mozilla",
+    108
+   ],
+   [
+    "Fortinet",
+    98
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    358
+   ],
+   [
+    "CWE-122",
+    341
+   ],
+   [
+    "CWE-416",
+    314
+   ],
+   [
+    "CWE-862",
+    252
+   ],
+   [
+    "CWE-125",
+    166
+   ],
+   [
+    "CWE-639",
+    151
+   ],
+   [
+    "CWE-863",
+    145
+   ],
+   [
+    "CWE-918",
+    140
+   ],
+   [
+    "CWE-22",
+    127
+   ],
+   [
+    "CWE-89",
+    108
+   ]
+  ]
+ }
+}
