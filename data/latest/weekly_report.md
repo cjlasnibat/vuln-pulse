@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-11-07 a 2026-11-13
+# Reporte semanal de vulnerabilidades — 2026-11-08 a 2026-11-14
 
 ## Resumen
 
-- KEV agregadas: **10** (catálogo total: 1779; ransomware conocido: 0)
-- CVE nuevos publicados: **5059** (rechazados: 25; registros actualizados: 6687)
-- Por severidad CVSS: {'MEDIUM': 1902, 'LOW': 210, 'HIGH': 2384, 'CRITICAL': 380, 'SIN_CVSS': 183}  — con CVSS: 96.4%
-- SSVC (CISA ADP) explotación PoC/activa: 212; automatizable + impacto total: 142
+- KEV agregadas: **12** (catálogo total: 1781; ransomware conocido: 0)
+- CVE nuevos publicados: **4649** (rechazados: 27; registros actualizados: 6801)
+- Por severidad CVSS: {'MEDIUM': 1699, 'CRITICAL': 325, 'HIGH': 2245, 'SIN_CVSS': 179, 'LOW': 201}  — con CVSS: 96.1%
+- SSVC (CISA ADP) explotación PoC/activa: 287; automatizable + impacto total: 143
 - EPSS ≥ 10%: 1
 
 ## KEV agregadas en la semana
@@ -22,6 +22,8 @@
 | 2026-11-10 | CVE-2026-111560 | Barracuda Networks Multiple Products | Barracuda Networks Multiple Products OS Command Injection Vulnerability | 2026-11-13 | Unknown |
 | 2026-11-10 | CVE-2026-116606 | Barracuda Networks Barracuda Email Security Gateway (ESG) | Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability | 2026-11-13 | Unknown |
 | 2026-11-10 | CVE-2026-125350 | Google Chromium | Google Chromium Use-After-Free Vulnerability | 2026-11-24 | Unknown |
+| 2026-11-13 | CVE-2026-114713 | UnrealIRCd UnrealIRCd | UnrealIRCd Improper Neutralization of Delimiters Vulnerability | 2026-11-16 | Unknown |
+| 2026-11-13 | CVE-2026-123039 | Check Point Multiple Products | Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability | 2026-11-16 | Unknown |
 
 ## CVE críticos (CVSS ≥ 9.0) publicados
 
@@ -37,13 +39,12 @@
 | CVE-2026-121353 | 10 | Adobe | Adobe Connect | CWE-93 | none |
 | CVE-2026-121356 | 10 | Adobe | Adobe Connect | CWE-918 | none |
 | CVE-2026-121889 | 10 | Adobe | Adobe Connect | CWE-918 | none |
-| CVE-2026-123551 | 10 | OpenIdentityPlatform | OpenAM | CWE-201 | none |
-| CVE-2026-123966 | 10 | Tenda | AC19 | CWE-119,CWE-122 | poc |
 | CVE-2026-124580 | 10 | Chengdu Feiyuxing Technology | VW2100 | CWE-77,CWE-78 | poc |
 | CVE-2026-124600 | 10 | GeoVision Inc. | GV-Face | CWE-319 | none |
 | CVE-2026-124815 | 10 | Unknown | Clockinator Lite | CWE-89 | none |
+| CVE-2026-124822 | 10 | Unknown | Easy DragDrop File Uploader | CWE-73 | none |
 | CVE-2026-125086 | 10 | D-Link | M60 | CWE-259,CWE-798 | poc |
-| CVE-2026-127275 | 10 | Linksys | EA8100 | CWE-287,CWE-306 |  |
+| CVE-2026-127275 | 10 | Linksys | EA8100 | CWE-287,CWE-306 | poc |
 | CVE-2026-127277 | 10 | Linksys | EA8100 | CWE-665 |  |
 | CVE-2026-76964 | 10 | SAP_SE | SAP NetWeaver AS ABAP (Internet Communic | CWE-1287 | none |
 | CVE-2026-78287 | 10 | Staggs | STAGGS | CWE-94 | none |
@@ -67,32 +68,33 @@
 | CVE-2026-121898 | 9.9 | Adobe | Adobe Connect | CWE-89 | none |
 | CVE-2026-121906 | 9.9 | Adobe | Adobe Connect | CWE-22 | none |
 | CVE-2026-121908 | 9.9 | Adobe | Adobe Connect | CWE-89 | none |
+| CVE-2026-123800 | 9.9 | supertokens | supertokens-core | CWE-639,CWE-863 | none |
 
 ## Top proveedores (CVE nuevos)
 
 - Microsoft: 1094
-- IBM: 295
 - Google: 248
-- n/a: 179
-- Unknown: 177
+- n/a: 177
+- Unknown: 171
 - openemr: 124
 - FFmpeg: 121
 - Adobe: 110
+- Apache Software Foundation: 109
 - Mozilla: 108
-- Apache Software Foundation: 102
+- IBM: 107
 
 ## Top CWE
 
-- CWE-79: 380
-- CWE-122: 346
-- CWE-416: 330
-- CWE-862: 280
-- CWE-125: 179
-- CWE-863: 161
-- CWE-639: 159
-- CWE-22: 135
-- CWE-787: 132
-- CWE-89: 131
+- CWE-122: 345
+- CWE-416: 329
+- CWE-79: 317
+- CWE-862: 231
+- CWE-125: 183
+- CWE-863: 155
+- CWE-787: 134
+- CWE-639: 121
+- CWE-22: 119
+- CWE-89: 113
 
 ## Estado de fuentes
 
@@ -101,17 +103,17 @@
   "kev": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
-    "catalogVersion": "2026.11.10"
+    "catalogVersion": "2026.11.13"
   },
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 5084,
+    "fetched": 4676,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4836
+    "scored": 4623
   }
 }
 ```
