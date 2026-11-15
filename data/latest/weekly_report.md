@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-11-08 a 2026-11-14
+# Reporte semanal de vulnerabilidades — 2026-11-09 a 2026-11-15
 
 ## Resumen
 
 - KEV agregadas: **12** (catálogo total: 1781; ransomware conocido: 0)
-- CVE nuevos publicados: **4649** (rechazados: 27; registros actualizados: 6801)
-- Por severidad CVSS: {'MEDIUM': 1699, 'CRITICAL': 325, 'HIGH': 2245, 'SIN_CVSS': 179, 'LOW': 201}  — con CVSS: 96.1%
-- SSVC (CISA ADP) explotación PoC/activa: 287; automatizable + impacto total: 143
+- CVE nuevos publicados: **4527** (rechazados: 27; registros actualizados: 6163)
+- Por severidad CVSS: {'MEDIUM': 1624, 'HIGH': 2203, 'CRITICAL': 321, 'SIN_CVSS': 192, 'LOW': 187}  — con CVSS: 95.8%
+- SSVC (CISA ADP) explotación PoC/activa: 230; automatizable + impacto total: 134
 - EPSS ≥ 10%: 1
 
 ## KEV agregadas en la semana
@@ -46,11 +46,14 @@
 | CVE-2026-125086 | 10 | D-Link | M60 | CWE-259,CWE-798 | poc |
 | CVE-2026-127275 | 10 | Linksys | EA8100 | CWE-287,CWE-306 | poc |
 | CVE-2026-127277 | 10 | Linksys | EA8100 | CWE-665 |  |
+| CVE-2026-129351 | 10 | TRENDnet | TEW-657BRM | CWE-119,CWE-787 |  |
+| CVE-2026-129353 | 10 | D-Link | DIR-600L | CWE-119,CWE-121 |  |
+| CVE-2026-129354 | 10 | D-Link | DIR-600L | CWE-119,CWE-121 |  |
+| CVE-2026-129444 | 10 | D-Link | DSL-6740C | CWE-259,CWE-798 |  |
 | CVE-2026-76964 | 10 | SAP_SE | SAP NetWeaver AS ABAP (Internet Communic | CWE-1287 | none |
 | CVE-2026-78287 | 10 | Staggs | STAGGS | CWE-94 | none |
 | CVE-2026-89103 | 10 | SAP_SE | SAP Gateway | CWE-863 | none |
 | CVE-2026-89126 | 10 | SAP_SE | SAP Web Dispatcher | CWE-122 | none |
-| CVE-2026-107331 | 9.9 | IBM | DataStage on Cloud Pak for Data | CWE-36 | none |
 | CVE-2026-109467 | 9.9 | Microsoft | Azure DevOps | CWE-287 | none |
 | CVE-2026-109795 | 9.9 | SAP_SE | S4CRM | CWE-94 | none |
 | CVE-2026-109803 | 9.9 | SAP_SE | SAP NetWeaver Knowledge Management (XML  | CWE-94 | none |
@@ -66,35 +69,32 @@
 | CVE-2026-121894 | 9.9 | Adobe | Adobe Connect | CWE-89 | none |
 | CVE-2026-121896 | 9.9 | Adobe | Adobe Connect | CWE-89 | none |
 | CVE-2026-121898 | 9.9 | Adobe | Adobe Connect | CWE-89 | none |
-| CVE-2026-121906 | 9.9 | Adobe | Adobe Connect | CWE-22 | none |
-| CVE-2026-121908 | 9.9 | Adobe | Adobe Connect | CWE-89 | none |
-| CVE-2026-123800 | 9.9 | supertokens | supertokens-core | CWE-639,CWE-863 | none |
 
 ## Top proveedores (CVE nuevos)
 
 - Microsoft: 1094
 - Google: 248
-- n/a: 177
-- Unknown: 171
-- openemr: 124
+- n/a: 176
+- Unknown: 161
 - FFmpeg: 121
+- Apache Software Foundation: 110
 - Adobe: 110
-- Apache Software Foundation: 109
 - Mozilla: 108
-- IBM: 107
+- Fortinet: 98
+- openemr: 80
 
 ## Top CWE
 
-- CWE-122: 345
-- CWE-416: 329
-- CWE-79: 317
-- CWE-862: 231
-- CWE-125: 183
-- CWE-863: 155
-- CWE-787: 134
-- CWE-639: 121
-- CWE-22: 119
-- CWE-89: 113
+- CWE-122: 346
+- CWE-416: 330
+- CWE-79: 320
+- CWE-862: 211
+- CWE-125: 186
+- CWE-863: 149
+- CWE-787: 135
+- CWE-22: 106
+- CWE-89: 105
+- CWE-639: 104
 
 ## Estado de fuentes
 
@@ -108,12 +108,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 4676,
+    "fetched": 4554,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4623
+    "scored": 4485
   }
 }
 ```
