@@ -1,0 +1,139 @@
+{
+ "date": "2026-11-17",
+ "window_7d": {
+  "start": "2026-11-11",
+  "end": "2026-11-17",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.13"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 2603,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 2431
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.13",
+  "catalog_total": 1781,
+  "added_7d": 2,
+  "added_7d_ids": [
+   "CVE-2026-114713",
+   "CVE-2026-123039"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "UnrealIRCd": 1,
+   "Check Point": 1
+  }
+ },
+ "cve_7d": {
+  "new": 2588,
+  "rejected": 15,
+  "updated": 2839,
+  "by_severity": {
+   "MEDIUM": 1089,
+   "HIGH": 1073,
+   "CRITICAL": 222,
+   "LOW": 167,
+   "SIN_CVSS": 37
+  },
+  "with_cvss_pct": 98.6,
+  "ssvc_poc_or_active": 256,
+  "ssvc_automatable_total_impact": 106,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Unknown",
+    138
+   ],
+   [
+    "Fortinet",
+    93
+   ],
+   [
+    "Google",
+    83
+   ],
+   [
+    "openemr",
+    80
+   ],
+   [
+    "n/a",
+    62
+   ],
+   [
+    "Dell",
+    58
+   ],
+   [
+    "Apache Software Foundation",
+    52
+   ],
+   [
+    "Red Hat",
+    43
+   ],
+   [
+    "GitLab",
+    37
+   ],
+   [
+    "Samsung Mobile",
+    36
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    278
+   ],
+   [
+    "CWE-862",
+    219
+   ],
+   [
+    "CWE-863",
+    124
+   ],
+   [
+    "CWE-22",
+    98
+   ],
+   [
+    "CWE-639",
+    97
+   ],
+   [
+    "CWE-89",
+    79
+   ],
+   [
+    "CWE-200",
+    71
+   ],
+   [
+    "CWE-787",
+    66
+   ],
+   [
+    "CWE-416",
+    63
+   ],
+   [
+    "CWE-78",
+    57
+   ]
+  ]
+ }
+}
