@@ -1,0 +1,145 @@
+{
+ "date": "2026-11-20",
+ "window_7d": {
+  "start": "2026-11-14",
+  "end": "2026-11-20",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.18"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 4199,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 3969
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.18",
+  "catalog_total": 1786,
+  "added_7d": 5,
+  "added_7d_ids": [
+   "CVE-2026-115731",
+   "CVE-2024-10441",
+   "CVE-2026-40217",
+   "CVE-2026-90817",
+   "CVE-2026-90436"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Perforce": 1,
+   "Synology": 1,
+   "BerriAI": 1,
+   "Vanderbilt University": 1,
+   "Apache": 1
+  }
+ },
+ "cve_7d": {
+  "new": 4182,
+  "rejected": 17,
+  "updated": 6926,
+  "by_severity": {
+   "CRITICAL": 360,
+   "HIGH": 1316,
+   "SIN_CVSS": 530,
+   "MEDIUM": 1748,
+   "LOW": 228
+  },
+  "with_cvss_pct": 87.3,
+  "ssvc_poc_or_active": 334,
+  "ssvc_automatable_total_impact": 174,
+  "epss_ge_10pct": 7,
+  "top_vendors": [
+   [
+    "Oracle Corporation",
+    578
+   ],
+   [
+    "Linux",
+    516
+   ],
+   [
+    "JetBrains",
+    231
+   ],
+   [
+    "Google",
+    203
+   ],
+   [
+    "Splunk",
+    146
+   ],
+   [
+    "Unknown",
+    61
+   ],
+   [
+    "gpac",
+    48
+   ],
+   [
+    "nocodb",
+    43
+   ],
+   [
+    "Dell",
+    40
+   ],
+   [
+    "flowintel",
+    37
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    390
+   ],
+   [
+    "CWE-862",
+    307
+   ],
+   [
+    "CWE-284",
+    291
+   ],
+   [
+    "CWE-200",
+    174
+   ],
+   [
+    "CWE-863",
+    165
+   ],
+   [
+    "CWE-22",
+    134
+   ],
+   [
+    "CWE-639",
+    133
+   ],
+   [
+    "CWE-306",
+    133
+   ],
+   [
+    "CWE-416",
+    97
+   ],
+   [
+    "CWE-125",
+    82
+   ]
+  ]
+ }
+}
