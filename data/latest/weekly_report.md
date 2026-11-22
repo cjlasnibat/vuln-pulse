@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-11-15 a 2026-11-21
+# Reporte semanal de vulnerabilidades — 2026-11-16 a 2026-11-22
 
 ## Resumen
 
 - KEV agregadas: **9** (catálogo total: 1790; ransomware conocido: 0)
-- CVE nuevos publicados: **4559** (rechazados: 24; registros actualizados: 6955)
-- Por severidad CVSS: {'MEDIUM': 1909, 'CRITICAL': 362, 'HIGH': 1493, 'LOW': 242, 'SIN_CVSS': 553}  — con CVSS: 87.9%
-- SSVC (CISA ADP) explotación PoC/activa: 366; automatizable + impacto total: 177
+- CVE nuevos publicados: **4590** (rechazados: 25; registros actualizados: 7093)
+- Por severidad CVSS: {'HIGH': 1606, 'MEDIUM': 1940, 'SIN_CVSS': 440, 'CRITICAL': 364, 'LOW': 240}  — con CVSS: 90.4%
+- SSVC (CISA ADP) explotación PoC/activa: 344; automatizable + impacto total: 170
 - EPSS ≥ 10%: 12
 
 ## KEV agregadas en la semana
@@ -32,10 +32,10 @@
 | CVE-2026-114824 | 10 | Oracle Corporation | Oracle Platform Security for Java | CWE-502 | none |
 | CVE-2026-114835 | 10 | Oracle Corporation | Oracle Access Manager | CWE-306 | none |
 | CVE-2026-120387 | 10 | Circutor | PowerStudio SCADA Wave | CWE-347 | poc |
-| CVE-2026-129444 | 10 | D-Link | DSL-6740C | CWE-259,CWE-798 | none |
 | CVE-2026-130778 | 10 | lxc | incus | CWE-287 |  |
 | CVE-2026-133323 | 10 | Mitel | MiCollab | CWE-78 | none |
 | CVE-2026-133493 | 10 | D-Link | DIR-600L | CWE-77,CWE-78 | poc |
+| CVE-2026-133993 | 10 | D-Link | DIR-600L | CWE-119,CWE-121 |  |
 | CVE-2026-14914 | 10 | Tegsoft Yönetim ve Bilişim Hizmetleri Tic. Ltd. Şti. | Tegsoft Contact Center | CWE-434 | none |
 | CVE-2026-53998 | 10 | Arize-ai | phoenix | CWE-134,CWE-200 | none |
 | CVE-2026-71499 | 10 | hefy2027 | cf-manager | CWE-918,CWE-94 | none |
@@ -74,24 +74,24 @@
 - JetBrains: 231
 - Google: 203
 - Splunk: 146
-- Unknown: 78
+- gpac: 82
+- Unknown: 77
 - frappe: 69
-- gpac: 48
 - nocodb: 43
 - Dell: 40
 
 ## Top CWE
 
-- CWE-79: 460
+- CWE-79: 457
 - CWE-862: 355
-- CWE-284: 354
-- CWE-863: 190
-- CWE-200: 185
-- CWE-22: 146
-- CWE-639: 137
-- CWE-306: 136
-- CWE-416: 95
-- CWE-125: 94
+- CWE-284: 355
+- CWE-863: 183
+- CWE-200: 179
+- CWE-22: 143
+- CWE-639: 135
+- CWE-306: 135
+- CWE-416: 113
+- CWE-125: 93
 
 ## Estado de fuentes
 
@@ -105,12 +105,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 4583,
+    "fetched": 4615,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4330
+    "scored": 4550
   }
 }
 ```

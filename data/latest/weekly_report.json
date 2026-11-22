@@ -1,10 +1,10 @@
 {
   "window": {
-    "start": "2026-11-15",
-    "end": "2026-11-21",
+    "start": "2026-11-16",
+    "end": "2026-11-22",
     "utc_offset": -3
   },
-  "generated_at": "2026-11-21T17:37:35.473191+00:00",
+  "generated_at": "2026-11-22T17:53:04.261814+00:00",
   "sources_status": {
     "kev": {
       "ok": true,
@@ -14,12 +14,12 @@
     "cvelist": {
       "ok": true,
       "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-      "fetched": 4583,
+      "fetched": 4615,
       "errors": 0
     },
     "epss": {
       "ok": true,
-      "scored": 4330
+      "scored": 4550
     }
   },
   "summary": {
@@ -36,19 +36,19 @@
       "SAP": 1,
       "Cisco": 1
     },
-    "cve_new": 4559,
-    "cve_rejected": 24,
-    "cve_updated": 6955,
+    "cve_new": 4590,
+    "cve_rejected": 25,
+    "cve_updated": 7093,
     "cve_by_severity": {
-      "MEDIUM": 1909,
-      "CRITICAL": 362,
-      "HIGH": 1493,
-      "LOW": 242,
-      "SIN_CVSS": 553
+      "HIGH": 1606,
+      "MEDIUM": 1940,
+      "SIN_CVSS": 440,
+      "CRITICAL": 364,
+      "LOW": 240
     },
-    "cve_with_cvss_pct": 87.9,
-    "ssvc_poc_or_active": 366,
-    "ssvc_automatable_total_impact": 177,
+    "cve_with_cvss_pct": 90.4,
+    "ssvc_poc_or_active": 344,
+    "ssvc_automatable_total_impact": 170,
     "epss_ge_10pct": 12,
     "top_vendors": [
       [
@@ -72,16 +72,16 @@
         146
       ],
       [
+        "gpac",
+        82
+      ],
+      [
         "Unknown",
-        78
+        77
       ],
       [
         "frappe",
         69
-      ],
-      [
-        "gpac",
-        48
       ],
       [
         "nocodb",
@@ -93,7 +93,7 @@
       ],
       [
         "Red Hat",
-        37
+        38
       ],
       [
         "flowintel",
@@ -115,7 +115,7 @@
     "top_cwe": [
       [
         "CWE-79",
-        460
+        457
       ],
       [
         "CWE-862",
@@ -123,41 +123,41 @@
       ],
       [
         "CWE-284",
-        354
+        355
       ],
       [
         "CWE-863",
-        190
+        183
       ],
       [
         "CWE-200",
-        185
+        179
       ],
       [
         "CWE-22",
-        146
+        143
       ],
       [
         "CWE-639",
-        137
+        135
       ],
       [
         "CWE-306",
-        136
+        135
       ],
       [
         "CWE-416",
-        95
+        113
       ],
       [
         "CWE-125",
-        94
+        93
       ]
     ],
     "top_cna": [
       [
         "VulnCheck",
-        757
+        795
       ],
       [
         "oracle",
@@ -177,15 +177,15 @@
       ],
       [
         "Wordfence",
-        217
+        216
+      ],
+      [
+        "Patchstack",
+        205
       ],
       [
         "Chrome",
         203
-      ],
-      [
-        "Patchstack",
-        202
       ],
       [
         "cisco",
@@ -193,7 +193,7 @@
       ],
       [
         "VulDB",
-        95
+        108
       ]
     ]
   },
@@ -216,7 +216,7 @@
       ],
       "epss": {
         "epss": 0.01231,
-        "percentile": 0.69681
+        "percentile": 0.69697
       }
     },
     {
@@ -236,7 +236,7 @@
       ],
       "epss": {
         "epss": 0.03129,
-        "percentile": 0.8818
+        "percentile": 0.88188
       }
     },
     {
@@ -276,8 +276,8 @@
         "CWE-94"
       ],
       "epss": {
-        "epss": 0.33395,
-        "percentile": 0.98413
+        "epss": 0.34335,
+        "percentile": 0.98448
       }
     },
     {
@@ -297,7 +297,7 @@
       ],
       "epss": {
         "epss": 0.03813,
-        "percentile": 0.90307
+        "percentile": 0.90314
       }
     },
     {
@@ -317,7 +317,7 @@
       ],
       "epss": {
         "epss": 0.05459,
-        "percentile": 0.92934
+        "percentile": 0.92939
       }
     },
     {
@@ -336,8 +336,8 @@
         "CWE-288"
       ],
       "epss": {
-        "epss": 0.02985,
-        "percentile": 0.87629
+        "epss": 0.03526,
+        "percentile": 0.8953
       }
     },
     {
@@ -357,7 +357,7 @@
       ],
       "epss": {
         "epss": 0.00714,
-        "percentile": 0.54582
+        "percentile": 0.54603
       }
     },
     {
@@ -377,7 +377,7 @@
       ],
       "epss": {
         "epss": 0.02187,
-        "percentile": 0.82863
+        "percentile": 0.82875
       }
     }
   ],
@@ -406,7 +406,7 @@
       "description": "Rucio is a scientific data management framework. From 1.14.0 until 35.9.1, 38.6.1, 40.4.2, and 41.1.1, validate_auth_token in lib/rucio/core/authentication.py does not distinguish short-lived SSH challenge nonces from authentication tokens stored in the same token table. An unauthenticated attacker can request /auth/ssh_challenge_token for an arbitrary account by supplying X-Rucio-Account, then pr",
       "epss": {
         "epss": 0.00994,
-        "percentile": 0.63474
+        "percentile": 0.63497
       }
     },
     {
@@ -433,7 +433,7 @@
       "description": "Use of Hard-coded Cryptographic Key in ASUS Control Center Express allows a remote user to gain administrative privileges via a forged authentication token.\nRefer to the '\nSecurity Update for ASUS Control Center Express Agent  ' section on the ASUS Security Advisory for more information.",
       "epss": {
         "epss": 0.0063,
-        "percentile": 0.51086
+        "percentile": 0.51112
       }
     },
     {
@@ -460,7 +460,7 @@
       "description": "Vulnerability in the Oracle Business Intelligence Enterprise Edition product of Oracle Analytics (component: Platform Security).  Supported versions that are affected are 8.2.0.0.0 and  26.01.0.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Business Intelligence Enterprise Edition.  While the vulnerability is in Oracle Busine",
       "epss": {
         "epss": 0.00538,
-        "percentile": 0.46168
+        "percentile": 0.46189
       }
     },
     {
@@ -487,7 +487,7 @@
       "description": "Vulnerability in the Oracle Platform Security for Java product of Oracle Fusion Middleware (component: Centralized Thirdparty Jars).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Platform Security for Java.  While the vulnerability is in Oracle Platform Securit",
       "epss": {
         "epss": 0.00424,
-        "percentile": 0.37505
+        "percentile": 0.37511
       }
     },
     {
@@ -514,7 +514,7 @@
       "description": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Admin Console).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager.  While the vulnerability is in Oracle Access Manager, attacks may significantly impact addit",
       "epss": {
         "epss": 0.00355,
-        "percentile": 0.29831
+        "percentile": 0.29837
       }
     },
     {
@@ -541,35 +541,7 @@
       "description": "An improper JWT signature verification vulnerability in CIRCUTOR PowerStudio SCADA WAVE desktop version allows an unauthenticated remote attacker to bypass authentication by submitting an unsigned JWT with the algorithm set to “none”. The shared JWT validation component accepts the token without verifying a cryptographic signature, allowing the attacker to impersonate another user and access prote",
       "epss": {
         "epss": 0.00405,
-        "percentile": 0.3554
-      }
-    },
-    {
-      "cve_id": "CVE-2026-129444",
-      "state": "PUBLISHED",
-      "assigner": "VulDB",
-      "date_published": "2026-11-15T08:15:18.180Z",
-      "vendor": "D-Link",
-      "product": "DSL-6740C",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 10,
-        "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P"
-      },
-      "cwe": [
-        "CWE-259",
-        "CWE-798"
-      ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "yes",
-        "technical_impact": "total"
-      },
-      "description": "A vulnerability was identified in D-Link DSL-6740C 20131126. This affects an unknown function of the file /etc/templates/ftpd/ftpd_conf.php of the component FTP Daemon. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit is publicly available and might be used.",
-      "epss": {
-        "epss": 0.00619,
-        "percentile": 0.5057
+        "percentile": 0.35551
       }
     },
     {
@@ -592,7 +564,7 @@
       "description": "Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the server's or a cluster member's certificate to gain cluster-level access, bypass authorization, modify trust store entries, and influence scriptlet-based authorizat",
       "epss": {
         "epss": 0.0027,
-        "percentile": 0.19446
+        "percentile": 0.19445
       }
     },
     {
@@ -619,7 +591,7 @@
       "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct a blind command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This is MTLVULN-1864.",
       "epss": {
         "epss": 0.01662,
-        "percentile": 0.77289
+        "percentile": 0.77305
       }
     },
     {
@@ -646,8 +618,32 @@
       },
       "description": "A vulnerability was identified in D-Link DIR-600L 2.17b02. Affected is the function genacgi_main of the file gena.cgi of the component GENA Handler. Such manipulation leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used.",
       "epss": {
-        "epss": 0.02971,
-        "percentile": 0.87575
+        "epss": 0.03669,
+        "percentile": 0.8993
+      }
+    },
+    {
+      "cve_id": "CVE-2026-133993",
+      "state": "PUBLISHED",
+      "assigner": "VulDB",
+      "date_published": "2026-11-21T17:45:12.399Z",
+      "vendor": "D-Link",
+      "product": "DIR-600L",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 10,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P"
+      },
+      "cwe": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "ssvc": null,
+      "description": "A security flaw has been discovered in D-Link DIR-600L 2.17b02. This affects the function FUN_0040efb0 of the file gena.cgi of the component GENA Subscription Handler. Performing a manipulation of the argument service results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+      "epss": {
+        "epss": 0.01052,
+        "percentile": 0.65184
       }
     },
     {
@@ -673,8 +669,8 @@
       },
       "description": "Unrestricted upload of file with dangerous type vulnerability in Tegsoft Yönetim ve Bilişim Hizmetleri Tic. Ltd. Şti. Tegsoft Contact Center allows Upload a Web Shell to a Web Server.\n\nThis issue affects Tegsoft Contact Center: before latest-202611161510.",
       "epss": {
-        "epss": 0.00664,
-        "percentile": 0.52689
+        "epss": 0.00838,
+        "percentile": 0.58731
       }
     },
     {
@@ -702,7 +698,7 @@
       "description": "Phoenix is an AI observability and evaluation platform. From 13.0.0 until 15.7.0, the applyChatTemplate GraphQL query passed attacker-controlled F-string templates to FStringTemplateFormatter._format, while DotDict.__getattr__ did not prevent traversal through Python private attributes. A crafted field could traverse object internals such as __class__, __init__, and __globals__ to read process env",
       "epss": {
         "epss": 0.00553,
-        "percentile": 0.47088
+        "percentile": 0.47112
       }
     },
     {
@@ -730,7 +726,7 @@
       "description": "cf-manager is an all-in-one dashboard for managing multiple Cloudflare accounts and services. Prior to 1.1.2, worker/src/routes/workers.ts uses bare fetch(url) calls to retrieve user-supplied URLs and deploys the returned content as a Worker script using stored Cloudflare credentials. The multipart and JSON branches of POST /api/:accountId/workers and POST /api/batch-deploy accept URLs without pro",
       "epss": {
         "epss": 0.0044,
-        "percentile": 0.39044
+        "percentile": 0.39056
       }
     },
     {
@@ -757,7 +753,7 @@
       "description": "Miren Runtime provides the runtime component for the Miren application platform. Prior to 0.11.1, the QUIC/HTTP3 RPC server on the default port 8443 uses tls.RequestClientCert and does not verify that presented certificates chain to the configured cluster certificate authority. The RPC authenticators derive a caller identity from PeerCertificates[0].Subject.CommonName without requiring a non-empty",
       "epss": {
         "epss": 0.00286,
-        "percentile": 0.21383
+        "percentile": 0.2138
       }
     },
     {
@@ -780,7 +776,7 @@
       "description": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, the earlier CVE-2026-67429 remediation applied validate_path_with_env_config() to only a hand-picked set of file-writing modules, leaving data.csv.write in src/core/modules/atomic/data/csv_write.py, data.json_to_csv in src/core/modules/atomic/data/json_to_csv.py, file.copy in src/core/modules/atomic/file/cop",
       "epss": {
         "epss": 0.00748,
-        "percentile": 0.55817
+        "percentile": 0.55839
       }
     },
     {
@@ -807,7 +803,7 @@
       "description": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager.  While the vulnerability is in Oracle Access Manager, attacks may significantly impa",
       "epss": {
         "epss": 0.00378,
-        "percentile": 0.32513
+        "percentile": 0.32524
       }
     },
     {
@@ -834,7 +830,7 @@
       "description": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager.  While the vulnerability is in Oracle Access Manager, attacks may significantly impa",
       "epss": {
         "epss": 0.00378,
-        "percentile": 0.32513
+        "percentile": 0.32524
       }
     },
     {
@@ -861,7 +857,7 @@
       "description": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: TopLink Integration).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server.  While the vulnerability is in Oracle WebLogic Server, attac",
       "epss": {
         "epss": 0.00483,
-        "percentile": 0.42436
+        "percentile": 0.42449
       }
     },
     {
@@ -888,7 +884,7 @@
       "description": "A Deserialization of Untrusted Data vulnerability affecting Station Launcher App in 3DEXPERIENCE platform from Release 3DEXPERIENCE R2023x through Release 3DEXPERIENCE R2026x could lead to an unauthenticated remote code execution.",
       "epss": {
         "epss": 0.00707,
-        "percentile": 0.54307
+        "percentile": 0.54329
       }
     },
     {
@@ -915,7 +911,7 @@
       "description": "Vulnerabilities in the PAPI protocol of AOS-10 could allow an unauthenticated remote attacker to circumvent existing authentication controls. Successful exploitation could allow an attacker to gain administrative access, modify system configurations, and access or manipulate sensitive data.",
       "epss": {
         "epss": 0.0048,
-        "percentile": 0.42294
+        "percentile": 0.42307
       }
     },
     {
@@ -942,7 +938,7 @@
       "description": "Vulnerability in the Oracle Text component of Oracle Database Server.  Supported versions that are affected are 19.3-19.32, 21.3-21.24 and  23.4.0-23.26.3. Easily exploitable vulnerability allows low privileged attacker having Create Session privilege with network access via Oracle Net to compromise Oracle Text.  While the vulnerability is in Oracle Text, attacks may significantly impact additiona",
       "epss": {
         "epss": 0.00417,
-        "percentile": 0.36788
+        "percentile": 0.36796
       }
     },
     {
@@ -969,7 +965,7 @@
       "description": "Vulnerability in the RDBMS component of Oracle Database Server.  Supported versions that are affected are 23.4.0-23.26.4. Easily exploitable vulnerability allows low privileged attacker having Create Session privilege with network access via Oracle Net to compromise RDBMS.  While the vulnerability is in RDBMS, attacks may significantly impact additional products (scope change).  Successful attacks",
       "epss": {
         "epss": 0.00314,
-        "percentile": 0.24795
+        "percentile": 0.24798
       }
     },
     {
@@ -996,7 +992,7 @@
       "description": "Vulnerability in the Oracle Text component of Oracle Database Server.  Supported versions that are affected are 19.3-19.33, 21.3-21.24 and  23.4.0-23.26.3. Easily exploitable vulnerability allows low privileged attacker having Create Session privilege with network access via Oracle Net to compromise Oracle Text.  While the vulnerability is in Oracle Text, attacks may significantly impact additiona",
       "epss": {
         "epss": 0.00448,
-        "percentile": 0.397
+        "percentile": 0.39711
       }
     },
     {
@@ -1023,7 +1019,7 @@
       "description": "Vulnerability in the Oracle Hyperion Financial Management product of Oracle Hyperion (component: Security).   The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Hyperion Financial Management.  While the vulnerability is in Oracle Hyperion Financial Management, attacks may signifi",
       "epss": {
         "epss": 0.00417,
-        "percentile": 0.36807
+        "percentile": 0.36797
       }
     },
     {
@@ -1050,7 +1046,7 @@
       "description": "Vulnerability in the Oracle AutoVue product of Oracle Supply Chain (component: Security Related Issues).   The supported version that is affected is 21.1.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle AutoVue.  While the vulnerability is in Oracle AutoVue, attacks may significantly impact additional products (scope change).  Suc",
       "epss": {
         "epss": 0.00286,
-        "percentile": 0.21426
+        "percentile": 0.21424
       }
     },
     {
@@ -1077,7 +1073,7 @@
       "description": "The\nDanfoss legacy AK-SC 355 and AK-SM 800 Series are vulnerable to unauthorized\naccess when default credentials or known passwords are used for authentication.\nThese products were manufactured with default credentials documented in the\nproduct manual. All versions are affected.",
       "epss": {
         "epss": 0.00686,
-        "percentile": 0.53582
+        "percentile": 0.53605
       }
     },
     {
@@ -1104,7 +1100,7 @@
       "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Jacob N. Breetvelt WP Photo Album Plus wp-photo-album-plus allows Remote Code Inclusion.This issue affects WP Photo Album Plus: from n/a through 9.3.06.003.",
       "epss": {
         "epss": 0.00294,
-        "percentile": 0.22325
+        "percentile": 0.22324
       }
     },
     {
@@ -1131,7 +1127,7 @@
       "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.13 until 0.31.0, the Docker terminal, container-log, and monitoring WebSocket handlers accept a caller-controlled serviceId as authorization but do not consistently bind the requested containerId or appName to that service. A member with read access to any service can consequently target unrelated containers, obtain a root sh",
       "epss": {
         "epss": 0.00427,
-        "percentile": 0.37684
+        "percentile": 0.3769
       }
     },
     {
@@ -1155,7 +1151,7 @@
       "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, mount.deleteFileMount passes a path containing the user-controlled filePath to the local removeFileOrDirectory helper, which interpolates it unquoted into rm -rf, while the remote branch is quoted. An authenticated member with file-mount create and delete permissions can execute arbitrary commands in the host context i",
       "epss": {
         "epss": 0.00524,
-        "percentile": 0.45292
+        "percentile": 0.45314
       }
     },
     {
@@ -1182,7 +1178,7 @@
       "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the database password validation used by the MySQL, PostgreSQL, MariaDB, MongoDB, and Redis change-password procedures permits backticks, and the procedures interpolate attacker-controlled passwords into Bash command strings. An authenticated user who can update a database password can trigger command substitution befo",
       "epss": {
         "epss": 0.00616,
-        "percentile": 0.5043
+        "percentile": 0.50454
       }
     },
     {
@@ -1209,7 +1205,7 @@
       "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the Nixpacks publishDirectory build setting accepts shell metacharacters and is interpolated into a docker cp command executed through child_process.exec. An authenticated user with access to an application can execute arbitrary commands on the Dokploy host when triggering a Nixpacks deployment, leading to host comprom",
       "epss": {
         "epss": 0.00678,
-        "percentile": 0.53236
+        "percentile": 0.53257
       }
     },
     {
@@ -1236,7 +1232,7 @@
       "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the backup prefix field is only checked for a nonempty value, and normalizeS3Path preserves shell metacharacters before the prefix is interpolated into rclone upload and retention-cleanup command strings. An authenticated organization member with backup permission for a service can execute arbitrary commands as root on",
       "epss": {
         "epss": 0.00524,
-        "percentile": 0.45292
+        "percentile": 0.45315
       }
     },
     {
@@ -1263,7 +1259,7 @@
       "description": "In Splunk SOAR versions below 8.8.0, an authenticated user that holds a role with the Apps edit, Containers edit, and Playbooks execute permissions could use the App Wizard to execute arbitrary code as the user account that runs Splunk SOAR. This could compromise the confidentiality, integrity, and availability of the Splunk SOAR instance.\nThe vulnerability exists because the App Wizard does not v",
       "epss": {
         "epss": 0.00586,
-        "percentile": 0.48879
+        "percentile": 0.48903
       }
     },
     {
@@ -1290,7 +1286,7 @@
       "description": "In JetBrains TeamCity before 2026.1.3, 2025.11.7 remote code execution was possible via best-fit character mapping in Perforce settings",
       "epss": {
         "epss": 0.00648,
-        "percentile": 0.51997
+        "percentile": 0.52019
       }
     },
     {
@@ -1317,7 +1313,7 @@
       "description": "In JetBrains TeamCity before 2026.1.3, 2025.11.7 remote code execution was possible via argument injection in Perforce settings",
       "epss": {
         "epss": 0.00687,
-        "percentile": 0.53603
+        "percentile": 0.53625
       }
     },
     {
@@ -1344,7 +1340,7 @@
       "description": "In JetBrains TeamCity before 2026.1.3, 2025.11.7 remote code execution was possible via build attribute injection",
       "epss": {
         "epss": 0.00703,
-        "percentile": 0.54175
+        "percentile": 0.54198
       }
     },
     {
@@ -1371,7 +1367,7 @@
       "description": "In JetBrains TeamCity before 2026.1.3, 2025.11.7 remote code execution was possible via argument injection in Mercurial VCS root settings",
       "epss": {
         "epss": 0.00701,
-        "percentile": 0.54105
+        "percentile": 0.54128
       }
     },
     {
@@ -1398,7 +1394,7 @@
       "description": "A malicious actor with access to the network and low privileges could exploit an Improper Link Resolution Before File Access vulnerability found in UniFi Access Application to execute arbitrary code with root privileges on the host device.",
       "epss": {
         "epss": 0.00528,
-        "percentile": 0.45588
+        "percentile": 0.4561
       }
     },
     {
@@ -1425,7 +1421,7 @@
       "description": "A malicious actor with access to the network and low privileges could exploit a series of authenticated SQL Injection vulnerabilities found in UniFi Access Application to escalate privileges on the host device.",
       "epss": {
         "epss": 0.00354,
-        "percentile": 0.29698
+        "percentile": 0.29703
       }
     },
     {
@@ -1452,7 +1448,7 @@
       "description": "A malicious actor with access to the network and low privileges could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Access Application to escalate privileges within UniFi OS.",
       "epss": {
         "epss": 0.00343,
-        "percentile": 0.28447
+        "percentile": 0.28451
       }
     }
   ],
@@ -1481,7 +1477,7 @@
       "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. Prior to 0.8.6, the POST /api/auth/login local-login validation path in api/strategies/localStrategy.js logs req.body, including the submitted plaintext password, during a Zod validation failure. The standard browser form validation makes this path less likely through the normal interface, but a direct invalid login reques",
       "epss": {
         "epss": 0.00607,
-        "percentile": 0.49979
+        "percentile": 0.50003
       }
     },
     {
@@ -1509,7 +1505,7 @@
       "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. Prior to 0.8.7, unauthenticated POST /api/user/verify requests in api/server/routes/user.js call api/server/services/AuthService.js verifyEmail and return distinct responses for unknown, verified, and unverified email addresses and the route lacks request throttling. A remote attacker can submit candidate addresses with in",
       "epss": {
         "epss": 0.00812,
-        "percentile": 0.5786
+        "percentile": 0.57886
       }
     },
     {
@@ -1537,7 +1533,7 @@
       "description": "A vulnerability was found in D-Link DCS-935L 1.10.01. This affects the function loginRouter of the file web/cgi-bin/localrecording/setconf.cgi of the component Local Recording CGI. Performing a manipulation of the argument account/password results in os command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
       "epss": {
         "epss": 0.02215,
-        "percentile": 0.83073
+        "percentile": 0.83085
       }
     },
     {
@@ -1565,8 +1561,8 @@
       },
       "description": "MapServer is a system for developing web-based GIS applications. From 4.4.0 until 8.6.5, an unauthenticated remote attacker can send a WCS GetCoverage XML POST request whose BoundingBox element omits the crs attribute, causing xmlGetProp() in src/mapwcs.cpp to return null. msWCSParseRequest() then calls string functions on the null value before normal WCS exception handling, crashing the CGI or Fa",
       "epss": {
-        "epss": 0.01517,
-        "percentile": 0.75187
+        "epss": 0.01498,
+        "percentile": 0.74908
       }
     },
     {
@@ -1592,8 +1588,8 @@
       },
       "description": "MapServer is a system for developing web-based GIS applications. From 8.2.0 until 8.6.5, an unauthenticated attacker can send a WMS GetLegendGraphic request with a nonempty BBOX and repeated LAYER parameters to trigger a heap buffer overflow in msWMSDispatch() in src/mapwms.cpp. The handler appends synthesized entries to cgiRequestObj.ParamNames and cgiRequestObj.ParamValues at NumParams without r",
       "epss": {
-        "epss": 0.00968,
-        "percentile": 0.62674
+        "epss": 0.00956,
+        "percentile": 0.62298
       }
     },
     {
@@ -1619,8 +1615,8 @@
       },
       "description": "MapServer is a system for developing web-based GIS applications. Prior to 8.6.5, MapServer's MySQL JOIN implementation in src/mapjoin.c copies the source layer attribute selected by JOIN ... FROM into joininfo->target and inserts it into the query built by msMySQLJoinNext() without parameterization or SQL escaping. When MySQL JOIN support is enabled, an attacker who can control that source feature",
       "epss": {
-        "epss": 0.01181,
-        "percentile": 0.68496
+        "epss": 0.01182,
+        "percentile": 0.68546
       }
     },
     {
@@ -1649,7 +1645,7 @@
       "description": "NukeViet CMS is a multi Content Management System. Prior to 4.5.12 and 4.6.02, an attacker with access to an SVG upload flow can hide a script element in an internal DTD entity. NukeViet\\Files\\Upload::check_svg_tmpfile() loads the document without entity expansion, leaving a DOMEntityReference, and sanitize_svg_dom() inspects only element nodes, while browsers expand the entity when the stored fil",
       "epss": {
         "epss": 0.00881,
-        "percentile": 0.60002
+        "percentile": 0.60026
       }
     },
     {
@@ -1678,7 +1674,7 @@
       "description": "NukeViet CMS is a multi Content Management System. Prior to 4.6.01, an unauthenticated visitor can submit Contact module content containing numeric HTML entities with more than eight leading zeros in a URL-bearing attribute. NukeViet\\Core\\Request::unhtmlentities() does not decode that form before filterAttr() checks for a javascript: scheme, but browsers decode it when rendering the stored content",
       "epss": {
         "epss": 0.00595,
-        "percentile": 0.49364
+        "percentile": 0.49388
       }
     },
     {
@@ -1705,7 +1701,7 @@
       "description": "NukeViet CMS is a multi Content Management System. From the 3.x release line until 4.6.01, an unauthenticated visitor can submit a Contact module message containing an event-handler attribute prefixed by a slash. NukeViet\\Core\\Request::filterTags() tokenizes attributes using only ASCII spaces, so it sees /onerror and misses the ^on denylist, while the browser treats the slash as a separator and ac",
       "epss": {
         "epss": 0.00819,
-        "percentile": 0.58092
+        "percentile": 0.58117
       }
     },
     {
@@ -1732,7 +1728,7 @@
       "description": "NukeViet CMS is a multi Content Management System. Prior to 4.5.09, the Comment module accepts attacker-controlled base64 content in the status_comment parameter through modules/comment/funcs/main.php; modules/comment/comment.php decodes it with nv_base64_decode() and assigns it to STATUS_COMMENT without output escaping. The required checkss token was derived from the site-wide NV_CACHE_PREFIX rat",
       "epss": {
         "epss": 0.00684,
-        "percentile": 0.53496
+        "percentile": 0.53518
       }
     },
     {
@@ -1759,7 +1755,7 @@
       "description": "NukeViet CMS is a multi Content Management System. In 4.6.00, an unauthenticated attacker can rotate X-Forwarded-For because vendor/vinades/nukeviet/Core/Ips.php accepts forwarded client-IP headers without first confirming that REMOTE_ADDR is a trusted proxy. The resulting NV_CLIENT_IP keys the administrator login blocker in includes/core/admin_login.php; changing only the header value bypasses th",
       "epss": {
         "epss": 0.00741,
-        "percentile": 0.55543
+        "percentile": 0.55566
       }
     },
     {
@@ -1786,7 +1782,7 @@
       "description": "NukeViet CMS is a multi Content Management System. Prior to 4.5.09, an unauthenticated attacker can submit the __serverInfoUpdate=1 field while controlling X-Forwarded-Host and X-Forwarded-Proto. NukeViet\\Core\\Server::standardizeHost() did not validate the forwarded host against my_domains, and a trailing slash could preserve an attacker-selected port that server_info_update() used to construct a ",
       "epss": {
         "epss": 0.00788,
-        "percentile": 0.57095
+        "percentile": 0.57119
       }
     },
     {
@@ -1813,7 +1809,7 @@
       "description": "isomorphic-git is a pure JavaScript implementation of Git for Node.js and browsers. Prior to 1.38.7, tree-entry validation in src/models/GitTree.js does not reject the Windows NTFS reserved pathname alias .git::$INDEX_ALLOCATION. When clone() or checkout materializes an attacker-controlled tree containing this alias on Windows using an NTFS filesystem, the alias resolves to the active .git directo",
       "epss": {
         "epss": 0.0088,
-        "percentile": 0.5998
+        "percentile": 0.60003
       }
     },
     {
@@ -1840,7 +1836,7 @@
       "description": "isomorphic-git is a pure JavaScript implementation of Git for Node.js and browsers. Prior to 1.38.8, git cherry-pick applies tree changes through applyTreeChanges in src/utils/walkerToTreeEntryMap.js without checking whether a leading path component is a symbolic link. If a victim worktree contains a tracked symlink to a location outside the worktree and a cherry-picked tree places a file beneath ",
       "epss": {
         "epss": 0.0094,
-        "percentile": 0.61808
+        "percentile": 0.61831
       }
     },
     {
@@ -1868,7 +1864,7 @@
       "description": "AIT GUI provides a framework for building custom websites for real-time telemetry monitoring, commanding, and other mission operations. From 1.0.0 until 2.5.1, POST /tlm/query in ait/gui/__init__.py writes attacker-controlled field data to fields_in.txt, and its no-PCAP error path can abort before deleting that file. The unauthenticated POST /script/run route accepts a scriptPath that resolves out",
       "epss": {
         "epss": 0.01051,
-        "percentile": 0.65111
+        "percentile": 0.65131
       }
     },
     {
@@ -1895,7 +1891,7 @@
       "description": "pmo-platform is a modular PMO and release-management platform for Claude Code. From 3.48 until 3.69.1, release/skills/pmo-skill-refiner/eval-viewer/generate_review.py reads untrusted model or skill output from workspace/run*/outputs/ and embeds it with json.dumps into viewer.html inside an inline script without escaping HTML metacharacters. A crafted output can close the script element and execute",
       "epss": {
         "epss": 0.00417,
-        "percentile": 0.3674
+        "percentile": 0.36749
       }
     },
     {
@@ -1923,7 +1919,7 @@
       "description": "LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, the HTML bookmark import action in app/Actions/ImportHtmlBookmarks.php uses the global Link::whereUrl() lookup instead of restricting duplicate detection to the importing user. An authenticated user can submit a chosen URL and distinguish the skipped response count from the queued count to learn whether any account has save",
       "epss": {
         "epss": 0.00594,
-        "percentile": 0.49326
+        "percentile": 0.4935
       }
     },
     {
@@ -1952,7 +1948,7 @@
       "description": "LinkAce is a self-hosted archive to collect website links. Prior to 2.5.9, the authenticated GET /api/v2/lists/{list}/links endpoint in app/Http/Controllers/API/ListLinksController.php authorizes access only to the parent list and then returns its links without applying visibleForUser(). Because another user's INTERNAL or PUBLIC list may legitimately contain PRIVATE links, a normal authenticated u",
       "epss": {
         "epss": 0.00844,
-        "percentile": 0.58879
+        "percentile": 0.58904
       }
     },
     {
@@ -1979,7 +1975,7 @@
       "description": "Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.1.0 until 4.5.2, the Spotlight RPC consumer handlers sl_rpc_fetchAttributeNamesForOIDArray, sl_rpc_storeAttributesForOIDArray, and sl_rpc_fetchAttributesForOIDArray in etc/afpd/spotlight.c dereference the first element of a decoded sl_cnids_t without checking whether the inner CNID array is empty. An authe",
       "epss": {
         "epss": 0.00959,
-        "percentile": 0.62339
+        "percentile": 0.62364
       }
     },
     {
@@ -2007,7 +2003,7 @@
       "description": "Netatalk is a Free and Open Source file server suite for Unix-like operating systems. Prior to 4.4.3, the afpd Spotlight RPC string unmarshalling path in etc/afpd/spotlight_marshalling.c uses sl_unpack_cpx to calculate slen from qlen and the attacker-controlled used_in_last_block value without preventing a negative result. An authenticated AFP client can send a complex string or UTF-16 string elem",
       "epss": {
         "epss": 0.00771,
-        "percentile": 0.56566
+        "percentile": 0.5659
       }
     },
     {
@@ -2035,7 +2031,7 @@
       "description": "Netatalk is a Free and Open Source file server suite for Unix-like operating systems. Prior to 4.4.3, the afpd Spotlight RPC unmarshalling loop in etc/afpd/spotlight_marshalling.c subtracts an attacker-controlled subcount from the unsigned count variable in sl_unpack_loop without verifying that subcount is not larger. An authenticated AFP client can place an excessive element count in the sl_unpac",
       "epss": {
         "epss": 0.00771,
-        "percentile": 0.56566
+        "percentile": 0.56589
       }
     },
     {
@@ -2063,7 +2059,7 @@
       "description": "svglib reads SVG files and converts them to other formats. Prior to 2.3.1, the svg2rlg() renderer recursively expands nested SVG <use> references by deep-copying each referenced subtree; SvgRenderer.renderUse() in src/svglib/svglib.py calls xlink_href_target(), which rejects direct cycles but permits acyclic reference graphs with repeated fan-out. A small attacker-controlled SVG can therefore trig",
       "epss": {
         "epss": 0.0106,
-        "percentile": 0.65371
+        "percentile": 0.65392
       }
     },
     {
@@ -2090,7 +2086,7 @@
       "description": "wcmatch is a Python library for wildcard file-name matching. Prior to 11.2, under the default flags, matching a non-matching attacker-controlled name against an application-supplied pattern containing several star wildcards separated by literals makes the lazy .? and [^/]? segments, including _STAR and _PATH_STAR emitted by _handle_star() in wcmatch/_wcparse.py, backtrack across possible splits, s",
       "epss": {
         "epss": 0.00881,
-        "percentile": 0.6002
+        "percentile": 0.60044
       }
     },
     {
@@ -2118,7 +2114,7 @@
       "description": "Tapo provides Rust and Python APIs and an MCP server for TP-Link Tapo smart devices. From 0.3.1 until 0.5.0, the Streamable HTTP implementation in tapo-mcp/src/server.rs calls disable_allowed_hosts() without replacement Host or Origin validation, while TAPO_MCP_API_KEY remains optional for a listener that can bind to all interfaces. A malicious website can use DNS rebinding to send same-origin bro",
       "epss": {
         "epss": 0.00433,
-        "percentile": 0.38347
+        "percentile": 0.38354
       }
     },
     {
@@ -2147,7 +2143,7 @@
       "description": "Budibase is an open-source low-code platform. Prior to 3.50.0, a BASIC application user, or an unauthenticated visitor to a public write form, can store markup in a shared external datasource that a builder or administrator later evaluates in any Handlebars binding Preview that surfaces the value, including the Data-section Formula column editor or any binding drawer. jsonFormatter.format() in pac",
       "epss": {
         "epss": 0.00678,
-        "percentile": 0.53246
+        "percentile": 0.53267
       }
     },
     {
@@ -2174,7 +2170,7 @@
       "description": "LessPass self-hosted sync server backend before commit 9469b0c lacks rate limiting on the JWT login endpoints /tokens/auth/ and /auth/jwt/create/, allowing unlimited authentication attempts. Unauthenticated remote attackers can brute force passwords or perform credential stuffing against known account emails to obtain tokens granting read and write access to stored profiles.",
       "epss": {
         "epss": 0.01053,
-        "percentile": 0.65195
+        "percentile": 0.65214
       }
     },
     {
@@ -2203,7 +2199,7 @@
       "description": "In `github.com/eclipse-keypont/crypto11/v2` versions `<= 2.0.0-rc8` (and the deprecated v1 module paths `github.com/eclipse-keypont/crypto11 <= 1.6.8`, `github.com/ThalesGroup/crypto11 <= 1.7.0-rc1` and `github.com/ThalesIgnite/crypto11 <= 1.2.5`), the `cipher.AEAD` returned by `SecretKey.NewGCM()` passes whatever nonce it is given straight to `CK_GCM_PARAMS` without checking its length against `N",
       "epss": {
         "epss": 0.00829,
-        "percentile": 0.58418
+        "percentile": 0.58443
       }
     },
     {
@@ -2230,7 +2226,7 @@
       "description": "A vulnerability was determined in Sunnet CTMS up to 10.11. Impacted is an unknown function of the file /cltcms/api/external-training/ext-course of the component External Training Application Form Feature. This manipulation of the argument memberids causes improper control of resource identifiers. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be util",
       "epss": {
         "epss": 0.00411,
-        "percentile": 0.36188
+        "percentile": 0.36198
       }
     },
     {
@@ -2258,7 +2254,7 @@
       "description": "A weakness has been identified in SqueezeAILab SqueezeLLM up to a5fd71f353bf569feb7b55737c1c1493e78e8f31. This vulnerability affects the function vecquant4matmul_spmv_hybrid_nuq_perchannel of the file quant_cuda_kernel.cu of the component CUDA Matvec Kernel. Executing a manipulation of the argument full_row_indices can lead to out-of-bounds write. The attack can be launched remotely. The exploit h",
       "epss": {
         "epss": 0.00318,
-        "percentile": 0.252
+        "percentile": 0.25201
       }
     },
     {
@@ -2285,7 +2281,7 @@
       "description": "The targets R package before 1.12.1 contains a code execution vulnerability that allows attackers to run arbitrary R code by planting format functions in the data store metadata file. Attackers can supply a crafted _targets data store whose custom format or CAS repository functions are passed to eval(parse()), executing code when victims call tar_read(), tar_load() or tar_workspace().",
       "epss": {
         "epss": 0.00474,
-        "percentile": 0.41802
+        "percentile": 0.41816
       }
     },
     {
@@ -2312,7 +2308,7 @@
       "description": "free5GC SMF through 1.4.6 contains a resource exhaustion vulnerability because sendPDUSessionEstablishmentAccept returns early without calling RemoveSMContextFromAllNF on failures. Authenticated UEs repeatedly establishing PDU sessions during NRF or AMF failures leak SM contexts, UE IP addresses and TEIDs, exhausting the DNN IP pool.",
       "epss": {
         "epss": 0.00655,
-        "percentile": 0.52296
+        "percentile": 0.52319
       }
     },
     {
@@ -2339,7 +2335,7 @@
       "description": "free5GC SMF through 1.4.6 contains a resource exhaustion vulnerability in HandlePDUSessionSMContextLocalRelease that orphans SM contexts and UE IP addresses when PFCP session deletion fails. Attackers can send repeated PDU session establishment requests reusing an existing SUPI and PDU Session ID during PFCP deletion failures to exhaust the DNN's UE IP pool.",
       "epss": {
         "epss": 0.00655,
-        "percentile": 0.52296
+        "percentile": 0.52318
       }
     },
     {
@@ -2366,7 +2362,7 @@
       "description": "Open5GS AMF through 2.8.0 contains a resource leak vulnerability that allows authenticated UEs to exhaust the session pool by triggering failed DNN or S-NSSAI validation. Attackers can repeat PDU Session Establishment Requests with different PDU Session Identity values, leaving stale amf_sess contexts that degrade service for other subscribers.",
       "epss": {
         "epss": 0.0071,
-        "percentile": 0.54419
+        "percentile": 0.5444
       }
     },
     {
@@ -2393,7 +2389,7 @@
       "description": "Penpot 2.18.0 before 2.18.2 contains a stored cross-site scripting vulnerability that allows authenticated users with edit rights to bypass the sanitize-svg-element blocklist using namespace-prefixed SVG elements. Attackers can upload SVGs containing elements like x:script or attributes like x:onload, which are served inline as image/svg+xml to run JavaScript in victims' Penpot sessions.",
       "epss": {
         "epss": 0.00467,
-        "percentile": 0.41272
+        "percentile": 0.41283
       }
     },
     {
@@ -2420,7 +2416,7 @@
       "description": "request-filtering-agent before 3.2.2 contains a server-side request forgery filter bypass because address validation in src/request-filtering-agent.ts treats IPv4-compatible IPv6 addresses in the ::/96 range as public unicast. Attackers controlling a fetched URL can use addresses like ::7f00:1 or ::a9fe:a9fe to reach loopback or link-local services, including cloud metadata endpoints.",
       "epss": {
         "epss": 0.0065,
-        "percentile": 0.52079
+        "percentile": 0.521
       }
     },
     {
@@ -2447,7 +2443,7 @@
       "description": "In `github.com/eclipse-keypont/crypto11/v2` versions `<= 2.0.0-rc8` (and the deprecated v1 module paths `github.com/eclipse-keypont/crypto11 <= 1.6.8`, `github.com/ThalesGroup/crypto11 <= 1.7.0-rc1` and `github.com/ThalesIgnite/crypto11 <= 1.2.5`), the key-pair and certificate lookup functions (`FindKeyPair`, `FindKeyPairs`, `FindKeyPairsWithAttributes`, `FindAllKeyPairs`, the `FindRSAKeyPair*` fa",
       "epss": {
         "epss": 0.00178,
-        "percentile": 0.07405
+        "percentile": 0.07392
       }
     },
     {
@@ -2474,7 +2470,7 @@
       "description": "A security vulnerability has been detected in ModelCloud GPTQModel up to 7.6.0. Affected by this vulnerability is the function gptqmodel.adapter.remote.resolve_path of the file gptqmodel/adapter/remote.py of the component Adapter Resolution Pipeline. Such manipulation of the argument adapter.path leads to improper input validation. The attack may be launched remotely. The exploit has been disclose",
       "epss": {
         "epss": 0.00671,
-        "percentile": 0.52965
+        "percentile": 0.52985
       }
     },
     {
@@ -2501,7 +2497,7 @@
       "description": "A weakness has been identified in blinkospace blinko up to 1.8.8. Affected is an unknown function of the file /api/auth/verify-2fa of the component 2FA Endpoint. This manipulation of the argument userId causes improper authentication. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.8.9 is able to address ",
       "epss": {
         "epss": 0.00869,
-        "percentile": 0.59663
+        "percentile": 0.59686
       }
     },
     {
@@ -2528,7 +2524,7 @@
       "description": "A security flaw has been discovered in Gladys Assistant up to 4.71.0. This impacts an unknown function of the file server/lib/gateway/gateway.downloadBackup.js of the component Backup Restore Handler. The manipulation results in path traversal. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. Upgrading to version 4.72.0 will fix this iss",
       "epss": {
         "epss": 0.00804,
-        "percentile": 0.57643
+        "percentile": 0.57667
       }
     },
     {
@@ -2556,7 +2552,7 @@
       "description": "A vulnerability was found in Vahe1994 AQLM up to e79a896ed6656fe4ed06193d42d004e7d0bbdbb2. The affected element is an unknown function of the file inference_kernels/triton_kernel.py of the component Triton Kernel. Performing a manipulation of the argument codes results in out-of-bounds read. It is possible to initiate the attack remotely. The exploit has been made public and could be used. This pr",
       "epss": {
         "epss": 0.00425,
-        "percentile": 0.37513
+        "percentile": 0.37519
       }
     }
   ],
@@ -2585,8 +2581,8 @@
       },
       "description": "Session serializer mismatch can lead to remote code execution.\n\nSession upload progress, when enabled, can store attacker-controlled data in a session key using the php_binary or php_serialize session serializer. If the same session is later read with the php serializer, because session.serialize_handler is changed at runtime or differs between applications sharing a session store, bytes inside th",
       "epss": {
-        "epss": 0.71117,
-        "percentile": 0.99419
+        "epss": 0.73107,
+        "percentile": 0.99467
       }
     },
     {
@@ -2613,35 +2609,7 @@
       "description": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: Compiler).  Supported versions that are affected are Oracle Java SE: 8u511b33-perf, 17.0.21.0.3, 21.0.13.0.3, 25.0.5.0.3, 27.0.1.0.3; Oracle GraalVM for JDK: 17.0.21.0.3 and  21.0.13.0.3; Oracle GraalVM Enterprise Edition: 21.3.20.0.3. Difficult to exploit vulnerabil",
       "epss": {
         "epss": 0.45636,
-        "percentile": 0.98825
-      }
-    },
-    {
-      "cve_id": "CVE-2026-123007",
-      "state": "PUBLISHED",
-      "assigner": "f5",
-      "date_published": "2026-11-18T15:23:29.008Z",
-      "vendor": "F5",
-      "product": "NGINX Plus",
-      "cvss": {
-        "version": "cvssV4_0",
-        "score": 9.2,
-        "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
-      },
-      "cwe": [
-        "CWE-191",
-        "CWE-787"
-      ],
-      "ssvc": {
-        "exploitation": "none",
-        "automatable": "no",
-        "technical_impact": "total"
-      },
-      "description": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker segmentation fault. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or ",
-      "epss": {
-        "epss": 0.29863,
-        "percentile": 0.98243
+        "percentile": 0.98826
       }
     },
     {
@@ -2668,7 +2636,35 @@
       "description": "Zohocorp Manageengine DDI Central build below 6500 are affected by a authenticated command injection vulnerability in the Windows DDI Agent's clear_blocked_domains functionality, allowing specially crafted blocked-domain values to trigger arbitrary command execution on Windows systems.",
       "epss": {
         "epss": 0.28818,
-        "percentile": 0.98192
+        "percentile": 0.98194
+      }
+    },
+    {
+      "cve_id": "CVE-2026-123007",
+      "state": "PUBLISHED",
+      "assigner": "f5",
+      "date_published": "2026-11-18T15:23:29.008Z",
+      "vendor": "F5",
+      "product": "NGINX Plus",
+      "cvss": {
+        "version": "cvssV4_0",
+        "score": 9.2,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "cwe": [
+        "CWE-191",
+        "CWE-787"
+      ],
+      "ssvc": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technical_impact": "total"
+      },
+      "description": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker segmentation fault. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or ",
+      "epss": {
+        "epss": 0.27785,
+        "percentile": 0.98135
       }
     },
     {
@@ -2695,7 +2691,7 @@
       "description": "Zohocorp Manageengine DDI Central build below 6500 are affected by a authenticated PowerShell command injection vulnerability in the Telnet connectivity feature, allowing specially crafted IPv6 scope identifiers to execute arbitrary commands on managed Windows nodes.",
       "epss": {
         "epss": 0.24378,
-        "percentile": 0.97914
+        "percentile": 0.97915
       }
     },
     {
@@ -2722,7 +2718,7 @@
       "description": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for client connections and proxy client requests to a backend, a specially crafted request can result in use-after-free in the worker process, if this process is running low on worker_connections. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypas",
       "epss": {
         "epss": 0.17525,
-        "percentile": 0.97206
+        "percentile": 0.97208
       }
     },
     {
@@ -2749,7 +2745,7 @@
       "description": "This issue occurs when NGINX Plus or NGINX Open Source is configured as a proxy, the proxied server name includes variables, and a Server Side Includes (SSI) or mirror directive sends a subrequest to a location that resolves the same server name. Under these conditions, a specially crafted HTTP request may cause a use-after-free condition in a worker process. An attacker may also be able to execut",
       "epss": {
         "epss": 0.17103,
-        "percentile": 0.97155
+        "percentile": 0.97157
       }
     },
     {
@@ -2776,7 +2772,7 @@
       "description": "Description:\nThis issue affects NGINX Plus and NGINX Open Source configurations that use HTTP/3. A remote, unauthenticated attacker can cause a use-after-free condition in the NGINX worker process, leading to a restart. Exploitation also depends on conditions beyond the attacker’s control. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled o",
       "epss": {
         "epss": 0.16404,
-        "percentile": 0.97054
+        "percentile": 0.97056
       }
     },
     {
@@ -2803,8 +2799,8 @@
       },
       "description": "PHP-FPM request smuggling through an unread HTTP request body.\n\nPHP does not discard the unread part of an HTTP request body at request shutdown when the application has opened php://input without reading it to the end. When the front end reuses backend connections, which is not the default in nginx or Apache (for example nginx with fastcgi_keep_conn on, or Apache mod_proxy_fcgi with enablereuse=o",
       "epss": {
-        "epss": 0.16138,
-        "percentile": 0.97005
+        "epss": 0.16163,
+        "percentile": 0.97012
       }
     },
     {
@@ -2831,7 +2827,7 @@
       "description": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, undisclosed traffic can cause a use-after-free in an nginx worker process. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR.\n\nImpact:\nA remote unauthenticated attacker may crash an nginx worker process or corrupt its memory, disrupting ",
       "epss": {
         "epss": 0.1386,
-        "percentile": 0.96617
+        "percentile": 0.9662
       }
     },
     {
@@ -2858,8 +2854,8 @@
       },
       "description": "Partially overwritten session files can lead to remote code execution.\n\nThe files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of the new session followed by the end of the old one, and bytes of an ordinary string can later be unserialized as objects. A",
       "epss": {
-        "epss": 0.13104,
-        "percentile": 0.96448
+        "epss": 0.13297,
+        "percentile": 0.96489
       }
     },
     {
@@ -2888,7 +2884,7 @@
       "description": "PHP-CGI out-of-bounds read and write during PATH_INFO correction.\n\nThe PHP CGI binary (php-cgi), in CGI and FastCGI mode with cgi.fix_pathinfo enabled (the default), can perform an out-of-bounds read and write when the path removed from SCRIPT_FILENAME or PATH_TRANSLATED is longer than the supplied PATH_INFO, or when PATH_INFO is empty. This requires a web server mapping that passes such inconsist",
       "epss": {
         "epss": 0.12818,
-        "percentile": 0.96384
+        "percentile": 0.96387
       }
     }
   ]
