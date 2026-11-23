@@ -1,11 +1,11 @@
-# Reporte semanal de vulnerabilidades — 2026-11-16 a 2026-11-22
+# Reporte semanal de vulnerabilidades — 2026-11-17 a 2026-11-23
 
 ## Resumen
 
 - KEV agregadas: **9** (catálogo total: 1790; ransomware conocido: 0)
-- CVE nuevos publicados: **4590** (rechazados: 25; registros actualizados: 7093)
-- Por severidad CVSS: {'HIGH': 1606, 'MEDIUM': 1940, 'SIN_CVSS': 440, 'CRITICAL': 364, 'LOW': 240}  — con CVSS: 90.4%
-- SSVC (CISA ADP) explotación PoC/activa: 344; automatizable + impacto total: 170
+- CVE nuevos publicados: **4610** (rechazados: 27; registros actualizados: 7016)
+- Por severidad CVSS: {'CRITICAL': 373, 'HIGH': 1596, 'SIN_CVSS': 485, 'MEDIUM': 1931, 'LOW': 225}  — con CVSS: 89.5%
+- SSVC (CISA ADP) explotación PoC/activa: 443; automatizable + impacto total: 176
 - EPSS ≥ 10%: 12
 
 ## KEV agregadas en la semana
@@ -32,20 +32,21 @@
 | CVE-2026-114824 | 10 | Oracle Corporation | Oracle Platform Security for Java | CWE-502 | none |
 | CVE-2026-114835 | 10 | Oracle Corporation | Oracle Access Manager | CWE-306 | none |
 | CVE-2026-120387 | 10 | Circutor | PowerStudio SCADA Wave | CWE-347 | poc |
-| CVE-2026-130778 | 10 | lxc | incus | CWE-287 |  |
+| CVE-2026-130778 | 10 | lxc | incus | CWE-287 | none |
 | CVE-2026-133323 | 10 | Mitel | MiCollab | CWE-78 | none |
 | CVE-2026-133493 | 10 | D-Link | DIR-600L | CWE-77,CWE-78 | poc |
 | CVE-2026-133993 | 10 | D-Link | DIR-600L | CWE-119,CWE-121 |  |
+| CVE-2026-134882 | 10 | TOTOLINK | A7100RU | CWE-77,CWE-78 |  |
 | CVE-2026-14914 | 10 | Tegsoft Yönetim ve Bilişim Hizmetleri Tic. Ltd. Şti. | Tegsoft Contact Center | CWE-434 | none |
-| CVE-2026-53998 | 10 | Arize-ai | phoenix | CWE-134,CWE-200 | none |
+| CVE-2026-62841 | 10 | Microsoft | Azure Event Grid System | CWE-287 |  |
 | CVE-2026-71499 | 10 | hefy2027 | cf-manager | CWE-918,CWE-94 | none |
 | CVE-2026-75521 | 10 | mirendev | runtime | CWE-295 | none |
 | CVE-2026-77312 | 10 | flytohub | flyto-core | CWE-22 |  |
 | CVE-2026-91500 | 10 | Oracle Corporation | Oracle Access Manager | CWE-284 | none |
 | CVE-2026-91510 | 10 | Oracle Corporation | Oracle Access Manager | CWE-306 | none |
 | CVE-2026-91569 | 10 | Oracle Corporation | Oracle WebLogic Server | CWE-306 | none |
-| CVE-2026-93664 | 10 | Dassault Systèmes | Station Launcher App in 3DEXPERIENCE pla | CWE-502 | none |
 | CVE-2026-95787 | 10 | Hewlett Packard Enterprise (HPE) | ArubaOS (AOS) | CWE-269 | none |
+| CVE-2026-103782 | 9.9 | Dell | Enterprise Sonic Distributio | CWE-88 | none |
 | CVE-2026-114819 | 9.9 | Oracle Corporation | Oracle Database Server | CWE-284 | none |
 | CVE-2026-114822 | 9.9 | Oracle Corporation | Oracle Database Server | CWE-284 | none |
 | CVE-2026-114848 | 9.9 | Oracle Corporation | Oracle Database Server | CWE-284 | none |
@@ -65,33 +66,32 @@
 | CVE-2026-132234 | 9.9 | JetBrains | TeamCity | CWE-88 | none |
 | CVE-2026-132802 | 9.9 | Ubiquiti Inc | UniFi Access Application | CWE-59 | none |
 | CVE-2026-132803 | 9.9 | Ubiquiti Inc | UniFi Access Application | CWE-89 | none |
-| CVE-2026-132804 | 9.9 | Ubiquiti Inc | UniFi Access Application | CWE-918 | none |
 
 ## Top proveedores (CVE nuevos)
 
 - Oracle Corporation: 578
-- Linux: 516
-- JetBrains: 231
-- Google: 203
+- Linux: 493
+- Google: 256
+- JetBrains: 233
 - Splunk: 146
-- gpac: 82
-- Unknown: 77
-- frappe: 69
-- nocodb: 43
-- Dell: 40
+- gpac: 77
+- Unknown: 73
+- frappe: 67
+- Dell: 51
+- Red Hat: 44
 
 ## Top CWE
 
-- CWE-79: 457
-- CWE-862: 355
-- CWE-284: 355
+- CWE-79: 458
+- CWE-284: 356
+- CWE-862: 348
 - CWE-863: 183
-- CWE-200: 179
-- CWE-22: 143
-- CWE-639: 135
-- CWE-306: 135
-- CWE-416: 113
-- CWE-125: 93
+- CWE-200: 175
+- CWE-22: 144
+- CWE-639: 138
+- CWE-306: 132
+- CWE-416: 118
+- CWE-125: 104
 
 ## Estado de fuentes
 
@@ -105,12 +105,12 @@
   "cvelist": {
     "ok": true,
     "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
-    "fetched": 4615,
+    "fetched": 4637,
     "errors": 0
   },
   "epss": {
     "ok": true,
-    "scored": 4550
+    "scored": 4303
   }
 }
 ```
