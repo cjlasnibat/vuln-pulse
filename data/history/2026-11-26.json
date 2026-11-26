@@ -1,0 +1,167 @@
+{
+ "date": "2026-11-26",
+ "window_7d": {
+  "start": "2026-11-20",
+  "end": "2026-11-26",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.25"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3682,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 3313
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.25",
+  "catalog_total": 1805,
+  "added_7d": 19,
+  "added_7d_ids": [
+   "CVE-2026-129448",
+   "CVE-2026-123890",
+   "CVE-2025-42884",
+   "CVE-2026-76466",
+   "CVE-2026-133968",
+   "CVE-2026-134624",
+   "CVE-2026-132224",
+   "CVE-2026-131914",
+   "CVE-2026-132165",
+   "CVE-2026-103406",
+   "CVE-2026-133469",
+   "CVE-2025-41450",
+   "CVE-2023-25914",
+   "CVE-2023-25915",
+   "CVE-2026-133324",
+   "CVE-2026-133275",
+   "CVE-2026-133311",
+   "CVE-2026-133303",
+   "CVE-2026-133323"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Mitel": 5,
+   "Danfoss": 3,
+   "Apache": 1,
+   "Broadcom": 1,
+   "SAP": 1,
+   "Cisco": 1,
+   "Project MONAI": 1,
+   "N-able": 1,
+   "Optimizely": 1,
+   "Idunno": 1,
+   "Drupal": 1,
+   "Hewlett Packard Enterprise (HPE)": 1,
+   "Vates": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3654,
+  "rejected": 28,
+  "updated": 6653,
+  "by_severity": {
+   "MEDIUM": 1702,
+   "SIN_CVSS": 359,
+   "HIGH": 1191,
+   "LOW": 136,
+   "CRITICAL": 266
+  },
+  "with_cvss_pct": 90.2,
+  "ssvc_poc_or_active": 366,
+  "ssvc_automatable_total_impact": 75,
+  "epss_ge_10pct": 3,
+  "top_vendors": [
+   [
+    "Linux",
+    246
+   ],
+   [
+    "Mozilla",
+    120
+   ],
+   [
+    "Adobe",
+    112
+   ],
+   [
+    "Wikimedia Foundation",
+    75
+   ],
+   [
+    "frappe",
+    70
+   ],
+   [
+    "Apache Software Foundation",
+    65
+   ],
+   [
+    "Dell",
+    62
+   ],
+   [
+    "Unknown",
+    62
+   ],
+   [
+    "Joomla! Project",
+    58
+   ],
+   [
+    "Google",
+    54
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    603
+   ],
+   [
+    "CWE-862",
+    323
+   ],
+   [
+    "CWE-863",
+    141
+   ],
+   [
+    "CWE-89",
+    103
+   ],
+   [
+    "CWE-22",
+    102
+   ],
+   [
+    "CWE-639",
+    96
+   ],
+   [
+    "CWE-125",
+    92
+   ],
+   [
+    "CWE-416",
+    86
+   ],
+   [
+    "CWE-78",
+    73
+   ],
+   [
+    "CWE-770",
+    73
+   ]
+  ]
+ }
+}
