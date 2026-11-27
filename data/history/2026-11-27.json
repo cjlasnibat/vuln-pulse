@@ -1,0 +1,159 @@
+{
+ "date": "2026-11-27",
+ "window_7d": {
+  "start": "2026-11-21",
+  "end": "2026-11-27",
+  "utc_offset": -3
+ },
+ "sources_status": {
+  "kev": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+   "catalogVersion": "2026.11.25"
+  },
+  "cvelist": {
+   "ok": true,
+   "source": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/deltaLog.json",
+   "fetched": 3309,
+   "errors": 0
+  },
+  "epss": {
+   "ok": true,
+   "scored": 3098
+  }
+ },
+ "kev": {
+  "catalog_version": "2026.11.25",
+  "catalog_total": 1805,
+  "added_7d": 15,
+  "added_7d_ids": [
+   "CVE-2026-133968",
+   "CVE-2026-134624",
+   "CVE-2026-132224",
+   "CVE-2026-131914",
+   "CVE-2026-132165",
+   "CVE-2026-103406",
+   "CVE-2026-133469",
+   "CVE-2025-41450",
+   "CVE-2023-25914",
+   "CVE-2023-25915",
+   "CVE-2026-133324",
+   "CVE-2026-133275",
+   "CVE-2026-133311",
+   "CVE-2026-133303",
+   "CVE-2026-133323"
+  ],
+  "ransomware_known_7d": 0,
+  "vendors_7d": {
+   "Mitel": 5,
+   "Danfoss": 3,
+   "Project MONAI": 1,
+   "N-able": 1,
+   "Optimizely": 1,
+   "Idunno": 1,
+   "Drupal": 1,
+   "Hewlett Packard Enterprise (HPE)": 1,
+   "Vates": 1
+  }
+ },
+ "cve_7d": {
+  "new": 3279,
+  "rejected": 30,
+  "updated": 6329,
+  "by_severity": {
+   "MEDIUM": 1592,
+   "HIGH": 1114,
+   "LOW": 141,
+   "CRITICAL": 249,
+   "SIN_CVSS": 183
+  },
+  "with_cvss_pct": 94.4,
+  "ssvc_poc_or_active": 308,
+  "ssvc_automatable_total_impact": 68,
+  "epss_ge_10pct": 1,
+  "top_vendors": [
+   [
+    "Dell",
+    123
+   ],
+   [
+    "Mozilla",
+    120
+   ],
+   [
+    "Adobe",
+    113
+   ],
+   [
+    "Wikimedia Foundation",
+    75
+   ],
+   [
+    "frappe",
+    70
+   ],
+   [
+    "Apache Software Foundation",
+    66
+   ],
+   [
+    "Unknown",
+    61
+   ],
+   [
+    "Joomla! Project",
+    58
+   ],
+   [
+    "Google",
+    54
+   ],
+   [
+    "FFmpeg",
+    51
+   ]
+  ],
+  "top_cwe": [
+   [
+    "CWE-79",
+    585
+   ],
+   [
+    "CWE-862",
+    254
+   ],
+   [
+    "CWE-863",
+    148
+   ],
+   [
+    "CWE-89",
+    102
+   ],
+   [
+    "CWE-22",
+    99
+   ],
+   [
+    "CWE-416",
+    95
+   ],
+   [
+    "CWE-639",
+    89
+   ],
+   [
+    "CWE-918",
+    77
+   ],
+   [
+    "CWE-78",
+    73
+   ],
+   [
+    "CWE-770",
+    69
+   ]
+  ]
+ }
+}
